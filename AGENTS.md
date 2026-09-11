@@ -66,7 +66,7 @@ next-intl without i18n routing — URLs stay locale-free. English is the default
 
 - `messages/{en,vi}.json`: flat key-value strings, no nested namespaces. Add every new user-facing key to both files.
 - `src/i18n/config.ts`: `LOCALE_COOKIE` (`"locale"`), `LOCALES`, `isLocale`. The server resolves the locale from that cookie in `src/i18n/request.ts`.
-- `src/lib/locale.tsx`: `LocaleProvider`/`useLocale`. `setLocale` writes the cookie then calls `router.refresh()` so Server Components re-render in the new locale. The EN/VI switcher is a `SegmentedControl` in the sidebar footer (`src/components/AppShell.tsx`).
+- `src/lib/locale.tsx`: `LocaleProvider`/`useLocale`. `setLocale` writes the cookie then calls `router.refresh()` so Server Components re-render in the new locale. The EN/VI switcher is a `SegmentedControl` in the shell's shared footer slot (`src/components/AppShell.tsx`), rendered in the sidebar footer on desktop and the mobile drawer footer.
 - Client components use `useTranslations()`; Server Components, pages and metadata use the awaitable `getTranslations()` from `next-intl/server`. Both read the same flat keys with no namespace.
 
 ## Design system
@@ -96,7 +96,7 @@ Every visible control must come from `@robr0/design-system` (React 19 peer dep).
 
 Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout.tsx`), toggled by `src/lib/theme.tsx`'s `ThemeProvider`/`useTheme`. Never hardcode a hex colour or Tailwind colour utility outside the library's own components — override a `--primitive-*` token instead. `AppLayout` pins `theme` to `"dark"` by default; pass `theme="inherit"` for it to follow the page's `data-theme`. `AppSidebar` has no `theme` prop — it always follows the page's `data-theme` via the CSS cascade, which is why `src/components/AppShell.tsx` uses it directly instead of `AppLayout`.
 
-The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the sidebar automatically.
+The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the shell automatically.
 
 The shell is responsive at the design system's 768px breakpoint: on desktop it renders the fixed `AppSidebar`; on mobile it hides it and swaps in a fixed top bar (`Nav`) plus a left `Drawer` containing `NavList` for the four routes (the dark-theme `ToggleSwitch` moves into the drawer footer). Mobile `.main` top padding clears the bar with `calc(78px + var(--padding-lg))`; do not move the bar back into normal flow, or it steals width from the flex-row and overflows at 375px. Verify viewports at 375px and 1440px.
 

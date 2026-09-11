@@ -36,7 +36,6 @@ export function AppShell({ children }: { children: ReactNode }) {
         sections={sections}
         activeKey={activeKey}
         logoText="Job scout"
-        theme="inherit"
         footerSlot={
           <ToggleSwitch
             label="Dark theme"

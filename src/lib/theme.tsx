@@ -19,15 +19,16 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 const THEME_STORAGE_KEY = "theme";
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("dark");
+function readStoredTheme(): Theme {
+  if (typeof window === "undefined") {
+    return "dark";
+  }
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  return stored === "dark" || stored === "light" ? stored : "dark";
+}
 
-  useEffect(() => {
-    const stored = localStorage.getItem(THEME_STORAGE_KEY);
-    if (stored === "dark" || stored === "light") {
-      setThemeState(stored);
-    }
-  }, []);
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setThemeState] = useState<Theme>(readStoredTheme);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);

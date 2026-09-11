@@ -1,11 +1,13 @@
 import { EmptyState } from "@robr0/design-system";
+import { getTranslations } from "next-intl/server";
 
-export default function OptimizePage() {
+export default async function OptimizePage() {
+  const t = await getTranslations();
   return (
     <EmptyState
       icon="tune"
-      title="Optimize your resume"
-      description="Targeting questions and a resume artifact will appear here."
+      title={t("optimizeHeading")}
+      description={t("optimizeDescription")}
     />
   );
 }

@@ -6,6 +6,16 @@ The repo is early. Work is specified as GitHub issues, not as a half-built app. 
 
 Keep `AGENTS.md` and `CLAUDE.md` in sync. Edit both when navigation rules change.
 
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+
 ## What we are building
 
 An agent that reads a resume, asks what the person is aiming at, rewrites toward that target without inventing facts, then searches live jobs and scores them.
@@ -73,6 +83,12 @@ Rules:
 
 Copy: sentence-case labels, no emoji, no em dashes in product UI.
 
+Every visible control must come from `@robr0/design-system` (React 19 peer dep). Before building UI, read the vendored consumer skill at `.claude/skills/robr0-design-system/SKILL.md` (and its `references/components.md` catalogue) for install, theming, and prop-contract rules — do not guess a component's props from memory; read its `.d.ts` in `node_modules/@robr0/design-system` or the linked contract markdown.
+
+Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout.tsx`), toggled by `src/lib/theme.tsx`'s `ThemeProvider`/`useTheme`. Never hardcode a hex colour or Tailwind colour utility outside the library's own components — override a `--primitive-*` token instead. `AppLayout`/`AppSidebar` default `theme` to `"dark"` (pinned); pass `theme="inherit"` (or use `AppSidebar` directly, as `src/components/AppShell.tsx` does) so the shell follows the page's `data-theme`.
+
+The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the sidebar automatically.
+
 ## Agent rules
 
 - Tools are the only things that touch the world. Never invent jobs, URLs, employers, or resume metrics. Rewrites are evidence-only (optional fact-gate against source text); adaptive framing only.
@@ -97,3 +113,10 @@ Canonical roles map 1:1 to GitHub labels (`ready-for-agent`, `ready-for-human`, 
 ### Domain docs
 
 Single-context. See `docs/agents/domain.md`.
+
+## Maintaining this file
+
+Keep this file for knowledge useful to almost every future agent session in this project.
+Do not repeat what the codebase already shows; point to the authoritative file or command instead.
+Prefer rewriting or pruning existing entries over appending new ones.
+When updating this file, preserve this bar for all agents and keep entries concise.

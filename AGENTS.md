@@ -98,6 +98,8 @@ Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout
 
 The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the sidebar automatically.
 
+The shell is responsive at the design system's 768px breakpoint: on desktop it renders the fixed `AppSidebar`; on mobile it hides it and swaps in a fixed top bar (`Nav`) plus a left `Drawer` containing `NavList` for the four routes (the dark-theme `ToggleSwitch` moves into the drawer footer). Mobile `.main` top padding clears the bar with `calc(78px + var(--padding-lg))`; do not move the bar back into normal flow, or it steals width from the flex-row and overflows at 375px. Verify viewports at 375px and 1440px.
+
 ## Agent rules
 
 - Tools are the only things that touch the world. Never invent jobs, URLs, employers, or resume metrics. Rewrites are evidence-only (optional fact-gate against source text); adaptive framing only.

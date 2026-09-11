@@ -85,7 +85,7 @@ Copy: sentence-case labels, no emoji, no em dashes in product UI.
 
 Every visible control must come from `@robr0/design-system` (React 19 peer dep). Before building UI, read the vendored consumer skill at `.claude/skills/robr0-design-system/SKILL.md` (and its `references/components.md` catalogue) for install, theming, and prop-contract rules — do not guess a component's props from memory; read its `.d.ts` in `node_modules/@robr0/design-system` or the linked contract markdown.
 
-Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout.tsx`), toggled by `src/lib/theme.tsx`'s `ThemeProvider`/`useTheme`. Never hardcode a hex colour or Tailwind colour utility outside the library's own components — override a `--primitive-*` token instead. `AppLayout`/`AppSidebar` default `theme` to `"dark"` (pinned); pass `theme="inherit"` (or use `AppSidebar` directly, as `src/components/AppShell.tsx` does) so the shell follows the page's `data-theme`.
+Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout.tsx`), toggled by `src/lib/theme.tsx`'s `ThemeProvider`/`useTheme`. Never hardcode a hex colour or Tailwind colour utility outside the library's own components — override a `--primitive-*` token instead. `AppLayout`/`AppSidebar` default `theme` to `"dark"` (pinned); pass `theme="inherit"` explicitly, as `src/components/AppShell.tsx` does, so the shell follows the page's `data-theme`.
 
 The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the sidebar automatically.
 

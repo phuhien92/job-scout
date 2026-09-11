@@ -1,13 +1,5 @@
-import { EmptyState } from "@robr0/design-system";
-import { getTranslations } from "next-intl/server";
+import { ScoutChat } from "@/components/ScoutChat";
 
-export default async function ScoutPage() {
-  const t = await getTranslations();
-  return (
-    <EmptyState
-      icon="explore"
-      title={t("scoutHeading")}
-      description={t("scoutDescription")}
-    />
-  );
+export default function ScoutPage() {
+  return <ScoutChat />;
 }

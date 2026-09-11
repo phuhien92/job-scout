@@ -57,6 +57,7 @@ Start with issues whose Blocked by is none or already closed. Today that is usua
 - AI SDK UI (`@mastra/ai-sdk` + `useChat`) mapped onto DS chat primitives
 - Zod on every tool
 - Findwork for listings (typed adapter). Match scores are ours. Do not wrap FoundRole as the product backend.
+- Chat streaming: `POST /api/chat` calls Mastra `handleChatStream` (AI SDK v7) for the `jobScout` agent. `onError` only covers stream-time errors; wrap the call and emit a `{ type: "error", errorText }` UI-message part on creation-time throws.
 
 Env (when the app exists): `MODEL` plus the matching provider key, `FINDWORK_API_KEY`.
 

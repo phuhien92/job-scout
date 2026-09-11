@@ -1,6 +1,6 @@
 # Job scout
 
-Job scout helps a job seeker find roles, tailor their resume, and track applications in one place. It is a Next.js (React 19) app with four areas reachable from a shared sidebar:
+Job scout helps a job seeker find roles, tailor their resume, and track applications in one place. It is a Next.js (React 19) app with four areas reachable from a shared, responsive navigation shell (sidebar on desktop, drawer on mobile):
 
 - **Scout** — a search chat for finding open roles that match what you are looking for.
 - **Optimize** — targeting questions and a resume artifact tailored to a specific role, with download and save.

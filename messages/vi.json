@@ -1,0 +1,18 @@
+{
+  "appName": "Job scout",
+  "metaDescription": "Tìm kiếm, tối ưu hóa và theo dõi đơn ứng tuyển ở một nơi.",
+  "navScout": "Tìm việc",
+  "navOptimize": "Tối ưu",
+  "navJobs": "Việc làm",
+  "navProfile": "Hồ sơ",
+  "themeDark": "Chủ đề tối",
+  "languageLabel": "Ngôn ngữ",
+  "scoutHeading": "Tìm việc làm",
+  "scoutDescription": "Trò chuyện tìm kiếm việc làm sẽ xuất hiện ở đây.",
+  "optimizeHeading": "Tối ưu CV của bạn",
+  "optimizeDescription": "Câu hỏi về mục tiêu và bản CV tối ưu sẽ xuất hiện ở đây.",
+  "jobsHeading": "Chưa có việc làm nào",
+  "jobsDescription": "Những việc làm bạn lưu từ mục Tìm việc sẽ hiển thị ở đây.",
+  "profileHeading": "Tạo hồ sơ của bạn",
+  "profileDescription": "CV, sở thích mục tiêu và thông tin tài khoản của bạn sẽ nằm ở đây."
+}

@@ -1,11 +1,13 @@
 import { EmptyState } from "@robr0/design-system";
+import { getTranslations } from "next-intl/server";
 
-export default function JobsPage() {
+export default async function JobsPage() {
+  const t = await getTranslations();
   return (
     <EmptyState
       icon="work"
-      title="No jobs yet"
-      description="Roles you save from scout will show up in this split view."
+      title={t("jobsHeading")}
+      description={t("jobsDescription")}
     />
   );
 }

@@ -1,11 +1,13 @@
 import { EmptyState } from "@robr0/design-system";
+import { getTranslations } from "next-intl/server";
 
-export default function ScoutPage() {
+export default async function ScoutPage() {
+  const t = await getTranslations();
   return (
     <EmptyState
       icon="explore"
-      title="Scout for roles"
-      description="Search chat for open roles will appear here."
+      title={t("scoutHeading")}
+      description={t("scoutDescription")}
     />
   );
 }

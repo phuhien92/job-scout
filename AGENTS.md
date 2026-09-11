@@ -60,6 +60,15 @@ Start with issues whose Blocked by is none or already closed. Today that is usua
 
 Env (when the app exists): `MODEL` plus the matching provider key, `FINDWORK_API_KEY`.
 
+## Internationalization
+
+next-intl without i18n routing — URLs stay locale-free. English is the default locale; Vietnamese is second.
+
+- `messages/{en,vi}.json`: flat key-value strings, no nested namespaces. Add every new user-facing key to both files.
+- `src/i18n/config.ts`: `LOCALE_COOKIE` (`"locale"`), `LOCALES`, `isLocale`. The server resolves the locale from that cookie in `src/i18n/request.ts`.
+- `src/lib/locale.tsx`: `LocaleProvider`/`useLocale`. `setLocale` writes the cookie then calls `router.refresh()` so Server Components re-render in the new locale. The EN/VI switcher is a `SegmentedControl` in the sidebar footer (`src/components/AppShell.tsx`).
+- Client components use `useTranslations()`; Server Components, pages and metadata use the awaitable `getTranslations()` from `next-intl/server`. Both read the same flat keys with no namespace.
+
 ## Design system
 
 Package: [`@robr0/design-system`](https://github.com/robritacca-dotcom/design-system). Contracts: `node_modules` `.d.ts`, [component markdown](https://robertritacca.com/components/chat-thread.md), MCP `https://robertritacca.com/api/mcp`. Vendor the consumer skill when scaffolding:

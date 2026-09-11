@@ -1,11 +1,13 @@
 import { EmptyState } from "@robr0/design-system";
+import { getTranslations } from "next-intl/server";
 
-export default function ProfilePage() {
+export default async function ProfilePage() {
+  const t = await getTranslations();
   return (
     <EmptyState
       icon="person"
-      title="Build your profile"
-      description="Your resume, targeting preferences and account details will live here."
+      title={t("profileHeading")}
+      description={t("profileDescription")}
     />
   );
 }

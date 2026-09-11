@@ -15,3 +15,11 @@
   width: 100%;
   max-width: 960px;
 }
+
+.footerSlot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  width: 100%;
+  min-width: 0;
+}

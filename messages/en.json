@@ -1,0 +1,18 @@
+{
+  "appName": "Job scout",
+  "metaDescription": "Search, optimize and track job applications in one place.",
+  "navScout": "Scout",
+  "navOptimize": "Optimize",
+  "navJobs": "Jobs",
+  "navProfile": "Profile",
+  "themeDark": "Dark theme",
+  "languageLabel": "Language",
+  "scoutHeading": "Scout for roles",
+  "scoutDescription": "Search chat for open roles will appear here.",
+  "optimizeHeading": "Optimize your resume",
+  "optimizeDescription": "Targeting questions and a resume artifact will appear here.",
+  "jobsHeading": "No jobs yet",
+  "jobsDescription": "Roles you save from scout will show up in this split view.",
+  "profileHeading": "Build your profile",
+  "profileDescription": "Your resume, targeting preferences and account details will live here."
+}

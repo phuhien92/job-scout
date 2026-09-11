@@ -2,20 +2,10 @@ const FINDWORK_BASE_URL = "https://findwork.dev/api/jobs/";
 const FINDWORK_TIMEOUT_MS = 15000;
 const SUMMARY_MAX_LENGTH = 260;
 
-export type EmploymentType = "fulltime" | "parttime" | "contract" | "internship";
-
-export const EMPLOYMENT_TYPE_TO_API: Record<EmploymentType, string> = {
-  fulltime: "FULLTIME",
-  parttime: "PARTTIME",
-  contract: "CONTRACT",
-  internship: "INTERNSHIP",
-};
-
 export interface FindworkSearchParams {
   query: string;
   location?: string;
   remote?: boolean;
-  employmentType?: EmploymentType;
 }
 
 export interface FindworkListItem {
@@ -101,7 +91,8 @@ export function formatSalary(
   const maxValue = toNumber(max);
   if (minValue === null && maxValue === null) return null;
 
-  const symbol = CURRENCY_SYMBOLS[(currency ?? "").toUpperCase()] ?? "$";
+  const symbol =
+    CURRENCY_SYMBOLS[(currency ?? "").toUpperCase()] ?? (currency ?? "").toUpperCase();
   const format = (value: number) => `${symbol}${value.toLocaleString("en-US")}`;
 
   if (minValue !== null && maxValue !== null && minValue !== maxValue) {
@@ -122,6 +113,7 @@ function mapRawJob(job: RawFindworkJob): FindworkListItem | null {
 
   const title = (job.role ?? job.title ?? "").trim();
   const company = (job.company_name ?? job.company ?? "").trim();
+  if (!title || !company) return null;
   const location = (job.location ?? "").trim() || "Unknown location";
 
   return {
@@ -163,9 +155,6 @@ export async function searchFindworkJobs(params: FindworkSearchParams): Promise<
   searchParams.set("search", query);
   if (params.location?.trim()) searchParams.set("location", params.location.trim());
   if (params.remote === true) searchParams.set("remote", "true");
-  if (params.employmentType) {
-    searchParams.set("employment_type", EMPLOYMENT_TYPE_TO_API[params.employmentType]);
-  }
 
   const response = await fetch(`${FINDWORK_BASE_URL}?${searchParams.toString()}`, {
     headers: {

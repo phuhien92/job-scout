@@ -2,8 +2,6 @@ import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 import { searchFindworkJobs } from "@/lib/findwork";
 
-export const employmentTypeSchema = z.enum(["fulltime", "parttime", "contract", "internship"]);
-
 export const searchJobsInputSchema = z.object({
   query: z
     .string()
@@ -17,9 +15,6 @@ export const searchJobsInputSchema = z.object({
     .boolean()
     .optional()
     .describe("Set true to show only remote jobs. Omit for no remote filter."),
-  employmentType: employmentTypeSchema
-    .optional()
-    .describe("Optional employment type filter: fulltime, parttime, contract, or internship."),
 });
 
 export const searchJobsOutputSchema = z.object({
@@ -52,8 +47,8 @@ export const searchJobs = createTool({
     "Search live job listings on Findwork by role, location, and remote preference. Returns real, schema-validated listings or an error; never invents results.",
   inputSchema: searchJobsInputSchema,
   outputSchema: searchJobsOutputSchema,
-  execute: async ({ query, location, remote, employmentType }) => {
-    const jobs = await searchFindworkJobs({ query, location, remote, employmentType });
+  execute: async ({ query, location, remote }) => {
+    const jobs = await searchFindworkJobs({ query, location, remote });
     return { jobs };
   },
 });

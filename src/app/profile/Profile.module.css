@@ -1,0 +1,52 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  padding: var(--padding-lg);
+  border: var(--border-xs) solid var(--color-bg-container-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-container-primary);
+  min-width: 0;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  min-width: 0;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap-md);
+  min-width: 0;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.note {
+  color: var(--color-text-secondary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.saveStatus {
+  min-width: 0;
+}

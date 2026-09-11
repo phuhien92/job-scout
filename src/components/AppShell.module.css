@@ -8,12 +8,40 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  min-width: 0;
   padding: 48px 24px;
 }
 
 .content {
   width: 100%;
   max-width: 960px;
+  min-width: 0;
+}
+
+.mobileBar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .mobileBar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: var(--color-bg-page-primary);
+    border-bottom: var(--border-xs) solid var(--color-bg-container-border);
+  }
+
+  .main {
+    padding: calc(78px + var(--padding-lg)) 16px 40px;
+  }
 }
 
 .footerSlot {

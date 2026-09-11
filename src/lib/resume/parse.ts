@@ -25,7 +25,9 @@ export async function extractTextFromBuffer(
         return normalize(result.value);
       }
       case "txt": {
-        return normalize(new TextDecoder("utf-8").decode(buffer));
+        const decoded = new TextDecoder("utf-8").decode(buffer);
+        if (!isLikelyPlainText(decoded)) throw new ResumeParseError("unreadable");
+        return normalize(decoded);
       }
     }
   } catch {
@@ -39,4 +41,25 @@ function normalize(text: string): string {
     .replace(/\u0000/g, "")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+}
+
+function isLikelyPlainText(text: string): boolean {
+  let replacement = 0;
+  let control = 0;
+  let content = 0;
+  for (const char of text) {
+    const code = char.codePointAt(0) as number;
+    if (char === "\uFFFD") {
+      replacement += 1;
+    } else if (
+      (code < 0x20 && char !== "\n" && char !== "\r" && char !== "\t") ||
+      (code >= 0x80 && code <= 0x9f)
+    ) {
+      control += 1;
+    } else if (!/\s/.test(char)) {
+      content += 1;
+    }
+  }
+  if (content === 0) return false;
+  return replacement / content <= 0.02 && control / content <= 0.03;
 }

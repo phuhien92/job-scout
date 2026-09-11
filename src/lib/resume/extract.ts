@@ -100,10 +100,10 @@ const HEADING_TO_SECTION: Record<string, string> = {
   honours: "certifications",
   languages: "languages",
   language: "languages",
-  contact: "other",
-  "contact information": "other",
-  "contact details": "other",
-  "connect with me": "other",
+  contact: "contact",
+  "contact information": "contact",
+  "contact details": "contact",
+  "connect with me": "contact",
   publications: "other",
   conferences: "other",
   talks: "other",
@@ -427,7 +427,7 @@ export function extractProfile(text: string): Profile {
   const name = extractName(context, headerEnd);
   const skills = extractSkills(context, text);
   const titles = extractTitles(context, headerEnd);
-  const locations = extractLocations(text);
+  const locations = extractLocations(context, headerEnd);
   const remotePreference = extractRemotePreference(context, headerEnd);
   const summary = extractSummary(context, headerEnd);
   const seniority = extractSeniority(text);
@@ -651,7 +651,25 @@ function stripBullet(line: string): string {
     .trim();
 }
 
-function extractLocations(text: string): string[] {
+function extractLocations(context: SectionContext, headerEnd: number): string[] {
+  const { trim, sectionOf, headingIndexes } = context;
+
+  const lines: string[] = [];
+  for (let i = 0; i < Math.min(headerEnd, trim.length); i += 1) {
+    const line = trim[i];
+    if (line) lines.push(line);
+  }
+  for (let i = 0; i < headingIndexes.length; i += 1) {
+    const start = headingIndexes[i] + 1;
+    const end = i + 1 < headingIndexes.length ? headingIndexes[i + 1] : trim.length;
+    if (sectionOf(start) !== "contact") continue;
+    for (let j = start; j < end; j += 1) {
+      const line = trim[j];
+      if (line) lines.push(line);
+    }
+  }
+  const text = lines.join("\n");
+
   const found: string[] = [];
   const seen = new Set<string>();
 

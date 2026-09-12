@@ -52,6 +52,18 @@ export async function PATCH(request: Request) {
     const value = typeof profileInput.summary === "string" ? profileInput.summary.trim() : "";
     patch.summary = value.slice(0, MAX_STRING_LENGTH);
   }
+  if ("targetRole" in profileInput) {
+    const value =
+      typeof profileInput.targetRole === "string" ? profileInput.targetRole.trim() : "";
+    patch.targetRole = value.slice(0, 120);
+  }
+  if ("targetIndustry" in profileInput) {
+    const value =
+      typeof profileInput.targetIndustry === "string"
+        ? profileInput.targetIndustry.trim()
+        : "";
+    patch.targetIndustry = value.slice(0, 120);
+  }
   if ("remotePreference" in profileInput) {
     const value = profileInput.remotePreference;
     patch.remotePreference =

@@ -1,0 +1,49 @@
+.scout {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 96px);
+  min-height: 420px;
+  border: var(--border-xs) solid var(--color-bg-container-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-container-primary);
+  overflow: hidden;
+}
+
+.thread {
+  flex: 1;
+  min-height: 0;
+}
+
+.assistantContent {
+  width: 100%;
+  max-width: 100%;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  min-width: 0;
+  width: 100%;
+}
+
+.pending {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-sm, 0.875rem);
+}
+
+.error {
+  padding: var(--padding-lg) var(--padding-lg) 0;
+}
+
+.suggestions {
+  padding: var(--padding-md) var(--padding-lg) var(--padding-xs);
+}
+
+@media (max-width: 768px) {
+  .scout {
+    height: calc(100dvh - 138px);
+    min-height: 400px;
+  }
+}

@@ -1,5 +1,47 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Match Job Scout's data-theme attribute (not a .dark class). */
+@custom-variant dark (&:is([data-theme="dark"] *));
+
 :root {
   --font-family-primary: var(--font-nunito-sans), sans-serif;
+  --font-sans: var(--font-nunito-sans), sans-serif;
+
+  /* Bridge shadcn/AI Elements tokens onto @robr0/design-system semantics. */
+  --background: var(--color-bg-page-primary);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-bg-container-primary);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-bg-container-primary);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-action-primary-bg);
+  --primary-foreground: var(--color-action-primary-text);
+  --secondary: var(--color-bg-container-secondary);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-bg-container-tertiary);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-bg-container-secondary);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-text-primary);
+  --border: var(--color-bg-container-border);
+  --input: var(--color-bg-container-border);
+  --ring: var(--color-action-primary-border);
+  --chart-1: var(--color-action-primary-bg);
+  --chart-2: var(--color-text-secondary);
+  --chart-3: var(--color-text-tertiary);
+  --chart-4: var(--color-bg-container-secondary);
+  --chart-5: var(--color-bg-container-tertiary);
+  --radius: var(--radius-md, 0.625rem);
+  --sidebar: var(--color-bg-container-primary);
+  --sidebar-foreground: var(--color-text-primary);
+  --sidebar-primary: var(--color-action-primary-bg);
+  --sidebar-primary-foreground: var(--color-action-primary-text);
+  --sidebar-accent: var(--color-bg-container-secondary);
+  --sidebar-accent-foreground: var(--color-text-primary);
+  --sidebar-border: var(--color-bg-container-border);
+  --sidebar-ring: var(--color-action-primary-border);
 }
 
 html {
@@ -37,4 +79,97 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Scope AI Elements thread utilities without rebranding the app shell. */
+.chat-ai-thread {
+  min-height: 0;
+}
+
+.chat-ai-thread [data-slot="conversation-content"],
+.chat-ai-thread .flex.flex-col.gap-8 {
+  gap: var(--gap-md, 0.75rem);
+}
+
+/* PromptInput: bridge to DS surfaces; teal primary already maps via --primary. */
+.chat-ai-composer {
+  flex-shrink: 0;
+  padding: var(--padding-md) var(--padding-lg) var(--padding-lg);
+  border-top: var(--border-xs) solid var(--color-bg-container-border);
+  background: var(--color-bg-container-primary);
+}
+
+.chat-ai-composer [data-slot="input-group"] {
+  min-height: 3.25rem;
+  background: var(--color-bg-container-secondary);
+  border-color: var(--color-bg-container-border);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.chat-ai-composer [data-slot="input-group"]:focus-within {
+  border-color: var(--color-action-primary-border);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklch, var(--color-action-primary-border) 35%, transparent);
+}
+
+.chat-ai-composer textarea {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+}
+
+.chat-ai-composer textarea::placeholder {
+  color: var(--color-text-tertiary, var(--color-text-secondary));
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
 }

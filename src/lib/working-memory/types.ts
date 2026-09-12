@@ -27,11 +27,24 @@ export interface Profile {
   seniority: string[];
   summary: string;
   targetRoles: string[];
+  /** Active Optimize targeting choice (role). */
+  targetRole: string;
+  /** Active Optimize targeting choice (industry / company type). */
+  targetIndustry: string;
+}
+
+/** Last saved evidence-only rewrite from Optimize. */
+export interface OptimizedResume {
+  markdown: string;
+  title: string;
+  subtitle: string;
+  savedAt: string;
 }
 
 export interface WorkingMemory {
   resume: ResumeRecord | null;
   profile: Profile;
+  optimizedResume: OptimizedResume | null;
 }
 
 export const EMPTY_PROFILE: Profile = {
@@ -43,9 +56,12 @@ export const EMPTY_PROFILE: Profile = {
   seniority: [],
   summary: "",
   targetRoles: [],
+  targetRole: "",
+  targetIndustry: "",
 };
 
 export const EMPTY_WORKING_MEMORY: WorkingMemory = {
   resume: null,
   profile: EMPTY_PROFILE,
+  optimizedResume: null,
 };

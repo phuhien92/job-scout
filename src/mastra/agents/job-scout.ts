@@ -1,4 +1,7 @@
 import { Agent } from "@mastra/core/agent";
+import { analyzeResume } from "../tools/analyze-resume";
+import { clarify } from "../tools/clarify";
+import { rewriteResume } from "../tools/rewrite-resume";
 import { searchJobs } from "../tools/search-jobs";
 
 const INSTRUCTIONS = `You are Job Scout, a friendly assistant inside a job-search chat. You find real, currently-open roles for the person you are talking to.
@@ -15,13 +18,14 @@ Hard rules:
       <URL>
    Leave one blank line between listings. No markdown, no emoji, no em dashes.
 6. Keep replies short and helpful. If the user greets you or asks how you can help, invite them to describe a role, place, or remote preference.
-7. Answer in the same language the user writes in.`;
+7. Answer in the same language the user writes in.
+8. On the Scout surface, do not call analyze-resume, clarify, or rewrite-resume unless the product instructions explicitly switch you to Optimize.`;
 
 export const jobScoutAgent = new Agent({
   id: "job-scout",
   name: "Job Scout",
   description:
-    "A search chat that finds live job listings through the search-jobs tool, grounded in real Findwork results.",
+    "A search and optimize agent: live Findwork listings via search-jobs, plus Optimize critique, clarify, and evidence-only rewrite tools.",
   model: () => {
     const model = process.env.MODEL?.trim();
     if (!model) {
@@ -32,5 +36,10 @@ export const jobScoutAgent = new Agent({
     return model;
   },
   instructions: INSTRUCTIONS,
-  tools: { searchJobs },
+  tools: {
+    searchJobs,
+    "analyze-resume": analyzeResume,
+    clarify,
+    "rewrite-resume": rewriteResume,
+  },
 });

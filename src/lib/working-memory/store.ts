@@ -3,6 +3,7 @@ import path from "node:path";
 
 import {
   EMPTY_WORKING_MEMORY,
+  type OptimizedResume,
   type Profile,
   type WorkingMemory,
 } from "@/lib/working-memory/types";
@@ -61,6 +62,35 @@ function normalizeProfile(value: unknown): Profile {
     summary:
       typeof raw.summary === "string" ? raw.summary.trim().slice(0, 2000) : base.summary,
     targetRoles: normList(raw.targetRoles),
+    targetRole:
+      typeof raw.targetRole === "string" ? raw.targetRole.trim().slice(0, 120) : base.targetRole,
+    targetIndustry:
+      typeof raw.targetIndustry === "string"
+        ? raw.targetIndustry.trim().slice(0, 120)
+        : base.targetIndustry,
+  };
+}
+
+function normalizeOptimizedResume(value: unknown): OptimizedResume | null {
+  if (!value || typeof value !== "object") {
+    return null;
+  }
+  const raw = value as Partial<OptimizedResume>;
+  if (typeof raw.markdown !== "string" || !raw.markdown.trim()) {
+    return null;
+  }
+  return {
+    markdown: raw.markdown.slice(0, 100_000),
+    title:
+      typeof raw.title === "string" && raw.title.trim()
+        ? raw.title.trim().slice(0, 160)
+        : "Resume",
+    subtitle:
+      typeof raw.subtitle === "string" ? raw.subtitle.trim().slice(0, 160) : "",
+    savedAt:
+      typeof raw.savedAt === "string" && raw.savedAt
+        ? raw.savedAt
+        : new Date(0).toISOString(),
   };
 }
 
@@ -84,7 +114,11 @@ function normalizeWorkingMemory(value: unknown): WorkingMemory {
               : "",
         }
       : null;
-  return { resume: resumeRecord, profile: normalizeProfile(raw.profile) };
+  return {
+    resume: resumeRecord,
+    profile: normalizeProfile(raw.profile),
+    optimizedResume: normalizeOptimizedResume(raw.optimizedResume),
+  };
 }
 
 export async function readWorkingMemory(): Promise<WorkingMemory> {

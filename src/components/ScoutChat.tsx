@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useTranslations } from "next-intl";
@@ -46,7 +46,10 @@ export function ScoutChat() {
   const inputRef = useRef(input);
   const inputRevisionRef = useRef(0);
   const statusRef = useRef(status);
-  statusRef.current = status;
+
+  useEffect(() => {
+    statusRef.current = status;
+  }, [status]);
 
   const isStreaming = status === "submitted" || status === "streaming";
   const hasMessages = messages.length > 0;

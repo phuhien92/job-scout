@@ -36,18 +36,7 @@ gh issue list --label ready-for-agent --state open
 gh issue view <n>
 ```
 
-Start with issues whose Blocked by is none or already closed. Today that is usually [#1](https://github.com/phuhien92/job-scout/issues/1) (shell) and [#4](https://github.com/phuhien92/job-scout/issues/4) (resume upload), in parallel after the shell exists.
-
-| Issue | Slice | Blocked by |
-| --- | --- | --- |
-| [#1](https://github.com/phuhien92/job-scout/issues/1) | Product shell on the design system | none |
-| [#2](https://github.com/phuhien92/job-scout/issues/2) | Live job search through chat | #1 |
-| [#3](https://github.com/phuhien92/job-scout/issues/3) | Scout home with job cards | #2 |
-| [#4](https://github.com/phuhien92/job-scout/issues/4) | Upload a resume into working memory | #1 |
-| [#5](https://github.com/phuhien92/job-scout/issues/5) | Optimize: critique the resume in chat | #4 |
-| [#6](https://github.com/phuhien92/job-scout/issues/6) | Optimize: targeting questions in-thread | #5 |
-| [#7](https://github.com/phuhien92/job-scout/issues/7) | Optimize: resume artifact with download and save | #6 |
-| [#8](https://github.com/phuhien92/job-scout/issues/8) | Jobs split view and Browse roles handoff | #3, #7 |
+Start with issues whose Blocked by is none or already closed.
 
 ## Stack
 

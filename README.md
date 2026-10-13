@@ -26,3 +26,4 @@ Open [http://localhost:3000](http://localhost:3000).
 - `npm run dev` — start the dev server
 - `npm run build` — production build
 - `npm run lint` — lint the codebase
+- `npm run test` — run the Vitest test suite

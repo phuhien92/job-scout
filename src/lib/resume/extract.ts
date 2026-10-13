@@ -442,6 +442,8 @@ export function extractProfile(text: string): Profile {
     seniority,
     summary,
     targetRoles,
+    targetRole: "",
+    targetIndustry: "",
   };
 }
 

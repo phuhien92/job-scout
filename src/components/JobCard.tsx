@@ -18,7 +18,7 @@ export function JobCard({ job }: Props) {
     .join(" · ");
 
   return (
-    <Panel padding="compact" className={styles.card}>
+    <Panel padding="compact" className={styles.card} role="article">
       <div className={styles.body}>
         <h3 className={styles.title}>{job.title}</h3>
         <p className={styles.meta}>{meta}</p>
@@ -28,6 +28,7 @@ export function JobCard({ job }: Props) {
         variant="primary"
         size="compact"
         label={t("scoutJobOpen")}
+        iconRight="open_in_new"
         href={job.url}
         target="_blank"
         rel="noopener noreferrer"

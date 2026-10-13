@@ -1,4 +1,4 @@
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import type { UIMessage } from "ai";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -132,6 +132,67 @@ describe("ScoutChat", () => {
     render(<ScoutChat />);
     await user.click(screen.getByRole("button", { name: "Stop" }));
     expect(streaming.stop).toHaveBeenCalledOnce();
+  });
+
+  it("keeps the draft when a send resolves in the error state", async () => {
+    let finishSend: () => void = () => undefined;
+    const sendMessage = vi.fn(
+      () =>
+        new Promise<void>((resolve) => {
+          finishSend = resolve;
+        }),
+    );
+    const chat = setChatState({ sendMessage });
+    useChatMock.mockImplementation(() => chat);
+    const user = userEvent.setup();
+    const { rerender } = render(<ScoutChat />);
+
+    const composer = screen.getByPlaceholderText(
+      "Search for a role, location, or remote work",
+    );
+    await user.type(composer, "Data analyst{Enter}");
+    await waitFor(() => expect(sendMessage).toHaveBeenCalledOnce());
+
+    chat.status = "error";
+    chat.error = new Error("offline");
+    rerender(<ScoutChat />);
+    await act(async () => {
+      finishSend();
+    });
+
+    expect(composer).toHaveValue("Data analyst");
+  });
+
+  it("does not clear a newer draft when the submitted send completes", async () => {
+    let finishSend: () => void = () => undefined;
+    const sendMessage = vi.fn(
+      () =>
+        new Promise<void>((resolve) => {
+          finishSend = resolve;
+        }),
+    );
+    const chat = setChatState({ sendMessage });
+    useChatMock.mockImplementation(() => chat);
+    const user = userEvent.setup();
+
+    const { rerender } = render(<ScoutChat />);
+
+    const composer = screen.getByPlaceholderText(
+      "Search for a role, location, or remote work",
+    );
+    await user.type(composer, "Data analyst{Enter}");
+    await waitFor(() => expect(sendMessage).toHaveBeenCalledOnce());
+    chat.status = "streaming";
+    rerender(<ScoutChat />);
+    await user.clear(composer);
+    await user.type(composer, "Product analyst");
+    chat.status = "ready";
+    rerender(<ScoutChat />);
+    await act(async () => {
+      finishSend();
+    });
+
+    expect(composer).toHaveValue("Product analyst");
   });
 
   it("renders a pending tool call without exposing its input", () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useTranslations } from "next-intl";
@@ -43,6 +43,10 @@ export function ScoutChat() {
   const { messages, sendMessage, stop, status, error, clearError } = useChat({
     transport: new DefaultChatTransport({ api: "/api/chat" }),
   });
+  const inputRef = useRef(input);
+  const inputRevisionRef = useRef(0);
+  const statusRef = useRef(status);
+  statusRef.current = status;
 
   const isStreaming = status === "submitted" || status === "streaming";
   const hasMessages = messages.length > 0;
@@ -51,9 +55,20 @@ export function ScoutChat() {
     const trimmed = value.trim();
     if (!trimmed || isStreaming) return;
 
+    const submittedDraft = inputRef.current;
+    const submittedRevision = inputRevisionRef.current;
+    const submittedComposerDraft = submittedDraft.trim() === trimmed;
+
     try {
       await sendMessage({ text: trimmed });
-      setInput("");
+      if (
+        statusRef.current === "ready" &&
+        submittedComposerDraft &&
+        inputRevisionRef.current === submittedRevision
+      ) {
+        inputRef.current = "";
+        setInput("");
+      }
     } catch {
       // useChat exposes the request error; keep the draft so it can be retried.
     }
@@ -232,7 +247,11 @@ export function ScoutChat() {
 
       <Composer
         value={input}
-        onValueChange={setInput}
+        onValueChange={(value) => {
+          inputRef.current = value;
+          inputRevisionRef.current += 1;
+          setInput(value);
+        }}
         onSubmit={(value) => void handleSend(value)}
         streaming={isStreaming}
         onStop={() => stop()}

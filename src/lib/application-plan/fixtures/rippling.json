@@ -1,0 +1,119 @@
+{
+  "request": {
+    "version": 1,
+    "requestId": "request-demo-1",
+    "scanId": "scan-demo-1",
+    "jobUrl": "https://ats.rippling.com/example-company/jobs/example-role",
+    "ats": "rippling",
+    "fields": [
+      {
+        "fieldId": "field-name",
+        "label": "Full name",
+        "type": "text",
+        "required": true,
+        "sensitivity": "ordinary",
+        "options": [],
+        "context": "Contact information"
+      },
+      {
+        "fieldId": "field-email",
+        "label": "Email",
+        "type": "email",
+        "required": true,
+        "sensitivity": "ordinary",
+        "options": [],
+        "context": "Contact information"
+      },
+      {
+        "fieldId": "field-location",
+        "label": "Preferred work location",
+        "type": "select",
+        "required": true,
+        "sensitivity": "ordinary",
+        "options": ["Seattle", "Remote"],
+        "context": "Work preferences"
+      },
+      {
+        "fieldId": "field-sponsorship",
+        "label": "Will you require sponsorship?",
+        "type": "radio",
+        "required": true,
+        "sensitivity": "personal-declaration",
+        "options": ["Yes", "No"],
+        "context": "Work authorization"
+      },
+      {
+        "fieldId": "field-resume",
+        "label": "Resume",
+        "type": "file",
+        "required": true,
+        "sensitivity": "ordinary",
+        "options": [],
+        "context": "Upload PDF or DOCX"
+      },
+      {
+        "fieldId": "field-question",
+        "label": "Why this company?",
+        "type": "textarea",
+        "required": true,
+        "sensitivity": "ordinary",
+        "options": [],
+        "context": "Screening question"
+      },
+      {
+        "fieldId": "field-widget",
+        "label": "Availability calendar",
+        "type": "unsupported",
+        "required": false,
+        "sensitivity": "ordinary",
+        "options": [],
+        "context": "Custom widget"
+      }
+    ]
+  },
+  "evidenceContext": {
+    "profileVersion": "profile-demo-1",
+    "evidence": [
+      { "id": "fact-name", "verified": true },
+      { "id": "fact-email", "verified": true },
+      { "id": "fact-location", "verified": true }
+    ]
+  },
+  "response": {
+    "version": 1,
+    "requestId": "request-demo-1",
+    "scanId": "scan-demo-1",
+    "jobUrl": "https://ats.rippling.com/example-company/jobs/example-role",
+    "profileVersion": "profile-demo-1",
+    "candidates": [
+      {
+        "fieldId": "field-name",
+        "value": "Alex Example",
+        "evidenceIds": ["fact-name"],
+        "confidence": 1,
+        "requiresReview": true
+      },
+      {
+        "fieldId": "field-email",
+        "value": "alex@example.com",
+        "evidenceIds": ["fact-email"],
+        "confidence": 1,
+        "requiresReview": true
+      },
+      {
+        "fieldId": "field-location",
+        "value": "Seattle",
+        "evidenceIds": ["fact-location"],
+        "confidence": 1,
+        "requiresReview": true
+      }
+    ],
+    "unanswered": [
+      { "fieldId": "field-sponsorship", "reason": "personal-declaration" },
+      { "fieldId": "field-resume", "reason": "manual-upload" },
+      { "fieldId": "field-question", "reason": "missing-evidence" },
+      { "fieldId": "field-widget", "reason": "unsupported" }
+    ],
+    "warnings": ["Example fixture only; review answers and submit manually."]
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout wayfinder logo</title>
+  <circle cx="55" cy="54" r="38" fill="none" stroke="#087F78" stroke-width="10"/>
+  <path d="M82 82 108 108" fill="none" stroke="#087F78" stroke-width="12" stroke-linecap="round"/>
+  <path d="m38 72 15-31 26-10-10 26-31 15Z" fill="#35DCC8"/>
+  <path d="m38 72 31-15 10-26-26 10-15 31Z" fill="none" stroke="#087F78" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="58.5" cy="51.5" r="4" fill="#087F78"/>
+</svg>

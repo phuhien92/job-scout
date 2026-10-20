@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout resume route logo</title>
+  <path d="M28 13h52l23 23v76a9 9 0 0 1-9 9H28a9 9 0 0 1-9-9V22a9 9 0 0 1 9-9Z" fill="#087F78"/>
+  <path d="M80 13v18a5 5 0 0 0 5 5h18" fill="#35DCC8"/>
+  <path d="M39 94c0-21 11-24 22-25 13-1 21-8 21-25" fill="none" stroke="#35DCC8" stroke-width="10" stroke-linecap="round"/>
+  <path d="m69 56 13-14 13 14" fill="none" stroke="#35DCC8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

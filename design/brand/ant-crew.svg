@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout ant crew logo</title>
+  <path d="M62 37c-2-15-10-20-20-21M76 37c2-15 10-20 20-21" fill="none" stroke="#087F78" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="69" cy="64" r="31" fill="#087F78"/>
+  <circle cx="60" cy="60" r="4" fill="#E9FFF9"/>
+  <circle cx="78" cy="60" r="4" fill="#E9FFF9"/>
+  <path d="M61 74c5 5 11 5 16 0" fill="none" stroke="#35DCC8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 69c-1-10-6-14-13-15M35 69c1-10 6-14 13-15M101 69c-1-10-6-14-13-15M112 69c1-10 6-14 13-15" fill="none" stroke="#087F78" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="30" cy="89" r="20" fill="#35DCC8"/>
+  <circle cx="106" cy="89" r="20" fill="#35DCC8"/>
+  <circle cx="25" cy="87" r="2.5" fill="#073B3C"/>
+  <circle cx="35" cy="87" r="2.5" fill="#073B3C"/>
+  <circle cx="101" cy="87" r="2.5" fill="#073B3C"/>
+  <circle cx="111" cy="87" r="2.5" fill="#073B3C"/>
+  <path d="M26 97c2 2 6 2 8 0M102 97c2 2 6 2 8 0" fill="none" stroke="#087F78" stroke-width="2" stroke-linecap="round"/>
+</svg>

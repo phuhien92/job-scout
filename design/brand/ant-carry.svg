@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout ant carrying a resume</title>
+  <path d="M70 78 57 100M79 82l-1 23M96 82l15 19M55 72 39 94M63 83 54 105" fill="none" stroke="#087F78" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="39" cy="70" rx="24" ry="25" fill="#087F78"/>
+  <circle cx="70" cy="72" r="14" fill="#35DCC8"/>
+  <circle cx="96" cy="66" r="20" fill="#087F78"/>
+  <path d="M94 47c-1-15 6-23 16-24M104 50c5-13 14-16 21-13" fill="none" stroke="#087F78" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="103" cy="64" r="4" fill="#E9FFF9"/>
+  <path d="M101 75c5 3 9 2 12-1" fill="none" stroke="#E9FFF9" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 33h34l7 7v23H20Z" fill="#E9FFF9" stroke="#087F78" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M54 33v8h7M28 46h23M28 54h17" fill="none" stroke="#087F78" stroke-width="3" stroke-linecap="round"/>
+  <path d="M35 61v10" stroke="#35DCC8" stroke-width="6" stroke-linecap="round"/>
+</svg>

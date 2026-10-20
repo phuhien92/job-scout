@@ -1,6 +1,17 @@
 # Job Scout logo concepts
 
-Nine original, transparent vector prototypes for review. They share the same deep teal and mint palette so the idea, rather than the color, is the main choice.
+Twelve original, transparent vector prototypes for review. They share the same deep teal and mint palette so the idea, rather than the color, is the main choice.
+
+## Ant directions
+
+An ant crew makes the coordinated-helper idea friendlier: one user can have a team scouting roles, improving materials, and helping with applications.
+
+| J · Scout Ant | K · Resume Carrier | L · Ant Crew |
+| :---: | :---: | :---: |
+| <img src="scout-ant.svg" width="112" alt="Friendly ant scout"> | <img src="ant-carry.svg" width="112" alt="Ant carrying a resume"> | <img src="ant-crew.svg" width="112" alt="Three friendly ants working together"> |
+| Single guide | Help with an application | Coordinated support team |
+
+**Current README choice: L · Ant Crew.** The three ants express the support team directly. The choice is provisional while the concepts are under review.
 
 ## Fleet directions
 
@@ -10,8 +21,6 @@ The three ships can stand for coordinated helpers across finding jobs, improving
 | :---: | :---: | :---: |
 | <img src="scout-flotilla.svg" width="112" alt="Lead sailboat with support boats"> | <img src="fleet-formation.svg" width="112" alt="Three sailboats moving in formation"> | <img src="fleet-route.svg" width="112" alt="Three boats following a route"> |
 | Lead vessel with escorts | Coordinated set of helpers | Shared route toward a goal |
-
-**Current README choice: H · Fleet Formation.** Three vessels make the support fleet visible in a compact icon. The choice is provisional while the concepts are under review.
 
 ## Animal directions
 

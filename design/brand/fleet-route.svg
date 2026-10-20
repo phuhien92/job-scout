@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout fleet route logo</title>
+  <path d="M64 8 42 45h44Z" fill="#35DCC8"/>
+  <path d="M38 49h52l-8 13H46Z" fill="#087F78"/>
+  <path d="M25 53 12 76h26Z" fill="#35DCC8"/>
+  <path d="M90 76h26l-13-23Z" fill="#35DCC8"/>
+  <path d="M10 79h30l-5 9H15Zm78 0h30l-5 9H93Z" fill="#087F78"/>
+  <path d="M64 70v35" stroke="#087F78" stroke-width="6" stroke-linecap="round" stroke-dasharray="3 10"/>
+  <path d="m52 97 12 16 12-16" fill="none" stroke="#FF785E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

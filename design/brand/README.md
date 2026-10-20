@@ -1,6 +1,17 @@
 # Job Scout logo concepts
 
-Six original, transparent vector prototypes for review. They share the same deep teal and mint palette so the idea, rather than the color, is the main choice. The animal directions respond to feedback that the brand should feel friendlier.
+Nine original, transparent vector prototypes for review. They share the same deep teal and mint palette so the idea, rather than the color, is the main choice.
+
+## Fleet directions
+
+The three ships can stand for coordinated helpers across finding jobs, improving a resume, and completing applications.
+
+| G · Scout Flotilla | H · Fleet Formation | I · Fleet Route |
+| :---: | :---: | :---: |
+| <img src="scout-flotilla.svg" width="112" alt="Lead sailboat with support boats"> | <img src="fleet-formation.svg" width="112" alt="Three sailboats moving in formation"> | <img src="fleet-route.svg" width="112" alt="Three boats following a route"> |
+| Lead vessel with escorts | Coordinated set of helpers | Shared route toward a goal |
+
+**Current README choice: H · Fleet Formation.** Three vessels make the support fleet visible in a compact icon. The choice is provisional while the concepts are under review.
 
 ## Animal directions
 
@@ -8,8 +19,6 @@ Six original, transparent vector prototypes for review. They share the same deep
 | :---: | :---: | :---: |
 | <img src="fox-scout.svg" width="112" alt="Friendly fox scout"> | <img src="robin-resume.svg" width="112" alt="Bird carrying a resume"> | <img src="owl-review.svg" width="112" alt="Owl scanning an application"> |
 | Curious guide | Application companion | Careful reviewer |
-
-**Current README choice: F · Review Owl.** The owl gives Job Scout a friendly face, and its lens connects to finding and reviewing opportunities. The choice is provisional while the concepts are under review.
 
 ## Geometric directions
 

@@ -1,8 +1,8 @@
 # Job Scout
 
-Personal AI job-search product. Goal: a live demo that impresses recruiters and hiring managers.
+Personal AI job-search product. The current direction is an open-source local app with a browser autofill extension and a later paid hosted service. Read `ROADMAP.md` before planning new product work.
 
-The repo is early. Work is specified as GitHub issues, not as a half-built app. Read this file, then pick the next unblocked `ready-for-agent` issue. Do not invent a new product direction.
+GitHub issues specify implementation slices. Pick the next unblocked `ready-for-agent` issue unless the user requests a particular roadmap phase. Design new application and extension flows in pen.dev first; keep the editable `.pen` artifact and review states linked from implementation issues.
 
 Keep `AGENTS.md` and `CLAUDE.md` in sync. Edit both when navigation rules change.
 
@@ -18,7 +18,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## What we are building
 
-An agent that reads a resume, asks what the person is aiming at, rewrites toward that target without inventing facts, then searches live jobs and scores them.
+A local-first assistant that reads a resume, asks what the person is aiming at, suggests evidence-backed improvements, searches live jobs, and helps fill applications through a browser extension. The user reviews and submits. `ROADMAP.md` defines the shared core and later hosted mode.
 
 Surfaces:
 
@@ -42,7 +42,7 @@ Start with issues whose Blocked by is none or already closed.
 
 - Next.js App Router, React 19, Vercel-ready
 - Mastra agent, tools, LibSQL memory
-- `@robr0/design-system` for every visible control
+- Current UI uses `@robr0/design-system`; issue #17 tracks its migration to shadcn + Base UI. Follow the current component contracts until that migration is complete.
 - AI SDK UI (`@mastra/ai-sdk` + `useChat`) mapped onto DS chat primitives
 - Zod on every tool
 - Findwork for listings (typed adapter). Match scores are ours. Do not wrap FoundRole as the product backend.
@@ -59,7 +59,9 @@ next-intl without i18n routing — URLs stay locale-free. English is the default
 - `src/lib/locale.tsx`: `LocaleProvider`/`useLocale`. `setLocale` writes the cookie then calls `router.refresh()` so Server Components re-render in the new locale. The EN/VI switcher is a `SegmentedControl` in the shell's shared footer slot (`src/components/AppShell.tsx`), rendered in the sidebar footer on desktop and the mobile drawer footer.
 - Client components use `useTranslations()`; Server Components, pages and metadata use the awaitable `getTranslations()` from `next-intl/server`. Both read the same flat keys with no namespace.
 
-## Design system
+## Current design system
+
+These rules describe the existing UI. Issue #17 replaces the library after the pen.dev flow is ready; avoid expanding its use in new surfaces scheduled for the migration.
 
 Package: [`@robr0/design-system`](https://github.com/robritacca-dotcom/design-system). Contracts: `node_modules` `.d.ts`, [component markdown](https://robertritacca.com/components/chat-thread.md), MCP `https://robertritacca.com/api/mcp`. Vendor the consumer skill when scaffolding:
 
@@ -97,9 +99,9 @@ The shell is responsive at the design system's 768px breakpoint: on desktop it r
 - One agent, two entry points (Scout vs Optimize) that seed the first user turn. Shared resource-scoped working memory.
 - Generative UI: `tool-search-jobs` → JobCard, `tool-clarify` → ClarifyCard, `tool-rewrite-resume` → ResumeArtifact. Do not dump JSON or raw markdown as the hero.
 
-## Out of scope for v1
+## Current product boundaries
 
-FoundRole as listings backend. Cloning FoundRole, Glassdoor, or LinkedIn visuals. Visual resume editor, track-changes, designed PDF/DOCX. Inventing experience. Multi-resume library beyond last upload plus one saved optimized version. Auth, job tracker, second job source, evals dashboards.
+Use `ROADMAP.md` for release boundaries. Do not invent experience or automatically submit applications. The earlier web MVP's limits on resume editing, auth, and application tracking no longer govern the new extension and hosted phases.
 
 ## Agent skills
 

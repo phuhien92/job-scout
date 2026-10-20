@@ -1,6 +1,6 @@
 # Job scout
 
-Job scout helps a job seeker find roles, tailor their resume, and track applications in one place. It is a Next.js (React 19) app with four areas reachable from a shared, responsive navigation shell (sidebar on desktop, drawer on mobile):
+Job Scout is building toward helping a job seeker find roles, tailor their resume, and manage applications in one place. The [roadmap](ROADMAP.md) extends it into an open-source local application assistant with a browser autofill extension and a later paid hosted service. The extension and hosted service are planned work, not current features. It is a Next.js (React 19) app with four areas reachable from a shared, responsive navigation shell (sidebar on desktop, drawer on mobile):
 
 - **Scout** — a search chat for finding open roles that match what you are looking for.
 - **Optimize** — targeting questions and a resume artifact tailored to a specific role, with download and save.
@@ -9,7 +9,7 @@ Job scout helps a job seeker find roles, tailor their resume, and track applicat
 
 ## Design system
 
-Every visible control comes from [`@robr0/design-system`](https://www.npmjs.com/package/@robr0/design-system). The app imports the token stylesheet once, loads Nunito Sans into the `--font-family-primary` token, and defaults to `data-theme="dark"` with a theme toggle that switches to light. A consumer skill for the design system is vendored at `.claude/skills/robr0-design-system/` so agents working in this repo follow its install, theming, and prop-contract rules.
+The current UI uses [`@robr0/design-system`](https://www.npmjs.com/package/@robr0/design-system). [Issue #17](https://github.com/phuhien92/job-scout/issues/17) tracks migration to shadcn + Base UI. New application and extension journeys will be designed in pen.dev, with their editable flow linked from the implementation issues.
 
 ## Getting started
 

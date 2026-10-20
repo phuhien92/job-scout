@@ -4,8 +4,10 @@ How the engineering skills should consume this repo's domain documentation when 
 
 ## Before exploring, read these
 
-- **`AGENTS.md`** and **`CLAUDE.md`** (keep them identical) for product goal, pickup order, stack, and design-system rules
+- **`AGENTS.md`** (`CLAUDE.md` imports it) for product goal, pickup order, stack, and design-system rules
 - **`CONTEXT.md`** at the repo root, if it exists
+- **`docs/research/component-architecture.md`** for new UI and migration boundaries
+- **`docs/application-plan.md`** for the extension/backend contract
 - **`docs/adr/`** — read ADRs that touch the area you're about to work in
 
 If `CONTEXT.md` or `docs/adr/` do not exist, proceed silently.
@@ -27,4 +29,4 @@ Single-context repo:
 
 Prefer the terms in `AGENTS.md` until a `CONTEXT.md` exists: Scout, Optimize, Jobs, Profile, JobCard, ClarifyCard, ResumeArtifact, working memory, search-jobs, score-jobs. Do not rename these in issues or UI.
 
-If your output contradicts a locked v1 decision in `AGENTS.md` (Findwork not FoundRole, DS tokens not a cloned palette, Browse → `/jobs`), surface it explicitly rather than silently overriding.
+If your output contradicts a locked v1 decision in `AGENTS.md` (Findwork not FoundRole, local semantic tokens and Base UI for new UI, Browse → `/jobs`), surface it explicitly rather than silently overriding.

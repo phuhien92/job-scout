@@ -12,6 +12,8 @@ The Jobright resume screenshot is a product reference for section-level resume f
 
 Design the user journey in **pen.dev** before implementing new application and extension UI. The editable [workflow canvas](design/job-scout.pen) and [overview preview](design/workflow-overview.png) show the first end-to-end proposal; [design notes](design/README.md) map its screens to issues. A [profile reference screen](design/profile-overview.png) and [edit state](design/profile-edit.png) show how verified personal information is maintained for autofill. The design covers desktop and narrow website layouts plus the extension popup/side panel. It shows resume upload, extracted facts and corrections, section-level suggestions and accept/reject, a job-detail handoff, local companion pairing, form detection, proposed answers with evidence, fill preview, unresolved or sensitive questions, and the final user-controlled submit step. Include disconnected companion, unavailable AI, and unsupported form branches. Hosted sign-in remains a future mode placeholder. Treat the design as a reviewable flow proposal; implementation can evolve its components while preserving accepted decisions.
 
+Component implementation follows the [source-backed component research](docs/research/component-architecture.md): local shadcn + Base UI, Job Scout semantic tokens, separate surface shells, and shared primitives extracted when the extension starts. Issue #17 tracks migration of existing controls.
+
 ## Shared product architecture
 
 ```
@@ -33,6 +35,8 @@ One versioned application-plan contract serves both modes. A transport adapter c
 The extension should use Manifest V3. A content script inspects and fills the active application page; the service worker coordinates requests to the selected backend. Chrome documents that cross-origin fetches belong in extension contexts with host permissions, while content-script fetches follow the page's origin rules. Use `activeTab` and `scripting` to scope page access to user-invoked applications where feasible. Sources: [Chrome network requests](https://developer.chrome.com/docs/extensions/develop/concepts/network-requests), [activeTab](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab), [message passing](https://developer.chrome.com/docs/extensions/develop/concepts/messaging).
 
 ### Application-plan contract
+
+[Contract v1 and privacy boundaries](docs/application-plan.md) are implemented in `src/lib/application-plan/contract.ts`, with a synthetic Rippling fixture and offline tests. This is the schema/validation foundation for #19; transport, pairing, live ATS scanning, and filling remain later work.
 
 The extension sends a job URL, ATS identifier when known, and a bounded list of visible fields: stable field reference, label, type, required flag, options, and nearby explanatory text. The backend returns candidate values with evidence references and confidence, plus unanswered fields and warnings. The extension validates that fields still match before applying values. Unknown or sensitive answers require user review. The backend should not return arbitrary JavaScript or DOM selectors from an AI response.
 

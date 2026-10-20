@@ -13,7 +13,7 @@ Job Scout is building toward helping a job seeker find roles, tailor their resum
 
 ## Design system
 
-The current UI uses [`@robr0/design-system`](https://www.npmjs.com/package/@robr0/design-system). [Issue #17](https://github.com/phuhien92/job-scout/issues/17) tracks migration to shadcn + Base UI. New application and extension journeys will be designed in pen.dev, with their editable flow linked from the implementation issues.
+The current UI uses [`@robr0/design-system`](https://www.npmjs.com/package/@robr0/design-system). [Issue #17](https://github.com/phuhien92/job-scout/issues/17) tracks migration to shadcn + Base UI. New UI uses the local shadcn + Base UI primitives; do not add new dependencies on the legacy library. See the [component architecture research](docs/research/component-architecture.md) for migration and shared UI boundaries. New application and extension journeys are designed in pen.dev, with their editable flow linked from the implementation issues.
 
 ## Getting started
 
@@ -31,3 +31,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - `npm run build` — production build
 - `npm run lint` — lint the codebase
 - `npm run test` — run the Vitest test suite
+
+## Shared application contract
+
+The [application-plan v1 contract](docs/application-plan.md) defines validated review data shared by the planned extension and local/hosted backends. It includes a synthetic Rippling fixture and deterministic tests; it does not yet scan or fill live forms.

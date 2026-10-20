@@ -90,7 +90,7 @@ Keep the core closed to ad-hoc modification through stable interfaces:
 - Completed foundations: #1–#4. The shipped shell and Scout cards closed #1 and #3 during this roadmap review; #2 and #4 were already closed.
 - Website and resume flow: #5–#8. Keep the search-to-application handoff and evidence-backed resume suggestions; build from the pen.dev flow.
 - Quality and optional provider work: #12, #13. Keep test coverage and Ollama compatible with the shared provider contract.
-- Design migration: #17. Use the pen.dev flow to guide new UI; migrate existing `@robr0/design-system` usage to shadcn + Base UI deliberately.
+- Design migration: #17. Do not use `@robr0/design-system` for new UI. Use the [component architecture research](docs/research/component-architecture.md) to replace legacy usage with Job Scout-owned shadcn + Base UI primitives and shared semantic tokens.
 - Design and shared contract: #18–#19. The pen.dev artifact and application-plan schema guide new surfaces.
 - Verified profile and local provider: #20–#21. These are the source of form values and AI suggestions.
 - Local extension and review: #22–#24. Pair, preview/fill Rippling, then draft screening answers.

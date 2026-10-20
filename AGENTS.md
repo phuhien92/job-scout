@@ -42,8 +42,8 @@ Start with issues whose Blocked by is none or already closed.
 
 - Next.js App Router, React 19, Vercel-ready
 - Mastra agent, tools, LibSQL memory
-- Current UI uses `@robr0/design-system`; issue #17 tracks its migration to shadcn + Base UI. Follow the current component contracts until that migration is complete.
-- AI SDK UI (`@mastra/ai-sdk` + `useChat`) mapped onto DS chat primitives
+- Legacy UI still imports `@robr0/design-system`; do not add new imports or components from it. Issue #17 removes it after replacement. Use the local `src/components/ui` Base UI-backed primitives for new work and follow `docs/research/component-architecture.md` for the proposed boundaries.
+- AI SDK UI (`@mastra/ai-sdk` + `useChat`) with product-owned chat components
 - Zod on every tool
 - Findwork for listings (typed adapter). Match scores are ours. Do not wrap FoundRole as the product backend.
 - Chat streaming: `POST /api/chat` calls Mastra `handleChatStream` (AI SDK v7) for the `jobScout` agent. `onError` only covers stream-time errors; wrap the call and emit a `{ type: "error", errorText }` UI-message part on creation-time throws.
@@ -59,38 +59,13 @@ next-intl without i18n routing — URLs stay locale-free. English is the default
 - `src/lib/locale.tsx`: `LocaleProvider`/`useLocale`. `setLocale` writes the cookie then calls `router.refresh()` so Server Components re-render in the new locale. The EN/VI switcher is a `SegmentedControl` in the shell's shared footer slot (`src/components/AppShell.tsx`), rendered in the sidebar footer on desktop and the mobile drawer footer.
 - Client components use `useTranslations()`; Server Components, pages and metadata use the awaitable `getTranslations()` from `next-intl/server`. Both read the same flat keys with no namespace.
 
-## Current design system
+## Component architecture
 
-These rules describe the existing UI. Issue #17 replaces the library after the pen.dev flow is ready; avoid expanding its use in new surfaces scheduled for the migration.
+The existing website has local Base UI-backed primitives in `src/components/ui`, product components in `src/components`, and a legacy `@robr0/design-system` dependency. No new UI should depend on the legacy package. The migration plan and source-backed component boundaries are in `docs/research/component-architecture.md`; issue #17 tracks implementation and final dependency removal.
 
-Package: [`@robr0/design-system`](https://github.com/robritacca-dotcom/design-system). Contracts: `node_modules` `.d.ts`, [component markdown](https://robertritacca.com/components/chat-thread.md), MCP `https://robertritacca.com/api/mcp`. Vendor the consumer skill when scaffolding:
+The shared shell lives in `src/components/AppShell.tsx` and wraps the Scout, Optimize, Jobs, and Profile routes through `src/app/layout.tsx`. Preserve desktop and narrow navigation, keyboard operation, focus behavior, theme switching, and EN/VI controls while replacing legacy components. Verify at 375px and 1440px.
 
-```bash
-curl --create-dirs -o .claude/skills/robr0-design-system/SKILL.md https://robertritacca.com/skill/robr0-design-system/SKILL.md
-curl --create-dirs -o .claude/skills/robr0-design-system/references/components.md https://robertritacca.com/skill/robr0-design-system/references/components.md
-```
-
-Rules:
-
-- Import `@robr0/design-system/tokens/tokens.css` once. Semantic tokens only. No hex, no `--primitive-*` in app CSS, no Tailwind colour utilities.
-- Default `data-theme="dark"`. Leave the teal ramp alone.
-- Teal means "click here". Never decoration, never chat-bubble fill.
-- AI gradient only on AI affordances (`Composer aiGlow`, `AiButton`).
-- Nunito Sans via `next/font` into `--font-family-primary`.
-- `SplitPane` takes two children. Nest for three columns.
-- `InterruptCard` is allow/deny. Targeting questions use a composed ClarifyCard (`Panel` + `RadioGroup` + Skip/Continue).
-- `Composer` does not clear on submit. Clear after a successful send.
-- ShaderField: paint the CSS fallback only on `unavailable`, not `pending`. Mount once from the root layout.
-
-Copy: sentence-case labels, no emoji, no em dashes in product UI.
-
-Every visible control must come from `@robr0/design-system` (React 19 peer dep). Before building UI, read the vendored consumer skill at `.claude/skills/robr0-design-system/SKILL.md` (and its `references/components.md` catalogue) for install, theming, and prop-contract rules — do not guess a component's props from memory; read its `.d.ts` in `node_modules/@robr0/design-system` or the linked contract markdown.
-
-Theming: dark is the default (`data-theme="dark"` on `<html>` in `src/app/layout.tsx`), toggled by `src/lib/theme.tsx`'s `ThemeProvider`/`useTheme`. Never hardcode a hex colour or Tailwind colour utility outside the library's own components — override a `--primitive-*` token instead. `AppLayout` pins `theme` to `"dark"` by default; pass `theme="inherit"` for it to follow the page's `data-theme`. `AppSidebar` has no `theme` prop — it always follows the page's `data-theme` via the CSS cascade, which is why `src/components/AppShell.tsx` uses it directly instead of `AppLayout`.
-
-The shared shell lives in `src/components/AppShell.tsx` and wraps every route (`src/app/{scout,optimize,jobs,profile}/page.tsx`) via `src/app/layout.tsx`. Add new pages under that same directory pattern so they inherit the shell automatically.
-
-The shell is responsive at the design system's 768px breakpoint: on desktop it renders the fixed `AppSidebar`; on mobile it hides it and swaps in a fixed top bar (`Nav`) plus a left `Drawer` containing `NavList` for the four routes (the dark-theme `ToggleSwitch` moves into the drawer footer). Mobile `.main` top padding clears the bar with `calc(78px + var(--padding-lg))`; do not move the bar back into normal flow, or it steals width from the flex-row and overflows at 375px. Verify viewports at 375px and 1440px.
+Theme switching currently uses `data-theme` on `<html>` and `src/lib/theme.tsx`. New tokens must be owned by Job Scout; do not add styles that depend on `@robr0` token CSS. Copy uses sentence-case labels, no emoji, and no em dashes in product UI.
 
 ## Agent rules
 

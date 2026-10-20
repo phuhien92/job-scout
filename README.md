@@ -9,7 +9,7 @@ Job Scout is building toward helping a job seeker find roles, tailor their resum
 
 ## Design system
 
-The current UI uses [`@robr0/design-system`](https://www.npmjs.com/package/@robr0/design-system). [Issue #17](https://github.com/phuhien92/job-scout/issues/17) tracks migration to shadcn + Base UI. New application and extension journeys will be designed in pen.dev, with their editable flow linked from the implementation issues.
+The current UI still has legacy `@robr0/design-system` imports; do not add new use of that package. [Component architecture research](docs/research/component-architecture.md) defines the proposed Job Scout-owned replacements, and [issue #17](https://github.com/phuhien92/job-scout/issues/17) tracks migration to shadcn + Base UI. New application and extension journeys will be designed in pen.dev, with their editable flow linked from the implementation issues.
 
 ## Getting started
 

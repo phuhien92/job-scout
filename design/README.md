@@ -2,6 +2,10 @@
 
 Open [job-scout.pen](job-scout.pen) in pen.dev. Start with the canvas frame **00 · End-to-end user workflow**, then follow the numbered screens:
 
+The approved [rabbit logo](brand/scout-rabbit-bubble.png) appears in the website navigation, extension headers, and profile screens. It is placed as a replaceable image fill in the `.pen` design, with its source PNG stored alongside it.
+
+The design now uses a light cream canvas (`#F5FBF7`), white cards, forest-teal text (`#173D37`), green primary actions (`#087F65`), and mint status surfaces. The palette follows the approved logo across the website and extension. Preview the [resume intake](resume-intake.png), [extension pairing](extension-pairing.png), [fill preview](extension-fill-preview.png), and [workflow map](workflow-overview.png).
+
 | Step | Surface | User decision |
 | --- | --- | --- |
 | 01 · Resume intake | Website | Upload a source resume and correct extracted facts. |

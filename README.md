@@ -1,4 +1,8 @@
-# Job scout
+<p align="center">
+  <img src="design/brand/scout-rabbit-bubble.png" alt="Job Scout rabbit with a loupe inside a green thought bubble" width="160">
+</p>
+
+# Job Scout
 
 Job Scout is building toward helping a job seeker find roles, tailor their resume, and manage applications in one place. The [roadmap](ROADMAP.md) extends it into an open-source local application assistant with a browser autofill extension and a later paid hosted service. The extension and hosted service are planned work, not current features. It is a Next.js (React 19) app with four areas reachable from a shared, responsive navigation shell (sidebar on desktop, drawer on mobile):
 

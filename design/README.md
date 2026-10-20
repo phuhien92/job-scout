@@ -2,6 +2,8 @@
 
 Open [job-scout.pen](job-scout.pen) in pen.dev. Start with the canvas frame **00 · End-to-end user workflow**, then follow the numbered screens:
 
+The approved [rabbit logo](brand/scout-rabbit-bubble.png) appears in the website navigation, extension headers, and profile screens. It is placed as a replaceable image fill in the `.pen` design, with its source PNG stored alongside it.
+
 | Step | Surface | User decision |
 | --- | --- | --- |
 | 01 · Resume intake | Website | Upload a source resume and correct extracted facts. |

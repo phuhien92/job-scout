@@ -27,14 +27,37 @@
           ],
           "children": [
             {
-              "type": "text",
-              "id": "SrWsl",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 24,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "h1bOy",
+              "name": "Brand lockup",
+              "height": 34,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "BVExP",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 34,
+                  "height": 34
+                },
+                {
+                  "type": "text",
+                  "id": "QTMRb",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -739,14 +762,37 @@
           ],
           "children": [
             {
-              "type": "text",
-              "id": "U7P2S",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 24,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "hhqWL",
+              "name": "Brand lockup",
+              "height": 34,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "j5VHP",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 34,
+                  "height": 34
+                },
+                {
+                  "type": "text",
+                  "id": "ouW9L",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -1456,14 +1502,37 @@
           ],
           "children": [
             {
-              "type": "text",
-              "id": "IMKeP",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 24,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "rFJSU",
+              "name": "Brand lockup",
+              "height": 34,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "aaIY5",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 34,
+                  "height": 34
+                },
+                {
+                  "type": "text",
+                  "id": "X7ou0v",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -2022,14 +2091,37 @@
           ],
           "children": [
             {
-              "type": "text",
-              "id": "UF0mU",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 24,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "rVvuR",
+              "name": "Brand lockup",
+              "height": 34,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "dasOl",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 34,
+                  "height": 34
+                },
+                {
+                  "type": "text",
+                  "id": "VBoKG",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -2705,14 +2797,37 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "Y6DGG",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 19,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "gS94U",
+              "name": "Brand lockup",
+              "height": 26,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "L0rPc8",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 26,
+                  "height": 26
+                },
+                {
+                  "type": "text",
+                  "id": "apmun",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 19,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -3098,14 +3213,37 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "z3Po1P",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 19,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "y4eVC",
+              "name": "Brand lockup",
+              "height": 26,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "ScPfp",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 26,
+                  "height": 26
+                },
+                {
+                  "type": "text",
+                  "id": "R5x2j",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 19,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -3535,14 +3673,37 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "UoGM8",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 19,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "HUdag",
+              "name": "Brand lockup",
+              "height": 26,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "Ip7OU",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 26,
+                  "height": 26
+                },
+                {
+                  "type": "text",
+                  "id": "oZYwd",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 19,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -4641,14 +4802,37 @@
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "oi47s",
-              "name": "Brand",
-              "fill": "$text-primary",
-              "content": "job scout",
-              "fontFamily": "Nunito Sans",
-              "fontSize": 19,
-              "fontWeight": "800"
+              "type": "frame",
+              "id": "w3He1",
+              "name": "Brand lockup",
+              "height": 26,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "VU46p",
+                  "name": "Rabbit logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "brand/scout-rabbit-bubble.png",
+                    "mode": "contain"
+                  },
+                  "width": 26,
+                  "height": 26
+                },
+                {
+                  "type": "text",
+                  "id": "GJj5J",
+                  "name": "Brand text",
+                  "fill": "$text-primary",
+                  "content": "job scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 19,
+                  "fontWeight": "800"
+                }
+              ]
             },
             {
               "type": "text",
@@ -5045,12 +5229,16 @@
         },
         {
           "type": "rectangle",
-          "cornerRadius": 17,
           "id": "vqXE8",
           "x": 20,
           "y": 56,
           "name": "Job Scout mark",
-          "fill": "#19D29A",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "brand/scout-rabbit-bubble.png",
+            "mode": "contain"
+          },
           "width": 34,
           "height": 34
         },
@@ -5060,6 +5248,7 @@
           "x": 31,
           "y": 63,
           "name": "Job Scout mark glyph",
+          "enabled": false,
           "fill": "#FFFFFF",
           "textGrowth": "fixed-width",
           "width": 20,
@@ -6334,12 +6523,16 @@
         },
         {
           "type": "rectangle",
-          "cornerRadius": 17,
           "id": "xJPps",
           "x": 20,
           "y": 56,
           "name": "Job Scout mark",
-          "fill": "#19D29A",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "brand/scout-rabbit-bubble.png",
+            "mode": "contain"
+          },
           "width": 34,
           "height": 34
         },
@@ -6349,6 +6542,7 @@
           "x": 31,
           "y": 63,
           "name": "Job Scout mark glyph",
+          "enabled": false,
           "fill": "#FFFFFF",
           "textGrowth": "fixed-width",
           "width": 20,

@@ -1,0 +1,5063 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "FCH3i",
+      "x": 0,
+      "y": 720,
+      "name": "01 • Resume intake",
+      "clip": true,
+      "width": 1280,
+      "height": 850,
+      "fill": "$bg-page",
+      "children": [
+        {
+          "type": "frame",
+          "id": "S1YYh",
+          "name": "Navigation",
+          "width": 218,
+          "height": "fill_container",
+          "fill": "$bg-panel",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            28,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "SrWsl",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "BFT3S",
+              "name": "Workspace label",
+              "fill": "$accent",
+              "content": "WORKSPACE",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "frame",
+              "id": "Nz8Y5",
+              "name": "Scout nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dZB2o",
+                  "name": "Scout nav label",
+                  "fill": "$text-secondary",
+                  "content": "Scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Xflcw",
+              "name": "Optimize nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cXoqQ",
+                  "name": "Optimize nav label",
+                  "fill": "$text-secondary",
+                  "content": "Optimize",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PklBk",
+              "name": "Jobs nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iZX1s",
+                  "name": "Jobs nav label",
+                  "fill": "$text-secondary",
+                  "content": "Jobs",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "G8V8UY",
+              "name": "Applications nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rExmC",
+                  "name": "Applications nav label",
+                  "fill": "$text-secondary",
+                  "content": "Applications",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a43x9",
+              "name": "Profile nav",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vd8Iz",
+                  "name": "Profile nav label",
+                  "fill": "$text-primary",
+                  "content": "Profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "RGntb",
+              "name": "Navigation spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12
+            },
+            {
+              "type": "text",
+              "id": "NrtkA",
+              "name": "Local mode",
+              "fill": "$positive-border",
+              "content": "● Local companion connected",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ELPp4",
+          "name": "Resume intake content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 26,
+          "padding": [
+            38,
+            46
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "TnL5T",
+              "name": "PROFILE / 01 eyebrow",
+              "fill": "$accent",
+              "content": "PROFILE / 01",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "text",
+              "id": "osLaF",
+              "name": "Start with your resume title",
+              "fill": "$text-primary",
+              "content": "Start with your resume",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "AjPHo",
+              "name": "Start with your resume subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Your original resume stays intact. Review extracted facts before Job Scout uses them in an application.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "WInCr",
+              "name": "Intake columns",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Hx52X",
+                  "name": "Upload and source",
+                  "width": 560,
+                  "layout": "vertical",
+                  "gap": 22,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LcIZ6",
+                      "name": "Resume upload",
+                      "height": 305,
+                      "fill": "$bg-panel",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AvVR7",
+                          "name": "Upload step",
+                          "fill": "$accent",
+                          "content": "SOURCE DOCUMENT",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.2
+                        },
+                        {
+                          "type": "text",
+                          "id": "ha4b4",
+                          "name": "Upload title",
+                          "fill": "$text-primary",
+                          "content": "Add a resume",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 27,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "U8bSfW",
+                          "name": "Upload explanation",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": 430,
+                          "content": "PDF, DOCX, or TXT · Keep the original for future applications",
+                          "textAlign": "center",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JhtK7",
+                          "name": "Choose resume",
+                          "fill": "$accent",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sbGB3",
+                              "name": "Choose resume label",
+                              "fill": "$accent-text",
+                              "content": "Choose a file",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "DpedC",
+                          "name": "Upload privacy",
+                          "fill": "$text-tertiary",
+                          "content": "Stored on this computer in local mode",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iKU9q",
+                      "name": "Your control",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 14,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GG3fM",
+                          "name": "Trust marker",
+                          "fill": "$accent",
+                          "content": "BEFORE YOU CONTINUE",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.2
+                        },
+                        {
+                          "type": "text",
+                          "id": "b1mPgk",
+                          "name": "Trust title",
+                          "fill": "$text-primary",
+                          "content": "Facts need your approval",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 19,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "F6NbFl",
+                          "name": "Trust body",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "We mark uncertain details, preserve the source, and never turn guesses into application answers.",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "R0M1F",
+                  "name": "Verified facts preview",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bvM9z",
+                      "name": "Extracted facts",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 14,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "a6z8RI",
+                          "name": "Facts label",
+                          "fill": "$accent",
+                          "content": "EXTRACTED FROM RESUME",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "700",
+                          "letterSpacing": 1.2
+                        },
+                        {
+                          "type": "text",
+                          "id": "V2IEGQ",
+                          "name": "Facts title",
+                          "fill": "$text-primary",
+                          "content": "Review what we found",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "DMJ4i",
+                          "name": "Full name row",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "QsD2v",
+                              "name": "Full name value",
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "cSWmQ",
+                                  "name": "Full name label",
+                                  "fill": "$text-tertiary",
+                                  "content": "Full name",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "kmBXp",
+                                  "name": "Full name text",
+                                  "fill": "$text-primary",
+                                  "content": "Alex Morgan",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 15,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "R2Yf1h",
+                              "name": "Full name status",
+                              "fill": "$positive-border",
+                              "content": "Found",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "hayP5",
+                          "name": "Full name divider",
+                          "fill": "$border",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "AQvod",
+                          "name": "Current role row",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "U1yllV",
+                              "name": "Current role value",
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "LYdTG",
+                                  "name": "Current role label",
+                                  "fill": "$text-tertiary",
+                                  "content": "Current role",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qnz01",
+                                  "name": "Current role text",
+                                  "fill": "$text-primary",
+                                  "content": "Senior Product Designer",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 15,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "C4xZB",
+                              "name": "Current role status",
+                              "fill": "$positive-border",
+                              "content": "Found",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "nj2zb",
+                          "name": "Current role divider",
+                          "fill": "$border",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Fpiha",
+                          "name": "Location row",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Z29tV",
+                              "name": "Location value",
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "VraT1",
+                                  "name": "Location label",
+                                  "fill": "$text-tertiary",
+                                  "content": "Location",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "sbeuu",
+                                  "name": "Location text",
+                                  "fill": "$text-primary",
+                                  "content": "Seattle, WA",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 15,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Y0AyP",
+                              "name": "Location status",
+                              "fill": "$warning-border",
+                              "content": "Needs review",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "Is2Fw",
+                          "name": "Location divider",
+                          "fill": "$border",
+                          "width": "fill_container",
+                          "height": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sTXPE",
+                          "name": "Work authorization row",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "hSgl1",
+                              "name": "Work authorization value",
+                              "layout": "vertical",
+                              "gap": 3,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "gXztt",
+                                  "name": "Work authorization label",
+                                  "fill": "$text-tertiary",
+                                  "content": "Work authorization",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 12,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "fCWUJ",
+                                  "name": "Work authorization text",
+                                  "fill": "$text-primary",
+                                  "content": "Not provided",
+                                  "fontFamily": "Nunito Sans",
+                                  "fontSize": 15,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Hj5Bg",
+                              "name": "Work authorization status",
+                              "fill": "$warning-border",
+                              "content": "Your answer needed",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "uW0kb",
+                          "name": "Work authorization divider",
+                          "fill": "$border",
+                          "width": "fill_container",
+                          "height": 1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "E5Qppx",
+                      "name": "Review facts",
+                      "fill": "$accent",
+                      "cornerRadius": 10,
+                      "gap": 12,
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KaHLZ",
+                          "name": "Review facts label",
+                          "fill": "$accent-text",
+                          "content": "Review and correct facts",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "G1qbr",
+                      "name": "Resume next step",
+                      "fill": "$text-secondary",
+                      "content": "Next: evidence-backed resume analysis",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "YcfRS",
+      "x": 1380,
+      "y": 720,
+      "name": "02 • Evidence-backed resume review",
+      "clip": true,
+      "width": 1280,
+      "height": 900,
+      "fill": "$bg-page",
+      "children": [
+        {
+          "type": "frame",
+          "id": "eC61U",
+          "name": "Navigation",
+          "width": 218,
+          "height": "fill_container",
+          "fill": "$bg-panel",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            28,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "U7P2S",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "QrqGk",
+              "name": "Workspace label",
+              "fill": "$accent",
+              "content": "WORKSPACE",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "frame",
+              "id": "NLqAH",
+              "name": "Scout nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "udI3u",
+                  "name": "Scout nav label",
+                  "fill": "$text-secondary",
+                  "content": "Scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OYSZm",
+              "name": "Optimize nav",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "igpnm",
+                  "name": "Optimize nav label",
+                  "fill": "$text-primary",
+                  "content": "Optimize",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fwDQ1",
+              "name": "Jobs nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qqYey",
+                  "name": "Jobs nav label",
+                  "fill": "$text-secondary",
+                  "content": "Jobs",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DgJAp",
+              "name": "Applications nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ASCOy",
+                  "name": "Applications nav label",
+                  "fill": "$text-secondary",
+                  "content": "Applications",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V8gMU",
+              "name": "Profile nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OnRNS",
+                  "name": "Profile nav label",
+                  "fill": "$text-secondary",
+                  "content": "Profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I1lNDt",
+              "name": "Navigation spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12
+            },
+            {
+              "type": "text",
+              "id": "gBxKC",
+              "name": "Local mode",
+              "fill": "$positive-border",
+              "content": "● Local companion connected",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "so2Wp",
+          "name": "Resume analysis content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            34,
+            42
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "r5MQE",
+              "name": "OPTIMIZE / 02 eyebrow",
+              "fill": "$accent",
+              "content": "OPTIMIZE / 02",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "text",
+              "id": "YHf2C",
+              "name": "Make every change defensible title",
+              "fill": "$text-primary",
+              "content": "Make every change defensible",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "cxVp1",
+              "name": "Make every change defensible subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Review each suggestion against your resume. Accept, edit, or skip before creating a targeted version.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "o7prFZ",
+              "name": "Review progress",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 11,
+              "gap": 12,
+              "padding": [
+                13,
+                18
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dgJux",
+                  "name": "Progress",
+                  "fill": "$text-primary",
+                  "content": "Resume review · 1 of 3 suggestions",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LtMlA",
+                  "name": "Evidence note",
+                  "fill": "$positive-border",
+                  "content": "All claims need source evidence",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D3IFIG",
+              "name": "Suggestion workspace",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Q9zWW7",
+                  "name": "Resume sections",
+                  "width": 218,
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 13,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cH91W",
+                      "name": "Sections title",
+                      "fill": "$accent",
+                      "content": "SECTIONS",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LQIsj",
+                      "name": "Summary item",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "padding": [
+                        7,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "h2A8ny",
+                          "name": "Summary name",
+                          "fill": "$text-primary",
+                          "content": "Summary",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "e2Jp2H",
+                          "name": "Summary count",
+                          "fill": "$accent",
+                          "content": "2 ideas",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "R8eA2",
+                      "name": "Experience item",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "padding": [
+                        7,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SNQIG",
+                          "name": "Experience name",
+                          "fill": "$text-secondary",
+                          "content": "Experience",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "IeIAx",
+                          "name": "Experience count",
+                          "fill": "$text-tertiary",
+                          "content": "1 idea",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vuQXL",
+                      "name": "Skills item",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "padding": [
+                        7,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H3bEPH",
+                          "name": "Skills name",
+                          "fill": "$text-secondary",
+                          "content": "Skills",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ITGRb",
+                          "name": "Skills count",
+                          "fill": "$text-tertiary",
+                          "content": "Reviewed",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oMYzO",
+                      "name": "Education item",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "padding": [
+                        7,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mFyTX",
+                          "name": "Education name",
+                          "fill": "$text-secondary",
+                          "content": "Education",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "diIU5",
+                          "name": "Education count",
+                          "fill": "$text-tertiary",
+                          "content": "No changes",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VpOvX",
+                  "name": "Suggestion detail",
+                  "width": 455,
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 17,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vhNDR",
+                      "name": "Suggestion type",
+                      "fill": "$accent",
+                      "content": "SUMMARY · SUGGESTION 1",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.2
+                    },
+                    {
+                      "type": "text",
+                      "id": "zuCBu",
+                      "name": "Suggestion heading",
+                      "fill": "$text-primary",
+                      "content": "Make the platform work concrete",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 22,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sKxpE",
+                      "name": "Current label",
+                      "fill": "$text-tertiary",
+                      "content": "CURRENT",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g39qOb",
+                      "name": "Current text",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Product designer with experience in design systems and cross-functional teams.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Awhfa",
+                      "name": "Suggestion divider",
+                      "fill": "$border",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "O1i67U",
+                      "name": "Proposed label",
+                      "fill": "$accent",
+                      "content": "PROPOSED",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oTHPs",
+                      "name": "Proposed text",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Product designer who led a shared design system and partnered with engineering to improve product consistency.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VkhcL",
+                      "name": "Suggestion actions",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "t4tmO",
+                          "name": "Accept suggestion",
+                          "fill": "$accent",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xVcOl",
+                              "name": "Accept suggestion label",
+                              "fill": "$accent-text",
+                              "content": "Accept",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q71Bf",
+                          "name": "Edit suggestion",
+                          "fill": "$bg-raised",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ikfqf",
+                              "name": "Edit suggestion label",
+                              "fill": "$text-primary",
+                              "content": "Edit",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PpY5y",
+                          "name": "Skip suggestion",
+                          "fill": "$bg-raised",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "HUNhI",
+                              "name": "Skip suggestion label",
+                              "fill": "$text-primary",
+                              "content": "Skip",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CTX0n",
+                  "name": "Evidence panel",
+                  "width": "fill_container",
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pp4IU",
+                      "name": "Evidence label",
+                      "fill": "$accent",
+                      "content": "WHY THIS IS SAFE",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.2
+                    },
+                    {
+                      "type": "text",
+                      "id": "a5ZKGb",
+                      "name": "Evidence heading",
+                      "fill": "$text-primary",
+                      "content": "Grounded in your resume",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 19,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O289P",
+                      "name": "Source quote",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "“Led a shared component library adopted by multiple product teams.”",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "x30vi",
+                      "name": "Source location",
+                      "fill": "$text-tertiary",
+                      "content": "Example Co. · Senior Product Designer",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "CaiJg",
+                      "name": "Evidence divider",
+                      "fill": "$border",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "guh3A",
+                      "name": "Limit label",
+                      "fill": "$warning-border",
+                      "content": "Needs your input",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bmzJW",
+                      "name": "Limit text",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "No adoption count is claimed because the source does not provide one.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KQx9o",
+      "x": 2760,
+      "y": 720,
+      "name": "03 • Targeted resume ready",
+      "clip": true,
+      "width": 1280,
+      "height": 850,
+      "fill": "$bg-page",
+      "children": [
+        {
+          "type": "frame",
+          "id": "enoaz",
+          "name": "Navigation",
+          "width": 218,
+          "height": "fill_container",
+          "fill": "$bg-panel",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            28,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "IMKeP",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "MU3FM",
+              "name": "Workspace",
+              "fill": "$accent",
+              "content": "WORKSPACE",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "DP5mq",
+              "name": "Scout nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X6TOLU",
+                  "name": "Scout label",
+                  "fill": "$text-secondary",
+                  "content": "Scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QYJNB",
+              "name": "Optimize nav",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gkh2h",
+                  "name": "Optimize label",
+                  "fill": "$text-primary",
+                  "content": "Optimize",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GSAzR",
+              "name": "Jobs nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mjycq",
+                  "name": "Jobs label",
+                  "fill": "$text-secondary",
+                  "content": "Jobs",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "h7e3b",
+              "name": "Applications nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "itLrq",
+                  "name": "Applications label",
+                  "fill": "$text-secondary",
+                  "content": "Applications",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "glkX1",
+              "name": "Profile nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "M38qZ4",
+                  "name": "Profile label",
+                  "fill": "$text-secondary",
+                  "content": "Profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AaHqz",
+              "name": "Navigation spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12
+            },
+            {
+              "type": "text",
+              "id": "Y5YeFM",
+              "name": "Mode",
+              "fill": "$positive-border",
+              "content": "● Local companion connected",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cBzru",
+          "name": "Draft content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            34,
+            42
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "z2plhK",
+              "name": "Step",
+              "fill": "$accent",
+              "content": "OPTIMIZE / 03",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Ktfni",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "A resume for this role",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "B8am3u",
+              "name": "Subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The draft uses only accepted changes and verified facts. Compare it with the source before saving.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "QBvWE",
+              "name": "Target choice",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 11,
+              "gap": 12,
+              "padding": [
+                13,
+                18
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BYvRp",
+                  "name": "Target role",
+                  "fill": "$text-primary",
+                  "content": "Target: Senior Product Designer",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "ZgMsM",
+                  "name": "Change target",
+                  "fill": "$accent",
+                  "content": "Change target",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uA7S4",
+              "name": "Draft workspace",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 22,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O9OWh9",
+                  "name": "Resume preview",
+                  "width": 628,
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 15,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Vp139",
+                      "name": "Name",
+                      "fill": "$text-primary",
+                      "content": "Alex Morgan",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "J4E27b",
+                      "name": "Role",
+                      "fill": "$text-secondary",
+                      "content": "Senior Product Designer · Seattle, WA",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "m82qHl",
+                      "name": "Summary label",
+                      "fill": "$accent",
+                      "content": "PROFESSIONAL SUMMARY",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ClXSD",
+                      "name": "Summary",
+                      "fill": "$text-primary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Product designer who led a shared design system and partnered with engineering to improve product consistency.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P31ZdT",
+                      "name": "Experience label",
+                      "fill": "$accent",
+                      "content": "EXPERIENCE",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ChhHR",
+                      "name": "Employer",
+                      "fill": "$text-primary",
+                      "content": "Example Co. · Senior Product Designer",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lwncV",
+                      "name": "Evidence bullet",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "• Led a shared component library adopted by multiple product teams.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OXQuJ",
+                      "name": "Second bullet",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "• Worked with engineering to standardize interaction patterns across web products.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kZDev",
+                  "name": "Draft controls",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UYSrQ",
+                      "name": "Source verification",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 14,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "F1aecU",
+                          "name": "Verification label",
+                          "fill": "$accent",
+                          "content": "SOURCE CHECK",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "d97GD",
+                          "name": "Verification title",
+                          "fill": "$text-primary",
+                          "content": "No unsupported claims",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 19,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z5nBnn",
+                          "name": "Verification body",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "2 accepted changes · 1 skipped · Original resume preserved",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CNlk5",
+                      "name": "Export and continue",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 14,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "G9BtJR",
+                          "name": "Export label",
+                          "fill": "$accent",
+                          "content": "READY TO USE",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kZT6p",
+                          "name": "Export title",
+                          "fill": "$text-primary",
+                          "content": "Save this version",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 19,
+                          "fontWeight": "800"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aCtTN",
+                          "name": "Export body",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Keep a role-specific copy for applications. Return to the original at any time.",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EfHqa",
+                          "name": "Save draft",
+                          "fill": "$accent",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "G5fWgg",
+                              "name": "Save draft label",
+                              "fill": "$accent-text",
+                              "content": "Save targeted resume",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xmXrk",
+                          "name": "Download draft",
+                          "fill": "$bg-raised",
+                          "cornerRadius": 10,
+                          "gap": 12,
+                          "padding": [
+                            12,
+                            18
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hMPlQ",
+                              "name": "Download draft label",
+                              "fill": "$text-primary",
+                              "content": "Download Markdown",
+                              "fontFamily": "Nunito Sans",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n9wveL",
+                      "name": "Browse roles",
+                      "fill": "$accent",
+                      "cornerRadius": 10,
+                      "gap": 12,
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AQcM5",
+                          "name": "Browse roles label",
+                          "fill": "$accent-text",
+                          "content": "Browse product design roles →",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JISdW",
+      "x": 4140,
+      "y": 720,
+      "name": "04 • Job match and apply handoff",
+      "clip": true,
+      "width": 1280,
+      "height": 850,
+      "fill": "$bg-page",
+      "children": [
+        {
+          "type": "frame",
+          "id": "gUY2U",
+          "name": "Navigation",
+          "width": 218,
+          "height": "fill_container",
+          "fill": "$bg-panel",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            28,
+            20
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "UF0mU",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "WJurx",
+              "name": "Workspace",
+              "fill": "$accent",
+              "content": "WORKSPACE",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "H3txYX",
+              "name": "Scout nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lnS10",
+                  "name": "Scout label",
+                  "fill": "$text-secondary",
+                  "content": "Scout",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nxxNS",
+              "name": "Optimize nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tgKDj",
+                  "name": "Optimize label",
+                  "fill": "$text-secondary",
+                  "content": "Optimize",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OF0yQ",
+              "name": "Jobs nav",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BQGCC",
+                  "name": "Jobs label",
+                  "fill": "$text-primary",
+                  "content": "Jobs",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wgDFI",
+              "name": "Applications nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "J4AuZ",
+                  "name": "Applications label",
+                  "fill": "$text-secondary",
+                  "content": "Applications",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Lodcw",
+              "name": "Profile nav",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 9,
+              "gap": 12,
+              "padding": [
+                9,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SeaLr",
+                  "name": "Profile label",
+                  "fill": "$text-secondary",
+                  "content": "Profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V9QwCW",
+              "name": "Navigation spacer",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12
+            },
+            {
+              "type": "text",
+              "id": "WYJSf",
+              "name": "Mode",
+              "fill": "$positive-border",
+              "content": "● Local companion connected",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kd0r9",
+          "name": "Jobs content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            34,
+            42
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "GWGwU",
+              "name": "Step",
+              "fill": "$accent",
+              "content": "JOBS / 04",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Ii1BV",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Choose where to apply",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "I6u3Z",
+              "name": "Subtitle",
+              "fill": "$text-secondary",
+              "content": "Understand the match before you open the employer’s application.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "VPAZG",
+              "name": "Jobs workspace",
+              "width": "fill_container",
+              "height": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "baqIS",
+                  "name": "Role list",
+                  "width": 250,
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RbQDi",
+                      "name": "Role list label",
+                      "fill": "$accent",
+                      "content": "MATCHED ROLES",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PXiKp",
+                      "name": "Senior Product Designer listing",
+                      "width": "fill_container",
+                      "fill": "$bg-raised",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        8
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "w2IbC",
+                          "name": "Senior Product Designer title",
+                          "fill": "$text-primary",
+                          "content": "Senior Product Designer",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uM3t6",
+                          "name": "Senior Product Designer org",
+                          "fill": "$text-secondary",
+                          "content": "Northstar Labs",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "X39cqE",
+                          "name": "Senior Product Designer band",
+                          "fill": "$positive-border",
+                          "content": "Strong fit",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UOszI",
+                      "name": "Design Systems Lead listing",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        8
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "frvKM",
+                          "name": "Design Systems Lead title",
+                          "fill": "$text-primary",
+                          "content": "Design Systems Lead",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tpQAV",
+                          "name": "Design Systems Lead org",
+                          "fill": "$text-secondary",
+                          "content": "Orbit Health",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "B4AjOK",
+                          "name": "Design Systems Lead band",
+                          "fill": "$warning-border",
+                          "content": "Stretch",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mx709",
+                      "name": "Staff Product Designer listing",
+                      "width": "fill_container",
+                      "fill": "$bg-panel",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        8
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NcHcd",
+                          "name": "Staff Product Designer title",
+                          "fill": "$text-primary",
+                          "content": "Staff Product Designer",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OHKyl",
+                          "name": "Staff Product Designer org",
+                          "fill": "$text-secondary",
+                          "content": "Cedar Works",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ro6uj",
+                          "name": "Staff Product Designer band",
+                          "fill": "$warning-border",
+                          "content": "Stretch",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F5PEF",
+                  "name": "Selected job",
+                  "width": 390,
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 15,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BdDYk",
+                      "name": "Company",
+                      "fill": "$accent",
+                      "content": "NORTHSTAR LABS",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kAxjI",
+                      "name": "Job title",
+                      "fill": "$text-primary",
+                      "content": "Senior Product Designer",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 24,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rqgff",
+                      "name": "Job meta",
+                      "fill": "$text-secondary",
+                      "content": "Remote (US) · Full-time · Sample role",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VSjxX",
+                      "name": "About heading",
+                      "fill": "$text-primary",
+                      "content": "The role",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s5iLYW",
+                      "name": "About",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Own the product experience for a growing platform. Partner with engineering and research to improve design quality and delivery.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hg7Tq",
+                      "name": "Requirements heading",
+                      "fill": "$text-primary",
+                      "content": "Key requirements",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xyCZJ",
+                      "name": "Design systems across teams",
+                      "fill": "$text-secondary",
+                      "content": "Design systems across teams",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rVXZ3",
+                      "name": "Complex web product workflows",
+                      "fill": "$text-secondary",
+                      "content": "Complex web product workflows",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "t5OAd9",
+                      "name": "Cross-functional leadership",
+                      "fill": "$text-secondary",
+                      "content": "Cross-functional leadership",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Nc0cJ",
+                  "name": "Match evidence",
+                  "width": "fill_container",
+                  "fill": "$bg-panel",
+                  "cornerRadius": 14,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y3b3jL",
+                      "name": "Match label",
+                      "fill": "$accent",
+                      "content": "EXPLAINABLE MATCH",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "abIlW",
+                      "name": "Match band",
+                      "fill": "$positive-border",
+                      "content": "Strong fit",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 21,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bWxqi",
+                      "name": "Design systems match",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SsJqs",
+                          "name": "Design systems heading",
+                          "fill": "$text-primary",
+                          "content": "Design systems",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "c0iE6K",
+                          "name": "Design systems explanation",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Supported by component library work",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WaxYx",
+                      "name": "Cross-functional match",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rGsX9",
+                          "name": "Cross-functional heading",
+                          "fill": "$text-primary",
+                          "content": "Cross-functional",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WV8BN",
+                          "name": "Cross-functional explanation",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Supported by design and engineering partnership",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "F5xbc",
+                      "name": "Domain match",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vNoCS",
+                          "name": "Domain heading",
+                          "fill": "$text-primary",
+                          "content": "Domain",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "c8KSk",
+                          "name": "Domain explanation",
+                          "fill": "$warning-border",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Industry experience not shown",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RlZEs",
+                      "name": "Open application",
+                      "fill": "$accent",
+                      "cornerRadius": 10,
+                      "gap": 12,
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NpuvQ",
+                          "name": "Open application label",
+                          "fill": "$accent-text",
+                          "content": "Open employer application",
+                          "fontFamily": "Nunito Sans",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "HxyzK",
+                      "name": "Handoff note",
+                      "fill": "$text-tertiary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "The extension scans the form only after you open it.",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "t8XZ5",
+      "x": 0,
+      "y": 1710,
+      "name": "05 • Extension companion pairing",
+      "clip": true,
+      "width": 400,
+      "height": 880,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 18,
+      "padding": 18,
+      "children": [
+        {
+          "type": "frame",
+          "id": "XjGi6",
+          "name": "Extension header",
+          "width": "fill_container",
+          "gap": 10,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Y6DGG",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 19,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "n4MB0",
+              "name": "Context",
+              "fill": "$accent",
+              "content": "EXTENSION",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 10,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i5IAH",
+          "name": "Pairing headline",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 7,
+          "children": [
+            {
+              "type": "text",
+              "id": "a7xxuO",
+              "name": "Step",
+              "fill": "$accent",
+              "content": "SETUP / 01",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "AVwF4",
+              "name": "Title",
+              "fill": "$text-primary",
+              "content": "Connect to your workspace",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 25,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "bI7Sf",
+              "name": "Explanation",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Choose where Job Scout prepares answers. Your employer page never receives model credentials.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qjCFJ",
+          "name": "Connection modes",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "frame",
+              "id": "qdvCa",
+              "name": "Local mode option",
+              "width": "fill_container",
+              "fill": "$bg-raised",
+              "cornerRadius": 12,
+              "stroke": "$accent",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": 15,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L1NIdb",
+                  "name": "Local mode title",
+                  "fill": "$text-primary",
+                  "content": "● Local companion",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "wsrSL",
+                  "name": "Local mode text",
+                  "fill": "$text-secondary",
+                  "content": "Runs on this computer · Open source",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nVT4d",
+              "name": "Hosted mode option",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": 15,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aQZS6",
+                  "name": "Hosted mode title",
+                  "fill": "$text-primary",
+                  "content": "Hosted account",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "B8Bg70",
+                  "name": "Hosted mode text",
+                  "fill": "$text-tertiary",
+                  "content": "Use Job Scout without local setup · Coming later",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Iz9NF",
+          "name": "Pairing steps",
+          "width": "fill_container",
+          "fill": "$bg-panel",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "cYgvr",
+              "name": "Pairing label",
+              "fill": "$accent",
+              "content": "TO CONNECT LOCALLY",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "pucXr",
+              "name": "Step 1",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zYleL",
+                  "name": "Step 1 numeral",
+                  "fill": "$accent",
+                  "content": "1",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "pIJia",
+                  "name": "Step 1 text",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Start the Job Scout companion",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Kn06q",
+              "name": "Step 2",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d46v8",
+                  "name": "Step 2 numeral",
+                  "fill": "$accent",
+                  "content": "2",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "izUJG",
+                  "name": "Step 2 text",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Open the local website",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "camdG",
+              "name": "Step 3",
+              "width": "fill_container",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TGoam",
+                  "name": "Step 3 numeral",
+                  "fill": "$accent",
+                  "content": "3",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "lv5OK",
+                  "name": "Step 3 text",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Approve this extension’s pairing request",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WvQ3R",
+          "name": "Connection status",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 6,
+          "children": [
+            {
+              "type": "text",
+              "id": "PKxQr",
+              "name": "Status label",
+              "fill": "$warning-border",
+              "content": "NOT CONNECTED",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "knljS",
+              "name": "Status explanation",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Pairing is required before this extension can scan a form.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UKre6",
+          "name": "Flexible spacer",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 12
+        },
+        {
+          "type": "frame",
+          "id": "i79lU",
+          "name": "Pair extension",
+          "width": "fill_container",
+          "fill": "$accent",
+          "cornerRadius": 10,
+          "gap": 10,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "fWWVR",
+              "name": "Pair extension label",
+              "fill": "$accent-text",
+              "content": "Pair with local companion",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EQ2sr",
+          "name": "Open local site",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 10,
+          "gap": 10,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "J7X0B",
+              "name": "Open local site label",
+              "fill": "$text-primary",
+              "content": "Open local website",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "YGHnJ",
+          "name": "Privacy note",
+          "fill": "$text-tertiary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Only fields from the active application are sent after you ask to scan.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "u1W3gm",
+      "x": 520,
+      "y": 1710,
+      "name": "06 • Extension fill preview",
+      "clip": true,
+      "width": 400,
+      "height": 880,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 16,
+      "padding": 18,
+      "children": [
+        {
+          "type": "frame",
+          "id": "U61baZ",
+          "name": "Extension header",
+          "width": "fill_container",
+          "gap": 9,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "z3Po1P",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 19,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "E4xLaj",
+              "name": "Local status",
+              "fill": "$positive-border",
+              "content": "● Local",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RJ1sy",
+          "name": "Application summary",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 5,
+          "children": [
+            {
+              "type": "text",
+              "id": "X5E9E",
+              "name": "Step",
+              "fill": "$accent",
+              "content": "APPLICATION / 02",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "v1ejr",
+              "name": "Job title",
+              "fill": "$text-primary",
+              "content": "Senior Product Designer",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 22,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "b1cTJZ",
+              "name": "Employer",
+              "fill": "$text-secondary",
+              "content": "Northstar Labs · Employer application",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qcdWI",
+          "name": "Form scan status",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 10,
+          "gap": 9,
+          "padding": 12,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "FlCyk",
+              "name": "Scan status",
+              "fill": "$text-primary",
+              "content": "Rippling form detected",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "rCJNp",
+              "name": "Field count",
+              "fill": "$warning-border",
+              "content": "3 ready · 2 need review",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eMaAf",
+          "name": "Planned answers",
+          "width": "fill_container",
+          "fill": "$bg-panel",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 11,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "LTnQe",
+              "name": "Plan label",
+              "fill": "$accent",
+              "content": "PROPOSED FIELD VALUES",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "uhfRh",
+              "name": "Full name field",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "J7Ldr",
+                  "name": "Full name row",
+                  "width": "fill_container",
+                  "gap": 9,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Mx2AK",
+                      "name": "Full name label",
+                      "fill": "$text-secondary",
+                      "content": "Full name",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "d1qr3L",
+                      "name": "Full name ready",
+                      "fill": "$positive-border",
+                      "content": "Ready",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "R6XPH",
+                  "name": "Full name value",
+                  "fill": "$text-primary",
+                  "content": "Alex Morgan",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "emT03",
+                  "name": "Full name evidence",
+                  "fill": "$text-tertiary",
+                  "content": "Verified profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "di211",
+              "name": "Email field",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "I9CAp",
+                  "name": "Email row",
+                  "width": "fill_container",
+                  "gap": 9,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yFHY9",
+                      "name": "Email label",
+                      "fill": "$text-secondary",
+                      "content": "Email",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j69io",
+                      "name": "Email ready",
+                      "fill": "$positive-border",
+                      "content": "Ready",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "XAFqd",
+                  "name": "Email value",
+                  "fill": "$text-primary",
+                  "content": "alex@example.com",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "AOUhO",
+                  "name": "Email evidence",
+                  "fill": "$text-tertiary",
+                  "content": "User-entered contact",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B87s46",
+              "name": "Portfolio URL field",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "C9QCc",
+                  "name": "Portfolio URL row",
+                  "width": "fill_container",
+                  "gap": 9,
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lCT1U",
+                      "name": "Portfolio URL label",
+                      "fill": "$text-secondary",
+                      "content": "Portfolio URL",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nxopI",
+                      "name": "Portfolio URL ready",
+                      "fill": "$positive-border",
+                      "content": "Ready",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SAbtj",
+                  "name": "Portfolio URL value",
+                  "fill": "$text-primary",
+                  "content": "alex.design",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "ySBYB",
+                  "name": "Portfolio URL evidence",
+                  "fill": "$text-tertiary",
+                  "content": "Verified profile",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r6BQir",
+          "name": "Unresolved questions",
+          "width": "fill_container",
+          "fill": "$warning-bg",
+          "cornerRadius": 10,
+          "layout": "vertical",
+          "gap": 6,
+          "padding": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "wurYh",
+              "name": "Warning label",
+              "fill": "$warning-border",
+              "content": "YOU NEED TO ANSWER",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "LCDVg",
+              "name": "Warning body",
+              "fill": "$warning-text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Work authorization and sponsorship were not verified. Job Scout will leave them blank.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NkWps",
+          "name": "Flexible spacer",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 10
+        },
+        {
+          "type": "frame",
+          "id": "om4oP",
+          "name": "Fill supported fields",
+          "width": "fill_container",
+          "fill": "$accent",
+          "cornerRadius": 10,
+          "gap": 9,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Bt2Bx",
+              "name": "Fill supported fields label",
+              "fill": "$accent-text",
+              "content": "Fill 3 supported fields",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HjR8f",
+          "name": "Edit plan",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 10,
+          "gap": 9,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "g4dQW",
+              "name": "Edit plan label",
+              "fill": "$text-primary",
+              "content": "Review every field",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "xlfa0",
+          "name": "No submit notice",
+          "fill": "$text-tertiary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "You review and submit on the employer page. Job Scout never submits for you.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "s0dvU",
+      "x": 1040,
+      "y": 1710,
+      "name": "07 • Extension final review",
+      "clip": true,
+      "width": 400,
+      "height": 880,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 17,
+      "padding": 18,
+      "children": [
+        {
+          "type": "frame",
+          "id": "IKSLi",
+          "name": "Extension header",
+          "width": "fill_container",
+          "gap": 9,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "UoGM8",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 19,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "r1Z8C",
+              "name": "Local status",
+              "fill": "$positive-border",
+              "content": "● Local",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Ff4Gq",
+          "name": "Step",
+          "fill": "$accent",
+          "content": "APPLICATION / 03",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "JDEm0",
+          "name": "Title",
+          "fill": "$text-primary",
+          "content": "Review on the employer page",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 24,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "D6Awk1",
+          "name": "Explanation",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Job Scout filled supported fields and left personal declarations for you.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "wn27Q",
+          "name": "Fill summary",
+          "width": "fill_container",
+          "fill": "$positive-bg",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 7,
+          "padding": 15,
+          "children": [
+            {
+              "type": "text",
+              "id": "rEFaw",
+              "name": "Summary title",
+              "fill": "$positive-text",
+              "content": "3 fields filled",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 17,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "d8Swx5",
+              "name": "Summary body",
+              "fill": "$positive-text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Name, email, and portfolio were applied from verified profile values.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "d55bw",
+          "name": "Before submitting",
+          "width": "fill_container",
+          "fill": "$bg-panel",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "DQWNL",
+              "name": "Checklist label",
+              "fill": "$accent",
+              "content": "CHECK BEFORE SUBMITTING",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "d7LOv",
+              "name": "Work authorization row",
+              "width": "fill_container",
+              "gap": 9,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S1nhA",
+                  "name": "Work authorization label",
+                  "fill": "$text-primary",
+                  "content": "Work authorization",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SOimi",
+                  "name": "Work authorization value",
+                  "fill": "$warning-border",
+                  "content": "Choose your answer",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "owqMv",
+              "name": "Sponsorship row",
+              "width": "fill_container",
+              "gap": 9,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OTMCD",
+                  "name": "Sponsorship label",
+                  "fill": "$text-primary",
+                  "content": "Sponsorship",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "cOhzU",
+                  "name": "Sponsorship value",
+                  "fill": "$warning-border",
+                  "content": "Choose your answer",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "iZOU9",
+              "name": "Resume attachment row",
+              "width": "fill_container",
+              "gap": 9,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PumBK",
+                  "name": "Resume attachment label",
+                  "fill": "$text-primary",
+                  "content": "Resume attachment",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "tKdCw",
+                  "name": "Resume attachment value",
+                  "fill": "$warning-border",
+                  "content": "Attach manually if required",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "x5HScq",
+              "name": "All other fields row",
+              "width": "fill_container",
+              "gap": 9,
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "I5bBEF",
+                  "name": "All other fields label",
+                  "fill": "$text-primary",
+                  "content": "All other fields",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Q4bs6W",
+                  "name": "All other fields value",
+                  "fill": "$warning-border",
+                  "content": "Review for accuracy",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qkhiv",
+          "name": "Submission control",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 7,
+          "children": [
+            {
+              "type": "text",
+              "id": "pFNm4",
+              "name": "Control heading",
+              "fill": "$text-primary",
+              "content": "Submission stays with you",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 16,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "qZZnR",
+              "name": "Control note",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "The extension has no submit action. Return to the application and use the employer’s button when ready.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i8iLT",
+          "name": "Flexible spacer",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 10
+        },
+        {
+          "type": "frame",
+          "id": "uUQBk",
+          "name": "Return to form",
+          "width": "fill_container",
+          "fill": "$accent",
+          "cornerRadius": 10,
+          "gap": 9,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "FddmV",
+              "name": "Return to form label",
+              "fill": "$accent-text",
+              "content": "Review application on page",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "jZlym",
+          "name": "Save attempt",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 10,
+          "gap": 9,
+          "padding": [
+            13,
+            16
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "bX8Uc",
+              "name": "Save attempt label",
+              "fill": "$text-primary",
+              "content": "Save this application attempt",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "SAyGD",
+      "x": 0,
+      "y": 0,
+      "name": "00 • End-to-end user workflow",
+      "clip": true,
+      "width": 1760,
+      "height": 620,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 18,
+      "padding": [
+        34,
+        38
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "gIRLb",
+          "name": "Map eyebrow",
+          "fill": "$accent",
+          "content": "JOB SCOUT · END-TO-END APPLICATION JOURNEY",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 12,
+          "fontWeight": "700",
+          "letterSpacing": 1
+        },
+        {
+          "type": "text",
+          "id": "S0qTvi",
+          "name": "Map title",
+          "fill": "$text-primary",
+          "content": "From resume to a reviewed application",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 34,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "KuxFv",
+          "name": "Map description",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Follow the numbered screens below. The website prepares verified information; the extension fills supported fields on the employer form. Recovery and narrow-layout variants sit beside the main path. Submission remains with the user.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 15,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "aV2Zb",
+          "name": "Website lane label",
+          "fill": "$accent",
+          "content": "WEBSITE · BUILD TRUST IN THE SOURCE",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "qHnLx",
+          "name": "Website workflow",
+          "width": "fill_container",
+          "gap": 10,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PkXVT",
+              "name": "Step 01 Resume intake",
+              "width": 380,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ijZtg",
+                  "name": "Step 01 number",
+                  "fill": "$accent",
+                  "content": "01",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "I3skW",
+                  "name": "Step 01 title",
+                  "fill": "$text-primary",
+                  "content": "Resume intake",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "ado4a",
+                  "name": "Step 01 description",
+                  "fill": "$text-secondary",
+                  "content": "Upload and confirm facts",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "g4kzq",
+              "name": "Arrow after 01",
+              "fill": "$accent",
+              "content": "→",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "PBQIZ",
+              "name": "Step 02 AI suggestions",
+              "width": 380,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KXSar",
+                  "name": "Step 02 number",
+                  "fill": "$accent",
+                  "content": "02",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "Bj2BV",
+                  "name": "Step 02 title",
+                  "fill": "$text-primary",
+                  "content": "AI suggestions",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "m4Gby",
+                  "name": "Step 02 description",
+                  "fill": "$text-secondary",
+                  "content": "Accept, edit, or skip",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "GIqDU",
+              "name": "Arrow after 02",
+              "fill": "$accent",
+              "content": "→",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "B01JgD",
+              "name": "Step 03 Targeted draft",
+              "width": 380,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AanZ7",
+                  "name": "Step 03 number",
+                  "fill": "$accent",
+                  "content": "03",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "K1vxH",
+                  "name": "Step 03 title",
+                  "fill": "$text-primary",
+                  "content": "Targeted draft",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "s9D25",
+                  "name": "Step 03 description",
+                  "fill": "$text-secondary",
+                  "content": "Save and export",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "z1RQh",
+              "name": "Arrow after 03",
+              "fill": "$accent",
+              "content": "→",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Wj2oL",
+              "name": "Step 04 Job match",
+              "width": 380,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZJQkO",
+                  "name": "Step 04 number",
+                  "fill": "$accent",
+                  "content": "04",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "JH8s4",
+                  "name": "Step 04 title",
+                  "fill": "$text-primary",
+                  "content": "Job match",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "Z4uaKo",
+                  "name": "Step 04 description",
+                  "fill": "$text-secondary",
+                  "content": "Open employer form",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "exNMz",
+          "name": "Extension lane label",
+          "fill": "$accent",
+          "content": "↓ HANDOFF TO EXTENSION ON THE EMPLOYER PAGE",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "THne8",
+          "name": "Extension workflow",
+          "width": "fill_container",
+          "gap": 10,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "d1Nfi3",
+              "name": "Step 05 Connect companion",
+              "width": 493,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oKC4x",
+                  "name": "Step 05 number",
+                  "fill": "$accent",
+                  "content": "05",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "cLNly",
+                  "name": "Step 05 title",
+                  "fill": "$text-primary",
+                  "content": "Connect companion",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "nD0KN",
+                  "name": "Step 05 description",
+                  "fill": "$text-secondary",
+                  "content": "Pair local mode; hosted later",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "TVlck",
+              "name": "Arrow after 05",
+              "fill": "$accent",
+              "content": "→",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Fo4aE",
+              "name": "Step 06 Preview answers",
+              "width": 493,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "uQACC",
+                  "name": "Step 06 number",
+                  "fill": "$accent",
+                  "content": "06",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "xPqVz",
+                  "name": "Step 06 title",
+                  "fill": "$text-primary",
+                  "content": "Preview answers",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "ocKWK",
+                  "name": "Step 06 description",
+                  "fill": "$text-secondary",
+                  "content": "See evidence and gaps",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "en2tv",
+              "name": "Arrow after 06",
+              "fill": "$accent",
+              "content": "→",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ni0XE",
+              "name": "Step 07 Review and submit",
+              "width": 493,
+              "height": 132,
+              "fill": "$bg-panel",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h19bX",
+                  "name": "Step 07 number",
+                  "fill": "$accent",
+                  "content": "07",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 12,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "Grxcw",
+                  "name": "Step 07 title",
+                  "fill": "$text-primary",
+                  "content": "Review and submit",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "Kd6Rw",
+                  "name": "Step 07 description",
+                  "fill": "$text-secondary",
+                  "content": "Finish on employer page",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "o50Z0G",
+          "name": "Workflow assurance",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 8,
+          "gap": 12,
+          "padding": [
+            10,
+            14
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "o2VYb",
+              "name": "Assurance text",
+              "fill": "$positive-border",
+              "content": "User confirms facts → user approves suggestions → user approves fill → user submits",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 13,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZquQz",
+      "x": 1600,
+      "y": 1710,
+      "name": "Branch • Recoverable application states",
+      "clip": true,
+      "width": 1280,
+      "height": 600,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 18,
+      "padding": 34,
+      "children": [
+        {
+          "type": "text",
+          "id": "qzgoh",
+          "name": "Branch label",
+          "fill": "$accent",
+          "content": "EXCEPTION BRANCHES · EXTENSION",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "Zi96F",
+          "name": "Branch title",
+          "fill": "$text-primary",
+          "content": "If a step cannot continue",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 30,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "T4crER",
+          "name": "Branch subtitle",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Keep the current employer page open and give a precise next action. Never claim fields were filled when they were not.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "ZszGO",
+          "name": "Recovery states",
+          "width": "fill_container",
+          "height": "fill_container",
+          "gap": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "n5Uql",
+              "name": "Companion disconnected state",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "gap": 15,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "z56uk",
+                  "name": "Companion disconnected marker",
+                  "fill": "$warning-border",
+                  "content": "RECOVERABLE",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "pwyZO",
+                  "name": "Companion disconnected heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Local service is offline",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 21,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "m3FjCZ",
+                  "name": "Companion disconnected description",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pairing expired or the local companion stopped. Form scan is paused.",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "a4te8",
+                  "name": "Companion disconnected action",
+                  "fill": "$bg-raised",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    11,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "k1rLm",
+                      "name": "Companion disconnected action label",
+                      "fill": "$text-primary",
+                      "content": "Reconnect companion",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Fq9uw",
+              "name": "AI unavailable state",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "gap": 15,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "y1yVP8",
+                  "name": "AI unavailable marker",
+                  "fill": "$warning-border",
+                  "content": "RECOVERABLE",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "GUm7t",
+                  "name": "AI unavailable heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Provider needs attention",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 21,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "KRymb",
+                  "name": "AI unavailable description",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "The provider returned an error or quota limit. Verified profile facts remain available.",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QCyli",
+                  "name": "AI unavailable action",
+                  "fill": "$bg-raised",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    11,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mXvn0",
+                      "name": "AI unavailable action label",
+                      "fill": "$text-primary",
+                      "content": "Retry or change provider",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xiFMb",
+              "name": "Unsupported form state",
+              "width": "fill_container",
+              "fill": "$bg-panel",
+              "cornerRadius": 14,
+              "layout": "vertical",
+              "gap": 15,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h8pxR",
+                  "name": "Unsupported form marker",
+                  "fill": "$warning-border",
+                  "content": "RECOVERABLE",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 11,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "I12eOe",
+                  "name": "Unsupported form heading",
+                  "fill": "$text-primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "This form needs manual help",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 21,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "De2GH",
+                  "name": "Unsupported form description",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "The form changed or its controls are not supported. No fields were written.",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "J1BR4Z",
+                  "name": "Unsupported form action",
+                  "fill": "$bg-raised",
+                  "cornerRadius": 9,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    11,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CybJR",
+                      "name": "Unsupported form action label",
+                      "fill": "$text-primary",
+                      "content": "Copy verified answers",
+                      "fontFamily": "Nunito Sans",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wuKZs",
+      "x": 3000,
+      "y": 1710,
+      "name": "Variant • Narrow resume review",
+      "clip": true,
+      "width": 390,
+      "height": 880,
+      "fill": "$bg-page",
+      "layout": "vertical",
+      "gap": 17,
+      "padding": 20,
+      "children": [
+        {
+          "type": "frame",
+          "id": "LZclA",
+          "name": "Narrow header",
+          "width": "fill_container",
+          "gap": 9,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "oi47s",
+              "name": "Brand",
+              "fill": "$text-primary",
+              "content": "job scout",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 19,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "YnrFS",
+              "name": "Section",
+              "fill": "$accent",
+              "content": "OPTIMIZE",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "I2FDbt",
+          "name": "Variant label",
+          "fill": "$accent",
+          "content": "STEP 02 · NARROW LAYOUT",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "jtnPc",
+          "name": "Title",
+          "fill": "$text-primary",
+          "content": "Review your resume",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 26,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "PNABQ",
+          "name": "Intro",
+          "fill": "$text-secondary",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Choose which suggestions belong in your targeted draft.",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 13,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "S4BfRP",
+          "name": "Progress",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 9,
+          "gap": 9,
+          "padding": 11,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "u1PE9X",
+              "name": "Count",
+              "fill": "$text-primary",
+              "content": "1 of 3 suggestions",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "aEeid",
+              "name": "Source status",
+              "fill": "$positive-border",
+              "content": "Evidence shown",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wm3K9",
+          "name": "Current suggestion",
+          "width": "fill_container",
+          "fill": "$bg-panel",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "YFEQI",
+              "name": "Section label",
+              "fill": "$accent",
+              "content": "SUMMARY",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "MRriy",
+              "name": "Suggestion title",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Make the platform work concrete",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 19,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "DZTzQ",
+              "name": "Current label",
+              "fill": "$text-tertiary",
+              "content": "CURRENT",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ThX3A",
+              "name": "Current value",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Product designer with experience in design systems and cross-functional teams.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "Zs1fF",
+              "name": "Proposed label",
+              "fill": "$accent",
+              "content": "PROPOSED",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 10,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "UdcpE",
+              "name": "Proposed value",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Product designer who led a shared design system and partnered with engineering to improve product consistency.",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 14,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "B7Srj",
+          "name": "Evidence details",
+          "width": "fill_container",
+          "fill": "$bg-raised",
+          "cornerRadius": 10,
+          "layout": "vertical",
+          "gap": 6,
+          "padding": 15,
+          "children": [
+            {
+              "type": "text",
+              "id": "lVFFP",
+              "name": "Evidence heading",
+              "fill": "$text-primary",
+              "content": "Source evidence",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 13,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "SrNwA",
+              "name": "Evidence quote",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "“Led a shared component library adopted by multiple product teams.”",
+              "fontFamily": "Nunito Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Lj6HH",
+          "name": "Flexible spacer",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 10
+        },
+        {
+          "type": "frame",
+          "id": "hyYR1",
+          "name": "Suggestion actions",
+          "width": "fill_container",
+          "gap": 9,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "V33o7i",
+              "name": "Accept",
+              "fill": "$accent",
+              "cornerRadius": 9,
+              "gap": 9,
+              "padding": [
+                11,
+                15
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mt1DS",
+                  "name": "Accept label",
+                  "fill": "$accent-text",
+                  "content": "Accept",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "POf1b",
+              "name": "Edit",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 9,
+              "padding": [
+                11,
+                15
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XOS5O",
+                  "name": "Edit label",
+                  "fill": "$text-primary",
+                  "content": "Edit",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DhXvb",
+              "name": "Skip",
+              "fill": "$bg-raised",
+              "cornerRadius": 9,
+              "gap": 9,
+              "padding": [
+                11,
+                15
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vcDqj",
+                  "name": "Skip label",
+                  "fill": "$text-primary",
+                  "content": "Skip",
+                  "fontFamily": "Nunito Sans",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "FI3N5",
+          "name": "Next note",
+          "fill": "$text-tertiary",
+          "content": "Next: experience suggestion",
+          "fontFamily": "Nunito Sans",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg-page": {
+      "type": "color",
+      "value": "#050505"
+    },
+    "bg-panel": {
+      "type": "color",
+      "value": "#0E0E0E"
+    },
+    "bg-raised": {
+      "type": "color",
+      "value": "#232323"
+    },
+    "bg-control": {
+      "type": "color",
+      "value": "#303030"
+    },
+    "border": {
+      "type": "color",
+      "value": "#303030"
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#F1F1F1"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#BCBCBC"
+    },
+    "text-tertiary": {
+      "type": "color",
+      "value": "#A2A2A2"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#3CA5C6"
+    },
+    "accent-text": {
+      "type": "color",
+      "value": "#052F3E"
+    },
+    "positive-bg": {
+      "type": "color",
+      "value": "#024336"
+    },
+    "positive-border": {
+      "type": "color",
+      "value": "#06D6A0"
+    },
+    "positive-text": {
+      "type": "color",
+      "value": "#ECFCF7"
+    },
+    "warning-bg": {
+      "type": "color",
+      "value": "#552716"
+    },
+    "warning-border": {
+      "type": "color",
+      "value": "#EF8247"
+    },
+    "warning-text": {
+      "type": "color",
+      "value": "#FFF3EC"
+    },
+    "error-bg": {
+      "type": "color",
+      "value": "#571727"
+    },
+    "error-border": {
+      "type": "color",
+      "value": "#EF476F"
+    },
+    "error-text": {
+      "type": "color",
+      "value": "#FDEFF3"
+    },
+    "font-primary": {
+      "type": "string",
+      "value": "Nunito Sans"
+    },
+    "radius-md": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "space-xs": {
+      "type": "number",
+      "value": 4
+    },
+    "space-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "space-md": {
+      "type": "number",
+      "value": 16
+    },
+    "space-lg": {
+      "type": "number",
+      "value": 20
+    },
+    "space-xl": {
+      "type": "number",
+      "value": 40
+    }
+  },
+  "fileToken": "a984f913-7ac2-4006-bf78-0cbd8968ca03"
+}

@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="design/brand/wayfinder.svg" alt="Job Scout wayfinder logo" width="112">
+  <img src="design/brand/owl-review.svg" alt="Job Scout owl mascot logo" width="112">
 </p>
 
 # Job Scout
 
-Three [logo concepts are available for review](design/brand/README.md). Wayfinder is the current README choice and can be changed after review.
+Six [logo concepts are available for review](design/brand/README.md), including three friendly animal directions. Review Owl is the current README choice and can be changed after review.
 
 Job Scout is building toward helping a job seeker find roles, tailor their resume, and manage applications in one place. The [roadmap](ROADMAP.md) extends it into an open-source local application assistant with a browser autofill extension and a later paid hosted service. The extension and hosted service are planned work, not current features. It is a Next.js (React 19) app with four areas reachable from a shared, responsive navigation shell (sidebar on desktop, drawer on mobile):
 

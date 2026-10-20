@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout fox mascot</title>
+  <path d="M23 51 17 13l31 20a49 49 0 0 1 32 0l31-20-6 38c5 11 4 26-4 39-9 15-23 25-37 25S36 105 27 90c-8-13-9-28-4-39Z" fill="#087F78"/>
+  <path d="m26 24 20 15-17 8Zm76 0L82 39l17 8Z" fill="#35DCC8"/>
+  <path d="M27 72c12 2 24 6 37 19 13-13 25-17 37-19-5 23-20 39-37 39S32 95 27 72Z" fill="#E9FFF9"/>
+  <circle cx="48" cy="66" r="4" fill="#073B3C"/>
+  <circle cx="80" cy="66" r="4" fill="#073B3C"/>
+  <path d="m57 82 7 6 7-6Z" fill="#FF785E"/>
+  <path d="M55 96a13 13 0 0 0 18 0" fill="none" stroke="#087F78" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="116" r="6" fill="#35DCC8" stroke="#087F78" stroke-width="3"/>
+</svg>

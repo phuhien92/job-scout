@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Job Scout bird carrying a resume</title>
+  <path d="M22 83 8 77l16-8C19 35 37 14 65 14c29 0 46 21 44 47-2 29-22 49-50 49-16 0-30-9-37-27Z" fill="#087F78"/>
+  <path d="M23 81C17 64 19 45 27 36c3 25 17 32 36 34-9 11-23 16-40 11Z" fill="#35DCC8"/>
+  <path d="M58 54c11-11 29-14 43-4 4 23-10 43-32 45-13 1-25-6-31-16 12-4 18-13 20-25Z" fill="#E9FFF9"/>
+  <circle cx="83" cy="46" r="5" fill="#073B3C"/>
+  <path d="m106 52 18 7-18 7Z" fill="#FF785E"/>
+  <path d="M43 84c-9 9-19 12-31 8 5 12 17 17 29 11 6-3 10-9 12-16Z" fill="#35DCC8"/>
+  <path d="M75 91v22h22V91l-5-5H75Z" fill="white" stroke="#087F78" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M92 86v7h6M81 99h11M81 105h9" fill="none" stroke="#087F78" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

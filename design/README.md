@@ -14,4 +14,8 @@ Open [job-scout.pen](job-scout.pen) in pen.dev. Start with the canvas frame **00
 
 The canvas also includes a narrow version of step 02 and recovery branches for a disconnected companion, unavailable AI provider, and unsupported form. All names, employers, and contact values are fictional examples. The earlier extension concepts have been removed from this workflow file.
 
+## Profile reference
+
+The canvas adds **08 · Profile hub** and **Action · Edit personal details**, based on the layout and interaction pattern of [Jobright's profile page](https://jobright.ai/jobs/profile). The [profile overview](profile-overview.png) shows its slim navigation, section tabs, personal details, education, work experience, skills, optional equal-employment information, and readiness rail. The [edit state](profile-edit.png) shows how a user corrects verified details before using them for application autofill. Job Scout branding, local-mode privacy copy, and all example data are original to this proposal.
+
 This design is the first proposal for [issue #18](https://github.com/phuhien92/job-scout/issues/18), not implementation or approval to submit an application.

@@ -1,0 +1,16 @@
+Alex Example
+Senior Frontend Engineer
+Seattle, WA
+alex@example.com
+
+Summary
+Frontend engineer building accessible web applications.
+
+Skills
+React, TypeScript, GraphQL, Playwright
+
+Experience
+Senior Frontend Engineer
+Example Company
+2020 - 2025
+Built accessible React interfaces and maintained automated tests.

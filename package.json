@@ -7,19 +7,21 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test:e2e": "node scripts/run-e2e.mjs"
   },
   "dependencies": {
-    "@ai-sdk/react": "^4.0.101",
+    "@ai-sdk/react": "4.0.101",
     "@base-ui/react": "^1.8.0",
-    "@mastra/ai-sdk": "^1.10.2",
-    "@mastra/core": "^1.66.0",
+    "@mastra/ai-sdk": "1.10.2",
+    "@mastra/core": "1.66.0",
     "@robr0/design-system": "^0.17.0",
     "@streamdown/cjk": "^1.0.3",
     "@streamdown/code": "^1.1.1",
     "@streamdown/math": "^1.0.2",
     "@streamdown/mermaid": "^1.0.2",
-    "ai": "^7.0.97",
+    "ai": "7.0.98",
     "class-variance-authority": "^0.7.1",
     "cmdk": "^1.1.1",
     "cn": "^0.2.6",
@@ -38,11 +40,13 @@
     "zod": "^4.6.2"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "@tailwindcss/postcss": "^4.3.3",
+    "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.7",
-    "@types/node": "^20",
+    "@types/node": "^24.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
@@ -51,6 +55,10 @@
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
     "typescript": "^5",
+    "vite": "^8.3.4",
     "vitest": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=24 <25"
   }
 }

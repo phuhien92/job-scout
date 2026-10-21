@@ -8,7 +8,10 @@ import {
   type WorkingMemory,
 } from "@/lib/working-memory/types";
 
-const STORE_FILE = path.join(process.cwd(), ".data", "working-memory.json");
+const STORE_FILE = path.join(
+  process.env.JOB_SCOUT_DATA_DIR || path.join(process.cwd(), ".data"),
+  "working-memory.json",
+);
 
 /**
  * Working-memory store for the whole product (Scout and Optimize share one

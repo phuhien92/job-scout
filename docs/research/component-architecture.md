@@ -81,3 +81,7 @@ This is a **design mapping**, not a claim of one-to-one API compatibility. Inspe
 - Whether the extension needs an in-page overlay at all. The side panel can support the planned review flow without one; a future overlay needs isolation and focus tests.
 - Whether shared UI extraction should be done in issue #17 or when the extension starts. The low-risk sequence is local cleanup first, extraction after stable primitives exist.
 - Which Pen palette and typography details are approved. The workflow currently expresses interaction and visual direction; codifying tokens requires design review, particularly for light/dark and narrow extension layouts.
+
+## Animation decision
+
+User direction (October 20, 2026): use Framer Motion when new product animation is needed. Respect reduced-motion preferences and preserve focus, keyboard access, and readable application review states. Keep animation in surface UI rather than the shared application-plan contract. Introduce the dependency with the first animation implementation; the testing baseline does not add animated UI.

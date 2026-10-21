@@ -17,8 +17,10 @@ The current UI uses [`@robr0/design-system`](https://www.npmjs.com/package/@robr
 
 ## Getting started
 
+Use Node 24.
+
 ```bash
-npm install
+npm ci
 cp .env.example .env.local   # fill in the model and Findwork API keys
 npm run dev
 ```
@@ -31,6 +33,10 @@ Open [http://localhost:3000](http://localhost:3000).
 - `npm run build` — production build
 - `npm run lint` — lint the codebase
 - `npm run test` — run the Vitest test suite
+- `npm run typecheck` — generate Next route types and check TypeScript
+- `npm run test:e2e` — run isolated Chromium smoke tests at mobile and desktop widths
+
+See the [browser baseline guide](docs/testing/browser-baseline.md) for browser installation, fixtures, storage isolation, and PR CI reports.
 
 ## Shared application contract
 

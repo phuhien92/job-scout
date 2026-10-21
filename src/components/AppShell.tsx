@@ -15,6 +15,7 @@ import type { AppSidebarSection } from "@robr0/design-system/components/AppSideb
 import { useTranslations } from "next-intl";
 import { useTheme } from "@/lib/theme";
 import { useLocale } from "@/lib/locale";
+import { useHydrated } from "@/lib/use-hydrated";
 import type { Locale } from "@/i18n/config";
 import styles from "./AppShell.module.css";
 
@@ -36,6 +37,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const { locale, setLocale } = useLocale();
   const t = useTranslations();
   const [navOpen, setNavOpen] = useState(false);
+  const hydrated = useHydrated();
 
   const sections: AppSidebarSection[] = [
     {
@@ -91,6 +93,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               label: "Menu",
               iconLeft: "menu",
               variant: "secondary",
+              disabled: !hydrated,
               onClick: () => setNavOpen(true),
             },
           ]}

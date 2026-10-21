@@ -14,6 +14,7 @@ import {
 } from "@robr0/design-system";
 
 import type { ResumeSummary } from "@/lib/working-memory/types";
+import { useHydrated } from "@/lib/use-hydrated";
 
 import styles from "./Optimize.module.css";
 
@@ -35,7 +36,11 @@ function hasSupportedExtension(name: string): boolean {
   return /\.(pdf|docx|txt)$/i.test(name.trim());
 }
 
-function formatUploadedAt(iso: string, locale: string, t: (key: string, values?: Record<string, string>) => string) {
+function formatUploadedAt(
+  iso: string,
+  locale: string,
+  t: (key: string, values?: Record<string, string>) => string,
+) {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) {
     return t("optimizeResumeStored");
@@ -48,7 +53,11 @@ function formatUploadedAt(iso: string, locale: string, t: (key: string, values?:
   return t("optimizeUploadedOn", { date: formatted });
 }
 
-function resumeOptionLabel(resume: ResumeSummary, profileName: string, t: (key: string, values?: Record<string, string>) => string) {
+function resumeOptionLabel(
+  resume: ResumeSummary,
+  profileName: string,
+  t: (key: string, values?: Record<string, string>) => string,
+) {
   const name = profileName.trim();
   if (name) {
     return t("optimizeResumeNamed", { name });
@@ -66,13 +75,15 @@ export function OptimizeLanding({
   const locale = useLocale();
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  // An enabled SSR button can be clicked before its navigation handler exists.
+  const hydrated = useHydrated();
 
   const [selectedId, setSelectedId] = useState(resume ? "stored" : "");
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [uploadFiles, setUploadFiles] = useState<FileInputFile[]>([]);
 
-  const canOptimize = Boolean(resume && selectedId === "stored");
+  const canOptimize = hydrated && Boolean(resume && selectedId === "stored");
 
   const handleOptimize = useCallback(() => {
     if (!canOptimize) return;
@@ -106,7 +117,9 @@ export function OptimizeLanding({
 
       const transientId = crypto.randomUUID();
       setUploading(true);
-      setUploadFiles([{ id: transientId, name: file.name, size: file.size, progress: 30 }]);
+      setUploadFiles([
+        { id: transientId, name: file.name, size: file.size, progress: 30 },
+      ]);
 
       const formData = new FormData();
       formData.append("file", file);
@@ -232,7 +245,11 @@ export function OptimizeLanding({
               disabled={!canOptimize || uploading}
               onClick={handleOptimize}
             />
-            <Divider label={t("optimizeOr")} labelPosition="center" spacing="sm" />
+            <Divider
+              label={t("optimizeOr")}
+              labelPosition="center"
+              spacing="sm"
+            />
             <Button
               label={t("optimizeUpload")}
               variant="secondary"

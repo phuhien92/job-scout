@@ -8,6 +8,8 @@
 
 :root {
   --font-sans: var(--font-nunito-sans), var(--js-font-primary), sans-serif;
+  /* Temporary @robr0/design-system compatibility; remove with issue #17. */
+  --font-family-primary: var(--font-sans);
 
   /* The single bridge from generated Job Scout tokens to shadcn/Tailwind roles. */
   --background: var(--js-bg-page);

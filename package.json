@@ -10,6 +10,7 @@
     "lint": "eslint",
     "tokens:generate": "node scripts/design-tokens.mts",
     "tokens:check": "node scripts/design-tokens.mts --check",
+    "design:components:check": "node scripts/check-pen-components.mts",
     "ui:catalog": "node scripts/ui-catalog.mts",
     "test": "vitest run",
     "typecheck": "next typegen && tsc --noEmit",

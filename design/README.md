@@ -6,7 +6,15 @@ The approved [rabbit logo](brand/scout-rabbit-bubble.png) remains a replaceable 
 
 The approved light values in the top-level Pen variables are the implementation token source. Run `npm run tokens:generate` after changing them; CI runs `npm run tokens:check` against the generated `src/styles/tokens.css`. Do not edit that stylesheet by hand.
 
-The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, application history, or a reusable-component migration.
+The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, or application history.
+
+## Component naming and instances
+
+The `Job Scout components · code-aligned` frame (`l7Piy5`) is the reusable Pen component set for the approved journey. Primitive names come from the generated [code catalog](../.claude/skills/job-scout-ui/references/components.md). Variant-bearing definitions use `Export / prop=value`, for example `Button / variant=default / size=default` and `SelectTrigger / size=default`; export, prop, and value spelling must match the catalog exactly.
+
+Product patterns keep stable PascalCase names: `EvidenceBadge`, `ReviewStatus`, `FieldAnswerRow`, `UnresolvedQuestion`, and `ConnectionState`. `AppNavigationItem`, `ExtensionHeader`, `ExtensionToolbar`, `JobCard`, and `CompactFieldStateRow` are proposed patterns because the current catalog has no equivalent. Do not assign a catalog primitive name to an unmatched design element.
+
+Every occurrence of a reusable control or pattern in the approved frames is a Pen `ref` instance. Change shared appearance in its reusable definition, and use instance overrides only for copy, state, locale, and container sizing. Do not detach an instance or redraw a parallel control. Review exports for issue #38 are in [`review/issue-38`](review/issue-38/).
 
 ## Approved architecture defaults
 

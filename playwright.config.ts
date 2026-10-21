@@ -9,6 +9,7 @@ if (!process.env.JOB_SCOUT_E2E || !process.env.JOB_SCOUT_DATA_DIR) {
 
 export default defineConfig({
   testDir: "./e2e",
+  globalSetup: "./e2e/global-setup.ts",
   fullyParallel: false,
   // The current app has one shared local profile; tests must not race its writes.
   workers: 1,

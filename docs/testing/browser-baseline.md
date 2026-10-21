@@ -47,9 +47,12 @@ until issues #22–#24 introduce them.
 
 ## CI and failure evidence
 
-`.github/workflows/playwright.yml` runs on pull requests and pushes to `main`:
-`npm ci`, lint, generated Next route types plus TypeScript, Vitest, and both
-Chromium viewport projects. It uses a read-only repository token and no secrets.
+`.github/workflows/ci.yml` runs on pull requests and pushes to `main`. Its `check`
+job runs `npm ci`, lint, the component catalog check, generated Next route types plus
+TypeScript, Vitest and a production build; its `e2e` job runs both Chromium viewport
+projects. Both use a read-only repository token and no secrets. Before the tests,
+`e2e/global-setup.ts` requests each route once so the development server's first-visit
+compiles do not count against a test's timeout.
 One retry is allowed on CI; `test.only` is forbidden. Failures upload the HTML
 report, screenshots, browser error attachment, and retained traces for seven days.
 `playwright-report` and `test-results` are gitignored.

@@ -75562,38 +75562,39 @@
                           "id": "Togad",
                           "name": "Button / variant=default / size=xs",
                           "reusable": true,
-                          "width": "fit_content",
+                          "height": 24,
                           "fill": "$accent",
                           "cornerRadius": 10,
-                          "gap": 8,
+                          "gap": 4,
                           "padding": [
                             0,
                             8
                           ],
                           "justifyContent": "center",
                           "alignItems": "center",
-                          "height": 24,
                           "children": [
                             {
                               "type": "icon",
-                              "id": "OABWU",
+                              "id": "evOU2",
+                              "x": 0,
+                              "y": 0,
                               "name": "Icon",
                               "enabled": false,
-                              "width": 16,
-                              "height": 16,
+                              "width": 12,
+                              "height": 12,
                               "icon": "plus",
                               "library": "lucide",
                               "fill": "$accent-text"
                             },
                             {
                               "type": "text",
-                              "id": "gexSD",
+                              "id": "IIOXN",
                               "name": "Label",
                               "fill": "$accent-text",
                               "content": "Extra small",
                               "fontFamily": "$font-primary",
                               "fontSize": 12,
-                              "fontWeight": "700"
+                              "fontWeight": "600"
                             }
                           ]
                         },
@@ -75602,38 +75603,39 @@
                           "id": "dSXKK",
                           "name": "Button / variant=default / size=sm",
                           "reusable": true,
-                          "width": "fit_content",
+                          "height": 28,
                           "fill": "$accent",
                           "cornerRadius": 12,
-                          "gap": 8,
+                          "gap": 4,
                           "padding": [
                             0,
                             10
                           ],
                           "justifyContent": "center",
                           "alignItems": "center",
-                          "height": 28,
                           "children": [
                             {
                               "type": "icon",
-                              "id": "xcMQk",
+                              "id": "Nw1B2",
+                              "x": 0,
+                              "y": 0,
                               "name": "Icon",
                               "enabled": false,
-                              "width": 16,
-                              "height": 16,
+                              "width": 14,
+                              "height": 14,
                               "icon": "plus",
                               "library": "lucide",
                               "fill": "$accent-text"
                             },
                             {
                               "type": "text",
-                              "id": "LwurT",
+                              "id": "zadxj",
                               "name": "Label",
                               "fill": "$accent-text",
                               "content": "Small",
                               "fontFamily": "$font-primary",
                               "fontSize": 13,
-                              "fontWeight": "700"
+                              "fontWeight": "600"
                             }
                           ]
                         },
@@ -75653,21 +75655,22 @@
                           "id": "eHEb3",
                           "name": "Button / variant=default / size=lg",
                           "reusable": true,
-                          "width": "fit_content",
+                          "height": 36,
                           "fill": "$accent",
                           "cornerRadius": 12,
-                          "gap": 8,
+                          "gap": 6,
                           "padding": [
                             0,
                             10
                           ],
                           "justifyContent": "center",
                           "alignItems": "center",
-                          "height": 36,
                           "children": [
                             {
                               "type": "icon",
-                              "id": "vNUtE",
+                              "id": "PiwZG",
+                              "x": 0,
+                              "y": 0,
                               "name": "Icon",
                               "enabled": false,
                               "width": 16,
@@ -75678,86 +75681,15 @@
                             },
                             {
                               "type": "text",
-                              "id": "jBHpa",
+                              "id": "UQhZx",
                               "name": "Label",
                               "fill": "$accent-text",
                               "content": "Large",
                               "fontFamily": "$font-primary",
                               "fontSize": 14,
-                              "fontWeight": "700"
+                              "fontWeight": "600"
                             }
                           ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "HUKpt",
-                          "name": "Button / variant=secondary / size=xs",
-                          "reusable": true,
-                          "fill": "$bg-raised",
-                          "cornerRadius": 10,
-                          "gap": 8,
-                          "padding": [
-                            0,
-                            8
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "height": 24,
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "Vbj22",
-                              "name": "Label",
-                              "fill": "$text-primary",
-                              "content": "Search",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 12,
-                              "fontWeight": "700"
-                            }
-                          ],
-                          "width": "fit_content"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "B57pY",
-                          "name": "Button / variant=outline / size=sm",
-                          "reusable": true,
-                          "height": 28,
-                          "fill": "$bg-raised",
-                          "cornerRadius": 12,
-                          "stroke": "$border",
-                          "strokeWidth": 1,
-                          "gap": 8,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "x1eb6",
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "plus",
-                              "library": "lucide",
-                              "fill": "$text-primary"
-                            },
-                            {
-                              "type": "text",
-                              "id": "VH14V",
-                              "name": "Label",
-                              "fill": "$text-primary",
-                              "content": "Review fields",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 13,
-                              "fontWeight": "700"
-                            }
-                          ],
-                          "width": "fit_content"
                         }
                       ]
                     }
@@ -75973,30 +75905,16 @@
                           ]
                         },
                         {
-                          "type": "frame",
                           "id": "p9wtt",
-                          "name": "Button / variant=outline / size=icon-sm",
-                          "reusable": true,
-                          "width": 28,
-                          "height": 28,
-                          "fill": "$bg-page",
-                          "cornerRadius": 12,
-                          "stroke": "$border",
-                          "strokeWidth": 1,
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "R39NG",
-                              "name": "Icon",
+                          "type": "ref",
+                          "ref": "isBLk",
+                          "name": "icon-sm",
+                          "descendants": {
+                            "fufrs": {
                               "width": 14,
-                              "height": 14,
-                              "icon": "ellipsis",
-                              "library": "lucide",
-                              "fill": "$text-primary"
+                              "height": 14
                             }
-                          ]
+                          }
                         },
                         {
                           "type": "frame",
@@ -76065,29 +75983,6 @@
                               "name": "Icon",
                               "width": 16,
                               "height": 16,
-                              "icon": "x",
-                              "library": "lucide",
-                              "fill": "$text-primary"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "lBqSS",
-                          "name": "Button / variant=ghost / size=icon-xs",
-                          "reusable": true,
-                          "width": 24,
-                          "height": 24,
-                          "cornerRadius": 10,
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "kSxfp",
-                              "name": "Icon",
-                              "width": 12,
-                              "height": 12,
                               "icon": "x",
                               "library": "lucide",
                               "fill": "$text-primary"
@@ -76736,31 +76631,32 @@
                               "reusable": true,
                               "width": 200,
                               "height": 28,
-                              "fill": "$bg-control",
                               "cornerRadius": 10,
                               "stroke": "$border",
                               "strokeWidth": 1,
+                              "gap": 6,
                               "padding": [
-                                13,
-                                14
+                                0,
+                                8,
+                                0,
+                                10
                               ],
+                              "justifyContent": "space_between",
                               "alignItems": "center",
                               "children": [
                                 {
                                   "type": "text",
-                                  "id": "RlwD6",
+                                  "id": "bG7Zt",
                                   "name": "Value",
                                   "fill": "$text-primary",
-                                  "textGrowth": "fixed-width",
-                                  "width": "fill_container",
                                   "content": "Small trigger",
                                   "fontFamily": "$font-primary",
-                                  "fontSize": 15,
+                                  "fontSize": 14,
                                   "fontWeight": "normal"
                                 },
                                 {
                                   "type": "icon",
-                                  "id": "AFsOq",
+                                  "id": "AWYYo",
                                   "name": "Chevron",
                                   "width": 16,
                                   "height": 16,
@@ -78842,6 +78738,241 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "B8LI5",
+      "x": 16646,
+      "y": -3448,
+      "name": "Primitives • catalog definitions without a specimen slot",
+      "fill": "$bg-page",
+      "cornerRadius": 24,
+      "stroke": "$border",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "topLj",
+          "name": "Definitions title",
+          "fill": "$text-primary",
+          "content": "Catalog definitions used by Primitives specimens",
+          "fontFamily": "$font-primary",
+          "fontSize": 20,
+          "fontWeight": "800"
+        },
+        {
+          "type": "frame",
+          "id": "kNRWw",
+          "name": "Button / variant=secondary / size=xs showcase",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "RNmkk",
+              "name": "Button / variant=secondary / size=xs caption",
+              "fill": "$text-secondary",
+              "content": "Button / variant=secondary / size=xs",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "HUKpt",
+              "name": "Button / variant=secondary / size=xs",
+              "reusable": true,
+              "height": 24,
+              "fill": "$bg-raised",
+              "cornerRadius": 10,
+              "gap": 4,
+              "padding": [
+                0,
+                8
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "pdC2s",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Icon",
+                  "enabled": false,
+                  "width": 12,
+                  "height": 12,
+                  "icon": "plus",
+                  "library": "lucide",
+                  "fill": "$text-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "kONcH",
+                  "name": "Label",
+                  "fill": "$text-primary",
+                  "content": "Search",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "MhJUF",
+          "name": "Button / variant=outline / size=sm showcase",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "HgZyR",
+              "name": "Button / variant=outline / size=sm caption",
+              "fill": "$text-secondary",
+              "content": "Button / variant=outline / size=sm",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "B57pY",
+              "name": "Button / variant=outline / size=sm",
+              "reusable": true,
+              "height": 28,
+              "fill": "$bg-page",
+              "cornerRadius": 12,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "gap": 4,
+              "padding": [
+                0,
+                10
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "vMdU0",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Icon",
+                  "enabled": false,
+                  "width": 14,
+                  "height": 14,
+                  "icon": "plus",
+                  "library": "lucide",
+                  "fill": "$text-primary"
+                },
+                {
+                  "type": "text",
+                  "id": "HQCRY",
+                  "name": "Label",
+                  "fill": "$text-primary",
+                  "content": "Review fields",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rw7qR",
+          "name": "Button / variant=ghost / size=icon-xs showcase",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "uUIlV",
+              "name": "Button / variant=ghost / size=icon-xs caption",
+              "fill": "$text-secondary",
+              "content": "Button / variant=ghost / size=icon-xs",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "lBqSS",
+              "name": "Button / variant=ghost / size=icon-xs",
+              "reusable": true,
+              "width": 24,
+              "height": 24,
+              "cornerRadius": 10,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "kSxfp",
+                  "name": "Icon",
+                  "width": 12,
+                  "height": 12,
+                  "icon": "x",
+                  "library": "lucide",
+                  "fill": "$text-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dJoOo",
+          "name": "Button / variant=outline / size=icon-sm showcase",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "IBN67",
+              "name": "Button / variant=outline / size=icon-sm caption",
+              "fill": "$text-secondary",
+              "content": "Button / variant=outline / size=icon-sm",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "isBLk",
+              "name": "Button / variant=outline / size=icon-sm",
+              "reusable": true,
+              "width": 28,
+              "height": 28,
+              "fill": "$bg-page",
+              "cornerRadius": 12,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "fufrs",
+                  "name": "Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "ellipsis",
+                  "library": "lucide",
+                  "fill": "$text-primary"
                 }
               ]
             }

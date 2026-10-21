@@ -560,7 +560,7 @@
                         {
                           "id": "UKD8n",
                           "type": "ref",
-                          "ref": "UIu4d",
+                          "ref": "ZmMoc",
                           "name": "Edit suggestion",
                           "height": 44,
                           "fill": "$bg-raised",
@@ -573,9 +573,8 @@
                           "justifyContent": "center",
                           "alignItems": "center",
                           "width": "fit_content",
-                          "stroke": "#00000000",
                           "descendants": {
-                            "A8Qe7": {
+                            "dzlXv": {
                               "name": "Edit suggestion label",
                               "fill": "$text-primary",
                               "content": "Edit",
@@ -588,7 +587,7 @@
                         {
                           "id": "q7i1Y",
                           "type": "ref",
-                          "ref": "UIu4d",
+                          "ref": "ZmMoc",
                           "name": "Skip suggestion",
                           "height": 44,
                           "fill": "$bg-raised",
@@ -601,9 +600,8 @@
                           "justifyContent": "center",
                           "alignItems": "center",
                           "width": "fit_content",
-                          "stroke": "#00000000",
                           "descendants": {
-                            "A8Qe7": {
+                            "dzlXv": {
                               "name": "Skip suggestion label",
                               "fill": "$text-primary",
                               "content": "Skip",
@@ -1205,7 +1203,7 @@
                         {
                           "id": "JMrk3",
                           "type": "ref",
-                          "ref": "UIu4d",
+                          "ref": "ZmMoc",
                           "name": "Download draft",
                           "height": 44,
                           "fill": "$bg-raised",
@@ -1218,9 +1216,8 @@
                           "alignItems": "center",
                           "width": "fit_content",
                           "justifyContent": "start",
-                          "stroke": "#00000000",
                           "descendants": {
-                            "A8Qe7": {
+                            "dzlXv": {
                               "name": "Download draft label",
                               "fill": "$text-primary",
                               "content": "Download Markdown",
@@ -78551,42 +78548,84 @@
                       "alignItems": "center",
                       "children": [
                         {
+                          "type": "frame",
                           "id": "Togad",
-                          "type": "ref",
-                          "ref": "dPqNg",
-                          "name": "Size xs",
+                          "name": "Button / variant=default / size=xs",
+                          "reusable": true,
                           "width": "fit_content",
-                          "height": 24,
+                          "fill": "$accent",
+                          "cornerRadius": 10,
+                          "gap": 8,
                           "padding": [
                             0,
                             8
                           ],
-                          "cornerRadius": 10,
-                          "descendants": {
-                            "lBog5": {
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "height": 24,
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "OABWU",
+                              "name": "Icon",
+                              "enabled": false,
+                              "width": 16,
+                              "height": 16,
+                              "icon": "plus",
+                              "library": "lucide",
+                              "fill": "$accent-text"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gexSD",
+                              "name": "Label",
+                              "fill": "$accent-text",
                               "content": "Extra small",
-                              "fontSize": 12
+                              "fontFamily": "$font-primary",
+                              "fontSize": 12,
+                              "fontWeight": "700"
                             }
-                          }
+                          ]
                         },
                         {
+                          "type": "frame",
                           "id": "dSXKK",
-                          "type": "ref",
-                          "ref": "dPqNg",
-                          "name": "Size sm",
+                          "name": "Button / variant=default / size=sm",
+                          "reusable": true,
                           "width": "fit_content",
-                          "height": 28,
+                          "fill": "$accent",
+                          "cornerRadius": 12,
+                          "gap": 8,
                           "padding": [
                             0,
                             10
                           ],
-                          "cornerRadius": 12,
-                          "descendants": {
-                            "lBog5": {
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "height": 28,
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "xcMQk",
+                              "name": "Icon",
+                              "enabled": false,
+                              "width": 16,
+                              "height": 16,
+                              "icon": "plus",
+                              "library": "lucide",
+                              "fill": "$accent-text"
+                            },
+                            {
+                              "type": "text",
+                              "id": "LwurT",
+                              "name": "Label",
+                              "fill": "$accent-text",
                               "content": "Small",
-                              "fontSize": 13
+                              "fontFamily": "$font-primary",
+                              "fontSize": 13,
+                              "fontWeight": "700"
                             }
-                          }
+                          ]
                         },
                         {
                           "id": "qbSsx",
@@ -78608,23 +78647,115 @@
                           }
                         },
                         {
+                          "type": "frame",
                           "id": "eHEb3",
-                          "type": "ref",
-                          "ref": "dPqNg",
-                          "name": "Size lg",
+                          "name": "Button / variant=default / size=lg",
+                          "reusable": true,
                           "width": "fit_content",
-                          "height": 36,
+                          "fill": "$accent",
+                          "cornerRadius": 12,
+                          "gap": 8,
                           "padding": [
                             0,
                             10
                           ],
-                          "cornerRadius": 12,
-                          "descendants": {
-                            "lBog5": {
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "height": 36,
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "vNUtE",
+                              "name": "Icon",
+                              "enabled": false,
+                              "width": 16,
+                              "height": 16,
+                              "icon": "plus",
+                              "library": "lucide",
+                              "fill": "$accent-text"
+                            },
+                            {
+                              "type": "text",
+                              "id": "jBHpa",
+                              "name": "Label",
+                              "fill": "$accent-text",
                               "content": "Large",
-                              "fontSize": 14
+                              "fontFamily": "$font-primary",
+                              "fontSize": 14,
+                              "fontWeight": "700"
                             }
-                          }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HUKpt",
+                          "name": "Button / variant=secondary / size=xs",
+                          "reusable": true,
+                          "fill": "$bg-raised",
+                          "cornerRadius": 10,
+                          "gap": 8,
+                          "padding": [
+                            0,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "height": 24,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Vbj22",
+                              "name": "Label",
+                              "fill": "$text-primary",
+                              "content": "Search",
+                              "fontFamily": "$font-primary",
+                              "fontSize": 12,
+                              "fontWeight": "700"
+                            }
+                          ],
+                          "width": "fit_content"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "B57pY",
+                          "name": "Button / variant=outline / size=sm",
+                          "reusable": true,
+                          "height": 28,
+                          "fill": "$bg-raised",
+                          "cornerRadius": 12,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "gap": 8,
+                          "padding": [
+                            0,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "x1eb6",
+                              "name": "Icon",
+                              "enabled": false,
+                              "width": 16,
+                              "height": 16,
+                              "icon": "plus",
+                              "library": "lucide",
+                              "fill": "$text-primary"
+                            },
+                            {
+                              "type": "text",
+                              "id": "VH14V",
+                              "name": "Label",
+                              "fill": "$text-primary",
+                              "content": "Review fields",
+                              "fontFamily": "$font-primary",
+                              "fontSize": 13,
+                              "fontWeight": "700"
+                            }
+                          ],
+                          "width": "fit_content"
                         }
                       ]
                     }
@@ -78676,7 +78807,8 @@
                             "lBog5": {
                               "content": "Upload"
                             }
-                          }
+                          },
+                          "height": 44
                         },
                         {
                           "id": "J8VLDS",
@@ -78735,7 +78867,8 @@
                             "lBog5": {
                               "content": "Saving"
                             }
-                          }
+                          },
+                          "height": 44
                         },
                         {
                           "id": "WVIs3",
@@ -78820,76 +78953,152 @@
                           ]
                         },
                         {
+                          "type": "frame",
                           "id": "Q2tbW",
-                          "type": "ref",
-                          "ref": "k1HlvD",
-                          "name": "icon-xs",
+                          "name": "Button / variant=outline / size=icon-xs",
+                          "reusable": true,
+                          "width": 24,
+                          "height": 24,
+                          "fill": "$bg-page",
+                          "cornerRadius": 10,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "yxUI6",
+                              "name": "Icon",
+                              "width": 12,
+                              "height": 12,
+                              "icon": "ellipsis",
+                              "library": "lucide",
+                              "fill": "$text-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "p9wtt",
+                          "name": "Button / variant=outline / size=icon-sm",
+                          "reusable": true,
+                          "width": 28,
+                          "height": 28,
+                          "fill": "$bg-page",
+                          "cornerRadius": 12,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "R39NG",
+                              "name": "Icon",
+                              "width": 14,
+                              "height": 14,
+                              "icon": "ellipsis",
+                              "library": "lucide",
+                              "fill": "$text-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "V6fLDi",
+                          "name": "Button / variant=outline / size=icon-lg",
+                          "reusable": true,
+                          "width": 36,
+                          "height": 36,
+                          "fill": "$bg-page",
+                          "cornerRadius": 12,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "bjEgq",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "ellipsis",
+                              "library": "lucide",
+                              "fill": "$text-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aoDnf",
+                          "name": "Button / variant=default / size=icon",
+                          "reusable": true,
+                          "width": 32,
+                          "height": 32,
+                          "fill": "$accent",
+                          "cornerRadius": "$radius-md",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "hVi5D",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "arrow-up",
+                              "library": "lucide",
+                              "fill": "$accent-text"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "j5gdT",
+                          "name": "Button / variant=ghost / size=icon",
+                          "reusable": true,
+                          "width": 32,
+                          "height": 32,
+                          "cornerRadius": "$radius-md",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "fhXzs",
+                              "name": "Icon",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "x",
+                              "library": "lucide",
+                              "fill": "$text-primary"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lBqSS",
+                          "name": "Button / variant=ghost / size=icon-xs",
+                          "reusable": true,
                           "width": 24,
                           "height": 24,
                           "cornerRadius": 10,
-                          "descendants": {
-                            "ExIK5": {
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "kSxfp",
+                              "name": "Icon",
                               "width": 12,
-                              "height": 12
+                              "height": 12,
+                              "icon": "x",
+                              "library": "lucide",
+                              "fill": "$text-primary"
                             }
-                          }
-                        },
-                        {
-                          "id": "p9wtt",
-                          "type": "ref",
-                          "ref": "k1HlvD",
-                          "name": "icon-sm",
-                          "width": 28,
-                          "height": 28,
-                          "cornerRadius": 12,
-                          "descendants": {
-                            "ExIK5": {
-                              "width": 14,
-                              "height": 14
-                            }
-                          }
-                        },
-                        {
-                          "id": "V6fLDi",
-                          "type": "ref",
-                          "ref": "k1HlvD",
-                          "name": "icon-lg",
-                          "width": 36,
-                          "height": 36,
-                          "cornerRadius": 12,
-                          "descendants": {
-                            "ExIK5": {
-                              "width": 16,
-                              "height": 16
-                            }
-                          }
-                        },
-                        {
-                          "id": "aoDnf",
-                          "type": "ref",
-                          "ref": "k1HlvD",
-                          "name": "Icon default variant",
-                          "fill": "$accent",
-                          "stroke": "#00000000",
-                          "descendants": {
-                            "ExIK5": {
-                              "icon": "arrow-up",
-                              "fill": "$accent-text"
-                            }
-                          }
-                        },
-                        {
-                          "id": "j5gdT",
-                          "type": "ref",
-                          "ref": "k1HlvD",
-                          "name": "Icon ghost variant",
-                          "fill": "#00000000",
-                          "stroke": "#00000000",
-                          "descendants": {
-                            "ExIK5": {
-                              "icon": "x"
-                            }
-                          }
+                          ]
                         }
                       ]
                     }
@@ -79305,19 +79514,12 @@
                             {
                               "id": "mJ10z",
                               "type": "ref",
-                              "ref": "ZmMoc",
+                              "ref": "HUKpt",
                               "name": "Inline button",
                               "width": "fit_content",
-                              "height": 24,
-                              "padding": [
-                                0,
-                                8
-                              ],
-                              "cornerRadius": 10,
                               "descendants": {
-                                "dzlXv": {
-                                  "content": "Search",
-                                  "fontSize": 12
+                                "Vbj22": {
+                                  "content": "Search"
                                 }
                               }
                             }
@@ -79464,19 +79666,45 @@
                               }
                             },
                             {
+                              "type": "frame",
                               "id": "Y9M1z",
-                              "type": "ref",
-                              "ref": "Kj7bi",
-                              "name": "Size sm",
+                              "name": "SelectTrigger / size=sm",
+                              "reusable": true,
                               "width": 200,
                               "height": 28,
+                              "fill": "$bg-control",
                               "cornerRadius": 10,
-                              "descendants": {
-                                "gnUIo": {
+                              "stroke": "$border",
+                              "strokeWidth": 1,
+                              "padding": [
+                                13,
+                                14
+                              ],
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "RlwD6",
+                                  "name": "Value",
+                                  "fill": "$text-primary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
                                   "content": "Small trigger",
-                                  "fill": "$text-primary"
+                                  "fontFamily": "$font-primary",
+                                  "fontSize": 15,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "AFsOq",
+                                  "name": "Chevron",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "chevron-down",
+                                  "library": "lucide",
+                                  "fill": "$text-secondary"
                                 }
-                              }
+                              ]
                             }
                           ]
                         },
@@ -80658,15 +80886,12 @@
                                     {
                                       "id": "YMwju",
                                       "type": "ref",
-                                      "ref": "UIu4d",
+                                      "ref": "B57pY",
                                       "name": "Action",
                                       "width": "fit_content",
-                                      "height": 28,
-                                      "cornerRadius": 12,
                                       "descendants": {
-                                        "A8Qe7": {
-                                          "content": "Review fields",
-                                          "fontSize": 13
+                                        "VH14V": {
+                                          "content": "Review fields"
                                         }
                                       }
                                     }
@@ -80751,15 +80976,12 @@
                                     {
                                       "id": "KqSKa",
                                       "type": "ref",
-                                      "ref": "UIu4d",
+                                      "ref": "B57pY",
                                       "name": "Action",
                                       "width": "fit_content",
-                                      "height": 28,
-                                      "cornerRadius": 12,
                                       "descendants": {
-                                        "A8Qe7": {
-                                          "content": "Review fields",
-                                          "fontSize": 13
+                                        "VH14V": {
+                                          "content": "Review fields"
                                         }
                                       }
                                     }
@@ -80844,15 +81066,12 @@
                                     {
                                       "id": "rmjJ9",
                                       "type": "ref",
-                                      "ref": "UIu4d",
+                                      "ref": "B57pY",
                                       "name": "Action",
                                       "width": "fit_content",
-                                      "height": 28,
-                                      "cornerRadius": 12,
                                       "descendants": {
-                                        "A8Qe7": {
-                                          "content": "Review fields",
-                                          "fontSize": 13
+                                        "VH14V": {
+                                          "content": "Review fields"
                                         }
                                       }
                                     }
@@ -80937,15 +81156,12 @@
                                     {
                                       "id": "hDxKA",
                                       "type": "ref",
-                                      "ref": "UIu4d",
+                                      "ref": "B57pY",
                                       "name": "Action",
                                       "width": "fit_content",
-                                      "height": 28,
-                                      "cornerRadius": 12,
                                       "descendants": {
-                                        "A8Qe7": {
-                                          "content": "Review fields",
-                                          "fontSize": 13
+                                        "VH14V": {
+                                          "content": "Review fields"
                                         }
                                       }
                                     }
@@ -81087,15 +81303,10 @@
                             {
                               "id": "gkdHD",
                               "type": "ref",
-                              "ref": "k1HlvD",
+                              "ref": "lBqSS",
                               "name": "Close",
-                              "width": 24,
-                              "height": 24,
-                              "cornerRadius": 10,
-                              "fill": "#00000000",
-                              "stroke": "#00000000",
                               "descendants": {
-                                "ExIK5": {
+                                "kSxfp": {
                                   "icon": "x",
                                   "width": 14,
                                   "height": 14,

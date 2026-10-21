@@ -6,7 +6,28 @@ The approved [rabbit logo](brand/scout-rabbit-bubble.png) remains a replaceable 
 
 The approved light values in the top-level Pen variables are the implementation token source. Run `npm run tokens:generate` after changing them; CI runs `npm run tokens:check` against the generated `src/styles/tokens.css`. Do not edit that stylesheet by hand.
 
-The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, application history, or a reusable-component migration.
+The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, or application history.
+
+## Component naming and instances
+
+The `Job Scout components · code-aligned` frame (`l7Piy5`) is the reusable Pen component set for the approved journey. A definition carries a name from the generated [code catalog](../.claude/skills/job-scout-ui/references/components.md) only when it matches that code export exactly. Variant-bearing catalog definitions use `Export / prop=value`; export, prop, and value spelling must match the catalog exactly. `Separator` and `DialogContent` are the exact matches in this set. The visible dialog surface is `DialogContent`, because the catalog's `Dialog` is the non-visual root.
+
+The approved journey's controls are 44px or taller touch targets, larger than the code's `Button`, `Input`, `Textarea`, and `SelectTrigger` defaults, so they are product patterns:
+
+- `ActionButton / variant=default|secondary|outline|destructive / surface=standard` is the 44px, radius-12 action used across the approved website, companion, popup, and side-panel frames.
+- `ActionButton / variant=default|secondary / surface=extension` is the radius-10, hug-height action in the extension canvas frames outside the approved list.
+- `ActionButton / variant=default|secondary / surface=workspace` is the radius-10 inline action used in frames 02–04, with matching `AppNavigationItem / state=default|active / surface=workspace` items there. Other frames use `AppNavigationItem / state=default|active / surface=standard`.
+- `FormInput / state=focus`, `FormTextarea / state=focus`, and `FormSelectTrigger` are the 48px approved form controls.
+
+Implement them with the matching code primitive and variant plus the larger sizing. Do not rename one to a catalog name unless it matches the code export exactly.
+
+The `Primitives • UI components` board (`rgFOJ`) is the specimen sheet for code-sized catalog primitives. Its definitions use exact catalog names: `Button / variant=default|outline|secondary|ghost|destructive|link / size=default`, `Button / variant=default / size=xs|sm|lg|icon`, `Button / variant=secondary / size=xs`, `Button / variant=outline / size=sm|icon|icon-xs|icon-sm|icon-lg`, `Button / variant=ghost / size=icon|icon-xs|icon-sm`, `Input`, `Textarea`, `SelectTrigger / size=default|sm`, `ButtonGroup / orientation=horizontal`, `InputGroup`, `SelectContent`, `SelectItem`, `DropdownMenuContent`, `DropdownMenuItem`, `Command`, `CommandItem`, `TooltipContent`, `HoverCardContent`, and `Spinner`. Each `a|b` entry is one definition per value. `Button / variant=secondary / size=xs`, `Button / variant=outline / size=sm|icon-sm`, and `Button / variant=ghost / size=icon-xs|icon-sm` have no specimen slot of their own, so they live in the `Primitives • catalog definitions without a specimen slot` frame, and the board's InputGroup, Alert, Toast, Dialog, and icon-button specimens are instances of them. The board's Dialog specimen is a plain composition of these Button definitions, not a definition; `DialogContent` stays in `l7Piy5`. Icon glyph size is a content override, matching a size class passed to the icon in code. Add a new variant or size as a new `Export / prop=value` definition and point instances at it; never restyle an instance into a different variant or size with overrides, and do not reintroduce the old `UI /` names.
+
+Product patterns keep stable PascalCase names: `ActionButton`, `FormInput`, `FormTextarea`, `FormSelectTrigger`, `EvidenceBadge`, `ReviewStatus`, `FieldAnswerRow`, `UnresolvedQuestion`, and `ConnectionState`. `AppNavigationItem`, `ExtensionHeader`, `ExtensionToolbar`, `JobCard`, `CompactFieldStateRow`, `Alert / tone=neutral|positive|warning|error`, and `Toast` are proposed patterns because the current catalog has no equivalent. Do not assign a catalog primitive name to an unmatched design element.
+
+Every occurrence of a reusable control or pattern in the approved frames is a Pen `ref` instance. Change shared appearance in its reusable definition, and use instance overrides only for copy, state, tone, locale, and container sizing. An instance must not repeat a value its definition already sets. Do not detach an instance or redraw a parallel control.
+
+The issue #38 conversion covers the 24 approved frames listed below. The extension canvas frames outside that list (`Extension closed • Launcher` and its hover state, `Extension • Job detected`, `Extension • Autofill information`, `Extension • Settings`, the scanning and filling states, and `Section 3 • Profile and resumes`) use `ExtensionToolbar`, `JobCard`, `CompactFieldStateRow`, and `ActionButton` instances, but their other form controls are still hand-drawn. Those frames fall outside this conversion; replace their controls with instances before treating them as approved. Review exports for issue #38 are in [`review/issue-38`](review/issue-38/).
 
 ## Approved architecture defaults
 

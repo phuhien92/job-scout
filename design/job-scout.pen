@@ -15080,14 +15080,14 @@
         {
           "type": "frame",
           "id": "W8Hykl",
-          "name": "Dialog primitive",
+          "name": "DialogContent primitive",
           "width": "fill_container",
           "gap": 20,
           "children": [
             {
               "type": "frame",
               "id": "U18pj",
-              "name": "Dialog showcase",
+              "name": "DialogContent showcase",
               "width": 720,
               "layout": "vertical",
               "gap": 8,
@@ -15095,11 +15095,11 @@
                 {
                   "type": "text",
                   "id": "w8p5Yn",
-                  "name": "Dialog caption",
+                  "name": "DialogContent caption",
                   "fill": "$text-secondary",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Dialog",
+                  "content": "DialogContent",
                   "fontFamily": "$font-primary",
                   "fontSize": 12,
                   "fontWeight": "700"
@@ -78416,21 +78416,21 @@
                           "type": "ref",
                           "id": "HkYW3",
                           "ref": "dPqNg",
-                          "name": "Button / Default",
+                          "name": "Button / variant=default / size=default",
                           "width": "fit_content"
                         },
                         {
                           "type": "ref",
                           "id": "oEBiB",
                           "ref": "UIu4d",
-                          "name": "Button / Outline",
+                          "name": "Button / variant=outline / size=default",
                           "width": "fit_content"
                         },
                         {
                           "type": "ref",
                           "id": "xAZP1",
                           "ref": "ZmMoc",
-                          "name": "Button / Secondary",
+                          "name": "Button / variant=secondary / size=default",
                           "width": "fit_content"
                         },
                         {
@@ -78477,7 +78477,7 @@
                           "type": "ref",
                           "id": "csCyc",
                           "ref": "i7aTQ8",
-                          "name": "Button / Destructive",
+                          "name": "Button / variant=destructive / size=default",
                           "width": "fit_content"
                         },
                         {
@@ -79447,7 +79447,7 @@
                               "type": "ref",
                               "id": "TDWwo",
                               "ref": "Kj7bi",
-                              "name": "Select trigger",
+                              "name": "SelectTrigger / size=default",
                               "width": 200
                             },
                             {
@@ -79759,7 +79759,7 @@
                           "type": "ref",
                           "id": "hVmVn",
                           "ref": "B7IZho",
-                          "name": "Dialog",
+                          "name": "DialogContent",
                           "width": 676,
                           "descendants": {
                             "ESeGI": {

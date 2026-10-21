@@ -78436,7 +78436,7 @@
                         {
                           "type": "frame",
                           "id": "lWOCv",
-                          "name": "UI / Button / Ghost",
+                          "name": "Button / variant=ghost / size=default",
                           "reusable": true,
                           "height": 32,
                           "cornerRadius": "$radius-md",
@@ -78483,7 +78483,7 @@
                         {
                           "type": "frame",
                           "id": "bmzPn",
-                          "name": "UI / Button / Link",
+                          "name": "Button / variant=link / size=default",
                           "reusable": true,
                           "height": 32,
                           "cornerRadius": "$radius-md",
@@ -78796,7 +78796,7 @@
                         {
                           "type": "frame",
                           "id": "k1HlvD",
-                          "name": "UI / Icon button",
+                          "name": "Button / variant=outline / size=icon",
                           "reusable": true,
                           "width": 32,
                           "height": 32,
@@ -78924,7 +78924,7 @@
                         {
                           "type": "frame",
                           "id": "jWtFr",
-                          "name": "UI / Button group",
+                          "name": "ButtonGroup / orientation=horizontal",
                           "reusable": true,
                           "children": [
                             {
@@ -79264,7 +79264,7 @@
                         {
                           "type": "frame",
                           "id": "NPLq5",
-                          "name": "UI / Input group",
+                          "name": "InputGroup",
                           "reusable": true,
                           "width": 320,
                           "height": 32,
@@ -79483,7 +79483,7 @@
                         {
                           "type": "frame",
                           "id": "QlyDk",
-                          "name": "UI / Select item",
+                          "name": "SelectItem",
                           "reusable": true,
                           "width": 192,
                           "cornerRadius": 10,
@@ -79525,7 +79525,7 @@
                         {
                           "type": "frame",
                           "id": "hpLOK",
-                          "name": "UI / Select content",
+                          "name": "SelectContent",
                           "reusable": true,
                           "width": 200,
                           "fill": "$bg-panel",
@@ -79770,7 +79770,7 @@
                         {
                           "type": "frame",
                           "id": "W3Ef0",
-                          "name": "UI / Dropdown menu",
+                          "name": "DropdownMenuContent",
                           "reusable": true,
                           "width": 224,
                           "fill": "$bg-panel",
@@ -79926,7 +79926,7 @@
                         {
                           "type": "frame",
                           "id": "RRYmZ",
-                          "name": "UI / Command",
+                          "name": "Command",
                           "reusable": true,
                           "clip": true,
                           "width": 320,
@@ -80182,7 +80182,7 @@
                         {
                           "type": "frame",
                           "id": "fZPBR",
-                          "name": "UI / Menu item",
+                          "name": "DropdownMenuItem",
                           "reusable": true,
                           "width": 216,
                           "cornerRadius": 10,
@@ -80231,7 +80231,7 @@
                         {
                           "type": "frame",
                           "id": "cvUpp",
-                          "name": "UI / Command item",
+                          "name": "CommandItem",
                           "reusable": true,
                           "width": 304,
                           "cornerRadius": 10,
@@ -80346,7 +80346,7 @@
                         {
                           "type": "frame",
                           "id": "fiNNo",
-                          "name": "UI / Tooltip",
+                          "name": "TooltipContent",
                           "reusable": true,
                           "layout": "vertical",
                           "alignItems": "center",
@@ -80396,7 +80396,7 @@
                         {
                           "type": "frame",
                           "id": "aYGjR",
-                          "name": "UI / Hover card",
+                          "name": "HoverCardContent",
                           "reusable": true,
                           "width": 256,
                           "fill": "$bg-panel",
@@ -80586,7 +80586,7 @@
                         {
                           "type": "frame",
                           "id": "kKcSv",
-                          "name": "UI / Alert / Neutral",
+                          "name": "Alert / tone=neutral",
                           "reusable": true,
                           "width": "fill_container",
                           "fill": "$bg-panel",
@@ -80679,7 +80679,7 @@
                         {
                           "type": "frame",
                           "id": "L3I1P",
-                          "name": "UI / Alert / Positive",
+                          "name": "Alert / tone=positive",
                           "reusable": true,
                           "width": "fill_container",
                           "fill": "$positive-bg",
@@ -80772,7 +80772,7 @@
                         {
                           "type": "frame",
                           "id": "ipsjb",
-                          "name": "UI / Alert / Warning",
+                          "name": "Alert / tone=warning",
                           "reusable": true,
                           "width": "fill_container",
                           "fill": "$warning-bg",
@@ -80865,7 +80865,7 @@
                         {
                           "type": "frame",
                           "id": "B9KGb",
-                          "name": "UI / Alert / Error",
+                          "name": "Alert / tone=error",
                           "reusable": true,
                           "width": "fill_container",
                           "fill": "$error-bg",
@@ -80998,7 +80998,7 @@
                         {
                           "type": "frame",
                           "id": "gRJAq",
-                          "name": "UI / Toast",
+                          "name": "Toast",
                           "reusable": true,
                           "width": 356,
                           "fill": "$bg-panel",
@@ -81424,7 +81424,7 @@
                         {
                           "type": "icon",
                           "id": "d0pImO",
-                          "name": "UI / Spinner",
+                          "name": "Spinner",
                           "reusable": true,
                           "width": 16,
                           "height": 16,

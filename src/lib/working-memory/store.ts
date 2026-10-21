@@ -1,6 +1,4 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
-import { randomUUID } from "node:crypto";
+import { accessDatabase } from "./database";
 import { applicationProfileSchema, migrateLegacyProfile, refreshLegacyFacts } from "./application-profile";
 
 import {
@@ -10,20 +8,7 @@ import {
   type WorkingMemory,
 } from "@/lib/working-memory/types";
 
-const STORE_FILE = path.join(
-  process.env.JOB_SCOUT_DATA_DIR || path.join(process.cwd(), ".data"),
-  "working-memory.json",
-);
-
-/**
- * Working-memory store for the whole product (Scout and Optimize share one
- * resource-scoped profile, `resume` source text, and extracted facts).
- *
- * This is the single swap point for the persistence layer. Today it is a
- * small server-side JSON file; swapping to Mastra memory or LibSQL means
- * reimplementing only `readWorkingMemory`/`writeWorkingMemory` behind the
- * same `WorkingMemory` shape.
- */
+/** Shared Scout/Optimize boundary; SQLite storage and migration live in database.ts. */
 
 function normList(value: unknown, max = 60): string[] {
   if (!Array.isArray(value)) {
@@ -145,35 +130,11 @@ function normalizeWorkingMemory(value: unknown): WorkingMemory {
 }
 
 export async function readWorkingMemory(): Promise<WorkingMemory> {
-  try {
-    const raw = await fs.readFile(STORE_FILE, "utf8");
-    return normalizeWorkingMemory(JSON.parse(raw) as unknown);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      return structuredClone(EMPTY_WORKING_MEMORY);
-    }
-    // Corruption, permissions and future versions must not become an empty profile.
-    throw error;
-  }
+  return accessDatabase(normalizeWorkingMemory);
 }
 
 export async function writeWorkingMemory(memory: WorkingMemory): Promise<void> {
-  // Refuse to replace an unreadable or future-version store, even for direct callers.
-  await readWorkingMemory();
   const normalized = normalizeWorkingMemory(memory);
   normalized.applicationProfile = refreshLegacyFacts(normalized.applicationProfile, normalized.profile);
-  await fs.mkdir(path.dirname(STORE_FILE), { recursive: true, mode: 0o700 });
-  const temporary = `${STORE_FILE}.${randomUUID()}.tmp`;
-  try {
-    const file = await fs.open(temporary, "wx", 0o600);
-    try {
-      await file.writeFile(`${JSON.stringify(normalized, null, 2)}\n`, "utf8");
-      await file.sync();
-    } finally {
-      await file.close();
-    }
-    await fs.rename(temporary, STORE_FILE);
-  } finally {
-    await fs.rm(temporary, { force: true });
-  }
+  await accessDatabase(normalizeWorkingMemory, normalized);
 }

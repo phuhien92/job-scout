@@ -1,3 +1,5 @@
+import type { ApplicationProfile } from "./application-profile";
+
 export const REMOTE_PREFERENCE_VALUES = ["remote", "hybrid", "onsite"] as const;
 export type RemotePreferenceValue = (typeof REMOTE_PREFERENCE_VALUES)[number];
 export type RemotePreference = RemotePreferenceValue | null;
@@ -42,6 +44,8 @@ export interface OptimizedResume {
 }
 
 export interface WorkingMemory {
+  storeVersion: 1;
+  applicationProfile: ApplicationProfile;
   resume: ResumeRecord | null;
   profile: Profile;
   optimizedResume: OptimizedResume | null;
@@ -61,6 +65,8 @@ export const EMPTY_PROFILE: Profile = {
 };
 
 export const EMPTY_WORKING_MEMORY: WorkingMemory = {
+  storeVersion: 1,
+  applicationProfile: { version: 1, facts: [] },
   resume: null,
   profile: EMPTY_PROFILE,
   optimizedResume: null,

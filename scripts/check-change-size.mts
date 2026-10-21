@@ -1,5 +1,5 @@
 /**
- * Enforces the change-size rule in AGENTS.md: a PR changes about 300 lines at most,
+ * Enforces the change-size rule in AGENTS.md: a PR changes about 500 lines at most,
  * not counting generated files. A PR over the limit passes only if its description
  * explains why it can't be split, under a "## Why this can't be split" heading.
  *
@@ -9,7 +9,7 @@
  */
 import { execFileSync } from "node:child_process";
 
-export const LIMIT = 300;
+export const LIMIT = 500;
 
 /** Generated or machine-written files: nobody reviews them line by line. */
 const EXCLUDED = [

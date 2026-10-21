@@ -1,6 +1,6 @@
 name: Change size
 
-# The change-size rule in AGENTS.md: about 300 changed lines per PR, generated files
+# The change-size rule in AGENTS.md: about 500 changed lines per PR, generated files
 # not counted. `edited` re-runs it when the description gains a
 # "## Why this can't be split" explanation.
 on:

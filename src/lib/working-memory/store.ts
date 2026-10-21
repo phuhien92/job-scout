@@ -1,5 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { randomUUID } from "node:crypto";
+import { applicationProfileSchema, migrateLegacyProfile, refreshLegacyFacts } from "./application-profile";
 
 import {
   EMPTY_WORKING_MEMORY,
@@ -98,7 +100,21 @@ function normalizeOptimizedResume(value: unknown): OptimizedResume | null {
 }
 
 function normalizeWorkingMemory(value: unknown): WorkingMemory {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error("Invalid working-memory store");
+  }
+  const version = (value as { storeVersion?: unknown }).storeVersion;
+  if (version !== undefined && version !== 1) {
+    throw new Error("Unsupported working-memory store version");
+  }
   const raw = (value ?? {}) as Partial<WorkingMemory>;
+  if (raw.profile !== undefined && (!raw.profile || typeof raw.profile !== "object" || Array.isArray(raw.profile))) {
+    throw new Error("Invalid stored profile");
+  }
+  if (version === 1 && raw.applicationProfile === undefined) {
+    throw new Error("Missing application profile in versioned store");
+  }
+  const profile = normalizeProfile(raw.profile);
   const resume = raw.resume;
   const resumeRecord =
     resume && typeof resume === "object" && typeof resume.fileName === "string"
@@ -118,8 +134,12 @@ function normalizeWorkingMemory(value: unknown): WorkingMemory {
         }
       : null;
   return {
+    storeVersion: 1,
+    applicationProfile: raw.applicationProfile === undefined
+      ? migrateLegacyProfile(profile)
+      : applicationProfileSchema.parse(raw.applicationProfile),
     resume: resumeRecord,
-    profile: normalizeProfile(raw.profile),
+    profile,
     optimizedResume: normalizeOptimizedResume(raw.optimizedResume),
   };
 }
@@ -128,12 +148,32 @@ export async function readWorkingMemory(): Promise<WorkingMemory> {
   try {
     const raw = await fs.readFile(STORE_FILE, "utf8");
     return normalizeWorkingMemory(JSON.parse(raw) as unknown);
-  } catch {
-    return EMPTY_WORKING_MEMORY;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return structuredClone(EMPTY_WORKING_MEMORY);
+    }
+    // Corruption, permissions and future versions must not become an empty profile.
+    throw error;
   }
 }
 
 export async function writeWorkingMemory(memory: WorkingMemory): Promise<void> {
-  await fs.mkdir(path.dirname(STORE_FILE), { recursive: true });
-  await fs.writeFile(STORE_FILE, `${JSON.stringify(memory, null, 2)}\n`, "utf8");
+  // Refuse to replace an unreadable or future-version store, even for direct callers.
+  await readWorkingMemory();
+  const normalized = normalizeWorkingMemory(memory);
+  normalized.applicationProfile = refreshLegacyFacts(normalized.applicationProfile, normalized.profile);
+  await fs.mkdir(path.dirname(STORE_FILE), { recursive: true, mode: 0o700 });
+  const temporary = `${STORE_FILE}.${randomUUID()}.tmp`;
+  try {
+    const file = await fs.open(temporary, "wx", 0o600);
+    try {
+      await file.writeFile(`${JSON.stringify(normalized, null, 2)}\n`, "utf8");
+      await file.sync();
+    } finally {
+      await file.close();
+    }
+    await fs.rename(temporary, STORE_FILE);
+  } finally {
+    await fs.rm(temporary, { force: true });
+  }
 }

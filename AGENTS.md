@@ -40,7 +40,7 @@ Start with issues whose Blocked by is none or already closed.
 
 ## Change size
 
-A person reads and reviews every PR, so keep each one to about 500 changed lines, not counting generated files (the component catalog, lockfiles, `.pen` files, snapshots). If an issue needs more, split it into sub-issues before writing code: each one lands on its own, builds, passes tests, and leaves the app working. Link them from the parent issue. If a change can't be split smaller, say why in its PR description.
+A person reads and reviews every PR, so keep each one to about 500 changed lines, not counting generated files (the component catalog, lockfiles, `.pen` files, snapshots). If an issue needs more, split it into sub-issues before writing code: each one lands on its own, builds, passes tests, and leaves the app working. Link them from the parent issue. If a change can't be split smaller, explain why under a `## Why this can't be split` heading in the PR description. The `Change size` CI check enforces this (`scripts/check-change-size.mts`).
 
 ## Stack
 
@@ -65,7 +65,7 @@ next-intl without i18n routing — URLs stay locale-free. English is the default
 
 ## Component architecture
 
-The existing website has local Base UI-backed primitives in `src/components/ui`, product components in `src/components`, and a legacy `@robr0/design-system` dependency. No new UI should depend on the legacy package. Before writing UI, load the `job-scout-ui` skill: its component catalog is generated from `src/components/ui` (`pnpm ui:catalog`; `pnpm ui:catalog --check` fails when stale), and ESLint blocks legacy imports and raw form controls in product code. The migration plan and source-backed component boundaries are in `docs/research/component-architecture.md`; issue #17 tracks implementation and final dependency removal.
+The existing website has local Base UI-backed primitives in `src/components/ui`, product components in `src/components`, and a legacy `@robr0/design-system` dependency. No new UI should depend on the legacy package. Before writing UI, load the `job-scout-ui` skill: its component catalog is generated from `src/components/ui` (`pnpm ui:catalog`, checked in CI), and ESLint blocks legacy imports and raw form controls in product code. The migration plan and source-backed component boundaries are in `docs/research/component-architecture.md`; issue #17 tracks implementation and final dependency removal.
 
 The shared shell lives in `src/components/AppShell.tsx` and wraps the Scout, Optimize, Jobs, and Profile routes through `src/app/layout.tsx`. Preserve desktop and narrow navigation, keyboard operation, focus behavior, theme switching, and EN/VI controls while replacing legacy components. Verify at 375px and 1440px.
 

@@ -40,7 +40,7 @@ Start with issues whose Blocked by is none or already closed.
 
 ## Change size
 
-A person reads and reviews every PR, so keep each one to about 500 changed lines, not counting generated files (the component catalog, lockfiles, `.pen` files, snapshots). If an issue needs more, split it into sub-issues before writing code: each one lands on its own, builds, passes tests, and leaves the app working. Link them from the parent issue. If a change can't be split smaller, explain why under a `## Why this can't be split` heading in the PR description. The `Change size` CI check enforces this (`scripts/check-change-size.mts`).
+A person reads and reviews every PR, so keep each one to about 500 changed lines, not counting generated files (the component catalog, lockfiles, `.pen` files, snapshots). If the work needs more, deliver it as a stack of PRs, each about 500 changed lines and based on the one before it. Split the issue into sub-issues before writing code: each PR in the stack lands on its own, builds, passes tests, and leaves the app working. Link the sub-issues from the parent issue and link each stacked PR to the PR it builds on. If a change can't be split smaller, explain why under a `## Why this can't be split` heading in the PR description. The `Change size` CI check enforces this (`scripts/check-change-size.mts`).
 
 ## Stack
 

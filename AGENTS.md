@@ -71,6 +71,13 @@ The shared shell lives in `src/components/AppShell.tsx` and wraps the Scout, Opt
 
 Theme switching currently uses `data-theme` on `<html>` and `src/lib/theme.tsx`. New tokens must be owned by Job Scout; do not add styles that depend on `@robr0` token CSS. Copy uses sentence-case labels, no emoji, and no em dashes in product UI.
 
+Use Framer Motion for new product animations when needed. Respect `prefers-reduced-motion`, preserve keyboard/focus behavior, and keep application review controls usable throughout transitions. Add the dependency when implementing an animation; the browser baseline itself needs no new animation.
+
+
+## Verification
+
+Use Node 24 and `npm ci`. `npm test` covers unit/component tests; `npm run typecheck` generates route types before checking TypeScript. `npm run test:e2e` owns its server and temporary profile store; see `docs/testing/browser-baseline.md`. Do not reuse a normal dev server or real profile data for browser tests.
+
 ## Shared application contract
 
 `src/lib/application-plan/contract.ts` defines the versioned extension/backend boundary. Read `docs/application-plan.md` before changing scanners, planners, or fill adapters. Keep it independent of React, Next.js, Chrome APIs, and provider code; validate wire payloads and recheck the active scan before user-approved writes.

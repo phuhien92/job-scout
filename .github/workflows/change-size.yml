@@ -1,0 +1,31 @@
+name: Change size
+
+# The change-size rule in AGENTS.md: about 300 changed lines per PR, generated files
+# not counted. `edited` re-runs it when the description gains a
+# "## Why this can't be split" explanation.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  size:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The description and branch name pass through env, never into the script text,
+      # so nothing in a PR can inject shell.
+      - run: node scripts/check-change-size.mts "origin/$BASE_REF" HEAD
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          PR_BODY: ${{ github.event.pull_request.body }}

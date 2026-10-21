@@ -1,56 +1,49 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "../styles/tokens.css";
 
-/* Match Job Scout's data-theme attribute (not a .dark class). */
+/* Never let Tailwind's dark variants follow a system preference. */
 @custom-variant dark (&:is([data-theme="dark"] *));
 
 :root {
-  --font-family-primary: var(--font-nunito-sans), sans-serif;
-  --font-sans: var(--font-nunito-sans), sans-serif;
+  --font-sans: var(--font-nunito-sans), var(--js-font-primary), sans-serif;
 
-  /* Bridge shadcn/AI Elements tokens onto @robr0/design-system semantics. */
-  --background: var(--color-bg-page-primary);
-  --foreground: var(--color-text-primary);
-  --card: var(--color-bg-container-primary);
-  --card-foreground: var(--color-text-primary);
-  --popover: var(--color-bg-container-primary);
-  --popover-foreground: var(--color-text-primary);
-  --primary: var(--color-action-primary-bg);
-  --primary-foreground: var(--color-action-primary-text);
-  --secondary: var(--color-bg-container-secondary);
-  --secondary-foreground: var(--color-text-primary);
-  --muted: var(--color-bg-container-tertiary);
-  --muted-foreground: var(--color-text-secondary);
-  --accent: var(--color-bg-container-secondary);
-  --accent-foreground: var(--color-text-primary);
-  --destructive: var(--color-text-primary);
-  --border: var(--color-bg-container-border);
-  --input: var(--color-bg-container-border);
-  --ring: var(--color-action-primary-border);
-  --chart-1: var(--color-action-primary-bg);
-  --chart-2: var(--color-text-secondary);
-  --chart-3: var(--color-text-tertiary);
-  --chart-4: var(--color-bg-container-secondary);
-  --chart-5: var(--color-bg-container-tertiary);
-  --radius: var(--radius-md, 0.625rem);
-  --sidebar: var(--color-bg-container-primary);
-  --sidebar-foreground: var(--color-text-primary);
-  --sidebar-primary: var(--color-action-primary-bg);
-  --sidebar-primary-foreground: var(--color-action-primary-text);
-  --sidebar-accent: var(--color-bg-container-secondary);
-  --sidebar-accent-foreground: var(--color-text-primary);
-  --sidebar-border: var(--color-bg-container-border);
-  --sidebar-ring: var(--color-action-primary-border);
+  /* The single bridge from generated Job Scout tokens to shadcn/Tailwind roles. */
+  --background: var(--js-bg-page);
+  --foreground: var(--js-text-primary);
+  --card: var(--js-bg-panel);
+  --card-foreground: var(--js-text-primary);
+  --popover: var(--js-bg-panel);
+  --popover-foreground: var(--js-text-primary);
+  --primary: var(--js-accent);
+  --primary-foreground: var(--js-accent-text);
+  --secondary: var(--js-bg-raised);
+  --secondary-foreground: var(--js-text-primary);
+  --muted: var(--js-bg-control);
+  --muted-foreground: var(--js-text-secondary);
+  --accent: var(--js-bg-raised);
+  --accent-foreground: var(--js-text-primary);
+  --destructive: var(--js-error-text);
+  --border: var(--js-border);
+  --input: var(--js-border);
+  --ring: var(--js-accent);
+  --radius: var(--js-radius-md);
+  --sidebar: var(--js-bg-panel);
+  --sidebar-foreground: var(--js-text-primary);
+  --sidebar-primary: var(--js-accent);
+  --sidebar-primary-foreground: var(--js-accent-text);
+  --sidebar-accent: var(--js-bg-raised);
+  --sidebar-accent-foreground: var(--js-text-primary);
+  --sidebar-border: var(--js-border);
+  --sidebar-ring: var(--js-accent);
+
+  /* The Pen source does not define chart roles; issue #17 must not infer them. */
 }
 
 html {
   height: 100%;
-  color-scheme: dark;
-}
-
-html[data-theme="light"] {
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 html,
@@ -63,9 +56,9 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--color-text-primary);
-  background: var(--color-bg-page-primary);
-  font-family: var(--font-family-primary);
+  color: var(--js-text-primary);
+  background: var(--js-bg-page);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,11 +85,6 @@ a {
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -131,38 +119,39 @@ a {
 
 .chat-ai-thread [data-slot="conversation-content"],
 .chat-ai-thread .flex.flex-col.gap-8 {
-  gap: var(--gap-md, 0.75rem);
+  gap: var(--js-space-md);
 }
 
 /* PromptInput: bridge to DS surfaces; teal primary already maps via --primary. */
 .chat-ai-composer {
   flex-shrink: 0;
-  padding: var(--padding-md) var(--padding-lg) var(--padding-lg);
-  border-top: var(--border-xs) solid var(--color-bg-container-border);
-  background: var(--color-bg-container-primary);
+  padding: var(--js-space-md) var(--js-space-lg) var(--js-space-lg);
+  border-top: var(--border-xs) solid var(--js-border);
+  background: var(--js-bg-panel);
 }
 
 .chat-ai-composer [data-slot="input-group"] {
   min-height: 3.25rem;
-  background: var(--color-bg-container-secondary);
-  border-color: var(--color-bg-container-border);
-  border-radius: var(--radius-md);
+  background: var(--js-bg-raised);
+  border-color: var(--js-border);
+  border-radius: var(--js-radius-md);
   box-shadow: none;
 }
 
 .chat-ai-composer [data-slot="input-group"]:focus-within {
-  border-color: var(--color-action-primary-border);
+  border-color: var(--js-accent);
+  box-shadow: 0 0 0 3px var(--js-accent);
   box-shadow: 0 0 0 3px
-    color-mix(in oklch, var(--color-action-primary-border) 35%, transparent);
+    color-mix(in oklch, var(--js-accent) 35%, transparent);
 }
 
 .chat-ai-composer textarea {
-  color: var(--color-text-primary);
-  font-family: var(--font-family-primary);
+  color: var(--js-text-primary);
+  font-family: var(--font-sans);
 }
 
 .chat-ai-composer textarea::placeholder {
-  color: var(--color-text-tertiary, var(--color-text-secondary));
+  color: var(--js-text-tertiary);
 }
 
 @layer base {

@@ -1,32 +1,32 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-lg);
+  gap: var(--js-space-lg);
   min-width: 0;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-lg);
-  padding: var(--padding-lg);
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  border-radius: var(--radius-md);
-  background: var(--color-bg-container-primary);
+  gap: var(--js-space-lg);
+  padding: var(--js-space-lg);
+  border: var(--border-xs) solid var(--js-border);
+  border-radius: var(--js-radius-md);
+  background: var(--js-bg-panel);
   min-width: 0;
 }
 
 .chipRow {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap-sm);
+  gap: var(--js-space-sm);
   min-width: 0;
 }
 
 .fields {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   min-width: 0;
 }
 
@@ -35,14 +35,14 @@
 }
 
 .note {
-  color: var(--color-text-secondary);
+  color: var(--js-text-secondary);
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   flex-wrap: wrap;
   min-width: 0;
 }

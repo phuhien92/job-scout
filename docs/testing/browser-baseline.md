@@ -49,7 +49,7 @@ until issues #22–#24 introduce them.
 ## CI and failure evidence
 
 `.github/workflows/ci.yml` runs on pull requests and pushes to `main`. Its `check`
-job runs `npm ci`, lint, the component catalog check, generated Next route types plus
+job runs `npm ci`, lint, the design-token and component-catalog checks, generated Next route types plus
 TypeScript, Vitest and a production build; its `e2e` job runs both Chromium viewport
 projects. Both use a read-only repository token and no secrets. Before the tests,
 `e2e/global-setup.ts` requests each route once so the development server's first-visit

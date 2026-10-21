@@ -1,9 +1,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  background: var(--color-bg-container-primary);
+  gap: var(--js-space-md);
+  border: var(--border-xs) solid var(--js-border);
+  background: var(--js-bg-panel);
   min-width: 0;
   width: 100%;
   max-width: 36rem;
@@ -12,19 +12,19 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--js-space-xs);
   min-width: 0;
 }
 
 .step {
   margin: 0;
-  color: var(--color-text-tertiary, var(--color-text-secondary));
+  color: var(--js-text-tertiary);
   font-size: var(--font-size-caption, 0.8125rem);
 }
 
 .question {
   margin: 0;
-  color: var(--color-text-primary);
+  color: var(--js-text-primary);
   font-weight: var(--font-weight-semibold, 600);
 }
 
@@ -37,9 +37,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-sm);
-  padding-top: var(--padding-sm);
-  border-top: var(--border-xs) solid var(--color-bg-container-border);
+  gap: var(--js-space-sm);
+  padding-top: var(--js-space-sm);
+  border-top: var(--border-xs) solid var(--js-border);
   min-width: 0;
 }
 
@@ -51,6 +51,6 @@
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap-sm);
+  gap: var(--js-space-sm);
   flex-shrink: 0;
 }

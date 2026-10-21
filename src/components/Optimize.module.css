@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xl);
+  gap: var(--js-space-xl);
   min-width: 0;
   width: 100%;
 }
@@ -9,7 +9,7 @@
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  gap: var(--gap-xl);
+  gap: var(--js-space-xl);
   align-items: center;
   min-width: 0;
 }
@@ -17,17 +17,17 @@
 .copy {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   min-width: 0;
 }
 
 .headline {
   margin: 0;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-sans);
   font-size: var(--font-size-heading-lg, 1.75rem);
   font-weight: var(--font-weight-semibold, 600);
   line-height: var(--line-height-heading, 1.25);
-  color: var(--color-text-primary);
+  color: var(--js-text-primary);
 }
 
 .bullets {
@@ -35,8 +35,8 @@
   padding-inline-start: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-sm);
-  color: var(--color-text-secondary);
+  gap: var(--js-space-sm);
+  color: var(--js-text-secondary);
 }
 
 .bullet {
@@ -46,39 +46,39 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
-  padding: var(--padding-lg);
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  border-radius: var(--radius-md);
-  background: var(--color-bg-container-primary);
+  gap: var(--js-space-md);
+  padding: var(--js-space-lg);
+  border: var(--border-xs) solid var(--js-border);
+  border-radius: var(--js-radius-md);
+  background: var(--js-bg-panel);
   min-width: 0;
 }
 
 .cardHeader {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-xs);
+  gap: var(--js-space-xs);
   text-align: center;
   min-width: 0;
 }
 
 .cardTitle {
   margin: 0;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-sans);
   font-size: var(--font-size-heading-sm, 1.125rem);
   font-weight: var(--font-weight-semibold, 600);
-  color: var(--color-text-primary);
+  color: var(--js-text-primary);
 }
 
 .cardSubtitle {
   margin: 0;
-  color: var(--color-text-secondary);
+  color: var(--js-text-secondary);
 }
 
 .actions {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-sm);
+  gap: var(--js-space-sm);
   min-width: 0;
 }
 
@@ -96,7 +96,7 @@
 
 .disclaimer {
   margin: 0;
-  color: var(--color-text-tertiary, var(--color-text-secondary));
+  color: var(--js-text-tertiary);
   font-size: var(--font-size-caption, 0.8125rem);
   line-height: 1.4;
 }
@@ -108,7 +108,7 @@
 .sessionMissing {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   max-width: 28rem;
   min-width: 0;
 }
@@ -118,9 +118,9 @@
   flex-direction: column;
   height: calc(100dvh - 96px);
   min-height: 420px;
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg-container-primary);
+  border: var(--border-xs) solid var(--js-border);
+  border-radius: var(--js-radius-md);
+  background-color: var(--js-bg-panel);
   overflow: hidden;
   min-width: 0;
 }
@@ -128,8 +128,8 @@
 .chipBar {
   display: flex;
   justify-content: center;
-  padding: var(--padding-md) var(--padding-lg) var(--padding-sm);
-  border-bottom: var(--border-xs) solid var(--color-bg-container-border);
+  padding: var(--js-space-md) var(--js-space-lg) var(--js-space-sm);
+  border-bottom: var(--border-xs) solid var(--js-border);
   flex-shrink: 0;
 }
 
@@ -139,11 +139,11 @@
 }
 
 .status {
-  padding: var(--padding-md) var(--padding-lg) 0;
+  padding: var(--js-space-md) var(--js-space-lg) 0;
 }
 
 .toolStatus {
-  padding-block: var(--padding-xs);
+  padding-block: var(--js-space-xs);
 }
 
 .toolBlock {
@@ -154,7 +154,7 @@
 .messageStack {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   min-width: 0;
 }
 
@@ -164,7 +164,7 @@
 }
 
 .chatError {
-  padding: var(--padding-lg) var(--padding-lg) 0;
+  padding: var(--js-space-lg) var(--js-space-lg) 0;
 }
 
 @media (max-width: 768px) {

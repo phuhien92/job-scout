@@ -14,6 +14,7 @@ export const LIMIT = 500;
 /** Generated or machine-written files: nobody reviews them line by line. */
 const EXCLUDED = [
   /^\.claude\/skills\/job-scout-ui\/references\/components\.md$/,
+  /^src\/styles\/tokens\.css$/,
   /(^|\/)pnpm-lock\.yaml$/,
   /(^|\/)package-lock\.json$/,
   /\.pen$/,

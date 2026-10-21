@@ -3,9 +3,9 @@
   flex-direction: column;
   height: calc(100dvh - 96px);
   min-height: 420px;
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  border-radius: var(--radius-md);
-  background-color: var(--color-bg-container-primary);
+  border: var(--border-xs) solid var(--js-border);
+  border-radius: var(--js-radius-md);
+  background-color: var(--js-bg-panel);
   overflow: hidden;
 }
 
@@ -27,27 +27,27 @@
 }
 
 .toolState {
-  padding-block: var(--padding-xs);
+  padding-block: var(--js-space-xs);
 }
 
 .jobList {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   min-width: 0;
   width: 100%;
 }
 
 .error {
-  padding-top: var(--padding-sm);
+  padding-top: var(--js-space-sm);
 }
 
 .suggestions {
-  padding: var(--padding-md) var(--padding-lg) var(--padding-xs);
+  padding: var(--js-space-md) var(--js-space-lg) var(--js-space-xs);
 }
 
 .composer {
-  border-top: var(--border-xs) solid var(--color-bg-container-border);
+  border-top: var(--border-xs) solid var(--js-border);
 }
 
 @media (max-width: 768px) {
@@ -57,6 +57,6 @@
   }
 
   .suggestions {
-    padding-inline: var(--padding-md);
+    padding-inline: var(--js-space-md);
   }
 }

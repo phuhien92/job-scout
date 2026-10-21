@@ -9,11 +9,9 @@ import {
   Nav,
   NavList,
   SegmentedControl,
-  ToggleSwitch,
 } from "@robr0/design-system";
 import type { AppSidebarSection } from "@robr0/design-system/components/AppSidebar/AppSidebar";
 import { useTranslations } from "next-intl";
-import { useTheme } from "@/lib/theme";
 import { useLocale } from "@/lib/locale";
 import { useHydrated } from "@/lib/use-hydrated";
 import type { Locale } from "@/i18n/config";
@@ -33,7 +31,6 @@ const LOCALE_SEGMENTS = [
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
   const { locale, setLocale } = useLocale();
   const t = useTranslations();
   const [navOpen, setNavOpen] = useState(false);
@@ -60,11 +57,6 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   const shellFooter = (
     <div className={styles.footerSlot}>
-      <ToggleSwitch
-        label={t("themeDark")}
-        checked={theme === "dark"}
-        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-      />
       <SegmentedControl
         segments={[...LOCALE_SEGMENTS]}
         activeSegment={locale}

@@ -14665,6 +14665,17 @@
                   "alignItems": "center",
                   "children": [
                     {
+                      "type": "icon",
+                      "id": "bIcn1",
+                      "name": "Icon",
+                      "enabled": false,
+                      "width": 16,
+                      "height": 16,
+                      "icon": "plus",
+                      "library": "lucide",
+                      "fill": "$accent-text"
+                    },
+                    {
                       "type": "text",
                       "id": "lBog5",
                       "name": "Label",
@@ -14759,6 +14770,7 @@
                   "cornerRadius": "$radius-md",
                   "stroke": "$border",
                   "strokeWidth": 1,
+                  "gap": 8,
                   "padding": [
                     12,
                     16
@@ -14766,6 +14778,17 @@
                   "justifyContent": "center",
                   "alignItems": "center",
                   "children": [
+                    {
+                      "type": "icon",
+                      "id": "oIcn1",
+                      "name": "Icon",
+                      "enabled": false,
+                      "width": 16,
+                      "height": 16,
+                      "icon": "plus",
+                      "library": "lucide",
+                      "fill": "$text-primary"
+                    },
                     {
                       "type": "text",
                       "id": "A8Qe7",
@@ -14872,12 +14895,24 @@
                   "cornerRadius": 10,
                   "stroke": "$accent",
                   "strokeWidth": 2,
+                  "gap": 8,
                   "padding": [
                     13,
                     14
                   ],
                   "alignItems": "center",
                   "children": [
+                    {
+                      "type": "icon",
+                      "id": "iIcn1",
+                      "name": "Icon",
+                      "enabled": false,
+                      "width": 16,
+                      "height": 16,
+                      "icon": "mail",
+                      "library": "lucide",
+                      "fill": "$text-secondary"
+                    },
                     {
                       "type": "text",
                       "id": "k9y4K1",
@@ -15072,7 +15107,7 @@
                 {
                   "type": "frame",
                   "id": "B7IZho",
-                  "name": "Dialog",
+                  "name": "DialogContent",
                   "reusable": true,
                   "width": 720,
                   "fill": "$bg-panel",
@@ -78378,129 +78413,25 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "HkYW3",
-                          "name": "UI / Button / Default",
-                          "reusable": true,
-                          "height": 32,
-                          "fill": "$accent",
-                          "cornerRadius": "$radius-md",
-                          "gap": 6,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "uqEOE",
-                              "x": 0,
-                              "y": 0,
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "plus",
-                              "library": "lucide",
-                              "fill": "$accent-text"
-                            },
-                            {
-                              "type": "text",
-                              "id": "SYE0C",
-                              "name": "Label",
-                              "fill": "$accent-text",
-                              "content": "Continue",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "600"
-                            }
-                          ]
+                          "ref": "dPqNg",
+                          "name": "Button / Default",
+                          "width": "fit_content"
                         },
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "oEBiB",
-                          "name": "UI / Button / Outline",
-                          "reusable": true,
-                          "height": 32,
-                          "fill": "$bg-page",
-                          "cornerRadius": "$radius-md",
-                          "stroke": "$border",
-                          "strokeWidth": 1,
-                          "gap": 6,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "abPx4",
-                              "x": 0,
-                              "y": 0,
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "plus",
-                              "library": "lucide",
-                              "fill": "$text-primary"
-                            },
-                            {
-                              "type": "text",
-                              "id": "RMkLL",
-                              "name": "Label",
-                              "fill": "$text-primary",
-                              "content": "Cancel",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "600"
-                            }
-                          ]
+                          "ref": "UIu4d",
+                          "name": "Button / Outline",
+                          "width": "fit_content"
                         },
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "xAZP1",
-                          "name": "UI / Button / Secondary",
-                          "reusable": true,
-                          "height": 32,
-                          "fill": "$bg-raised",
-                          "cornerRadius": "$radius-md",
-                          "gap": 6,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "YLhG7",
-                              "x": 0,
-                              "y": 0,
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "plus",
-                              "library": "lucide",
-                              "fill": "$text-primary"
-                            },
-                            {
-                              "type": "text",
-                              "id": "lCY2F",
-                              "name": "Label",
-                              "fill": "$text-primary",
-                              "content": "Preview",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "600"
-                            }
-                          ]
+                          "ref": "ZmMoc",
+                          "name": "Button / Secondary",
+                          "width": "fit_content"
                         },
                         {
                           "type": "frame",
@@ -78543,45 +78474,11 @@
                           ]
                         },
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "csCyc",
-                          "name": "UI / Button / Destructive",
-                          "reusable": true,
-                          "height": 32,
-                          "fill": "$error-bg",
-                          "cornerRadius": "$radius-md",
-                          "gap": 6,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "justifyContent": "center",
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "Z366T",
-                              "x": 0,
-                              "y": 0,
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "plus",
-                              "library": "lucide",
-                              "fill": "$error-text"
-                            },
-                            {
-                              "type": "text",
-                              "id": "NFu0i",
-                              "name": "Label",
-                              "fill": "$error-text",
-                              "content": "Delete",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "600"
-                            }
-                          ]
+                          "ref": "i7aTQ8",
+                          "name": "Button / Destructive",
+                          "width": "fit_content"
                         },
                         {
                           "type": "frame",
@@ -78656,8 +78553,9 @@
                         {
                           "id": "Togad",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Size xs",
+                          "width": "fit_content",
                           "height": 24,
                           "padding": [
                             0,
@@ -78665,7 +78563,7 @@
                           ],
                           "cornerRadius": 10,
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Extra small",
                               "fontSize": 12
                             }
@@ -78674,8 +78572,9 @@
                         {
                           "id": "dSXKK",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Size sm",
+                          "width": "fit_content",
                           "height": 28,
                           "padding": [
                             0,
@@ -78683,7 +78582,7 @@
                           ],
                           "cornerRadius": 12,
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Small",
                               "fontSize": 13
                             }
@@ -78692,8 +78591,9 @@
                         {
                           "id": "qbSsx",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Size default",
+                          "width": "fit_content",
                           "height": 32,
                           "padding": [
                             0,
@@ -78701,7 +78601,7 @@
                           ],
                           "cornerRadius": 12,
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Default",
                               "fontSize": 14
                             }
@@ -78710,8 +78610,9 @@
                         {
                           "id": "eHEb3",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Size lg",
+                          "width": "fit_content",
                           "height": 36,
                           "padding": [
                             0,
@@ -78719,7 +78620,7 @@
                           ],
                           "cornerRadius": 12,
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Large",
                               "fontSize": 14
                             }
@@ -78758,8 +78659,9 @@
                         {
                           "id": "c5pZqY",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "With icon",
+                          "width": "fit_content",
                           "padding": [
                             0,
                             10,
@@ -78767,11 +78669,11 @@
                             8
                           ],
                           "descendants": {
-                            "uqEOE": {
+                            "bIcn1": {
                               "enabled": true,
                               "icon": "upload"
                             },
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Upload"
                             }
                           }
@@ -78779,8 +78681,9 @@
                         {
                           "id": "J8VLDS",
                           "type": "ref",
-                          "ref": "oEBiB",
+                          "ref": "UIu4d",
                           "name": "Outline with icon",
+                          "width": "fit_content",
                           "padding": [
                             0,
                             10,
@@ -78788,11 +78691,11 @@
                             8
                           ],
                           "descendants": {
-                            "abPx4": {
+                            "oIcn1": {
                               "enabled": true,
                               "icon": "sparkles"
                             },
-                            "RMkLL": {
+                            "A8Qe7": {
                               "content": "Regenerate"
                             }
                           }
@@ -78800,13 +78703,14 @@
                         {
                           "id": "F8rWB2",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Focus visible",
+                          "width": "fit_content",
                           "stroke": "#087F6566",
                           "strokeWidth": 3,
                           "strokeAlignment": "outer",
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Focused"
                             }
                           }
@@ -78814,8 +78718,9 @@
                         {
                           "id": "JRs2S",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Loading",
+                          "width": "fit_content",
                           "padding": [
                             0,
                             10,
@@ -78823,11 +78728,11 @@
                             8
                           ],
                           "descendants": {
-                            "uqEOE": {
+                            "bIcn1": {
                               "enabled": true,
                               "icon": "loader-circle"
                             },
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Saving"
                             }
                           }
@@ -78835,11 +78740,12 @@
                         {
                           "id": "WVIs3",
                           "type": "ref",
-                          "ref": "HkYW3",
+                          "ref": "dPqNg",
                           "name": "Disabled",
+                          "width": "fit_content",
                           "opacity": 0.5,
                           "descendants": {
-                            "SYE0C": {
+                            "lBog5": {
                               "content": "Disabled"
                             }
                           }
@@ -78847,11 +78753,12 @@
                         {
                           "id": "rxi6x",
                           "type": "ref",
-                          "ref": "oEBiB",
+                          "ref": "UIu4d",
                           "name": "Invalid",
+                          "width": "fit_content",
                           "stroke": "$error-border",
                           "descendants": {
-                            "RMkLL": {
+                            "A8Qe7": {
                               "content": "Invalid"
                             }
                           }
@@ -79023,8 +78930,9 @@
                             {
                               "id": "FNS0C",
                               "type": "ref",
-                              "ref": "oEBiB",
+                              "ref": "UIu4d",
                               "name": "First",
+                              "width": "fit_content",
                               "cornerRadius": [
                                 12,
                                 0,
@@ -79032,7 +78940,7 @@
                                 12
                               ],
                               "descendants": {
-                                "RMkLL": {
+                                "A8Qe7": {
                                   "content": "Day"
                                 }
                               }
@@ -79040,8 +78948,9 @@
                             {
                               "id": "hqgds",
                               "type": "ref",
-                              "ref": "oEBiB",
+                              "ref": "UIu4d",
                               "name": "Middle",
+                              "width": "fit_content",
                               "cornerRadius": 0,
                               "strokeWidth": {
                                 "top": 1,
@@ -79049,7 +78958,7 @@
                                 "bottom": 1
                               },
                               "descendants": {
-                                "RMkLL": {
+                                "A8Qe7": {
                                   "content": "Week"
                                 }
                               }
@@ -79057,8 +78966,9 @@
                             {
                               "id": "C2z8T",
                               "type": "ref",
-                              "ref": "oEBiB",
+                              "ref": "UIu4d",
                               "name": "Last",
+                              "width": "fit_content",
                               "cornerRadius": [
                                 0,
                                 12,
@@ -79071,7 +78981,7 @@
                                 "bottom": 1
                               },
                               "descendants": {
-                                "RMkLL": {
+                                "A8Qe7": {
                                   "content": "Month"
                                 }
                               }
@@ -79183,54 +79093,24 @@
                       "gap": 16,
                       "children": [
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "p7HRF",
-                          "name": "UI / Input",
-                          "reusable": true,
+                          "ref": "p8sFQ",
+                          "name": "Input",
                           "width": 240,
-                          "height": 32,
-                          "cornerRadius": "$radius-md",
                           "stroke": "$border",
-                          "strokeWidth": 1,
-                          "gap": 8,
-                          "padding": [
-                            0,
-                            10
-                          ],
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "R2ToY",
-                              "x": 0,
-                              "y": 0,
-                              "name": "Icon",
-                              "enabled": false,
-                              "width": 16,
-                              "height": 16,
-                              "icon": "mail",
-                              "library": "lucide",
-                              "fill": "$text-secondary"
-                            },
-                            {
-                              "type": "text",
-                              "id": "HbFiQ",
-                              "name": "Value",
-                              "fill": "$text-secondary",
-                              "content": "Placeholder",
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "normal"
-                            }
-                          ]
+                          "strokeWidth": 1
                         },
                         {
                           "id": "mXR8A",
                           "type": "ref",
-                          "ref": "p7HRF",
+                          "ref": "p8sFQ",
                           "name": "Filled",
+                          "width": 240,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
                           "descendants": {
-                            "HbFiQ": {
+                            "k9y4K1": {
                               "content": "Senior product designer",
                               "fill": "$text-primary"
                             }
@@ -79239,8 +79119,9 @@
                         {
                           "id": "WsCY8",
                           "type": "ref",
-                          "ref": "p7HRF",
+                          "ref": "p8sFQ",
                           "name": "Focus visible",
+                          "width": 240,
                           "stroke": "$accent",
                           "effect": {
                             "type": "shadow",
@@ -79249,7 +79130,7 @@
                             "blur": 6
                           },
                           "descendants": {
-                            "HbFiQ": {
+                            "k9y4K1": {
                               "content": "Hanoi, Vietnam",
                               "fill": "$text-primary"
                             }
@@ -79295,12 +79176,12 @@
                             {
                               "id": "C5o6W",
                               "type": "ref",
-                              "ref": "p7HRF",
+                              "ref": "p8sFQ",
                               "name": "Invalid",
                               "width": "fill_container",
                               "stroke": "$error-border",
                               "descendants": {
-                                "HbFiQ": {
+                                "k9y4K1": {
                                   "content": "name@company",
                                   "fill": "$text-primary"
                                 }
@@ -79321,12 +79202,15 @@
                         {
                           "id": "Xi3ey",
                           "type": "ref",
-                          "ref": "p7HRF",
+                          "ref": "p8sFQ",
                           "name": "Disabled",
+                          "width": 240,
                           "fill": "$bg-control",
                           "opacity": 0.5,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
                           "descendants": {
-                            "HbFiQ": {
+                            "k9y4K1": {
                               "content": "Read only"
                             }
                           }
@@ -79334,13 +79218,16 @@
                         {
                           "id": "AJZ7j",
                           "type": "ref",
-                          "ref": "p7HRF",
+                          "ref": "p8sFQ",
                           "name": "With icon",
+                          "width": 240,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
                           "descendants": {
-                            "R2ToY": {
+                            "iIcn1": {
                               "enabled": true
                             },
-                            "HbFiQ": {
+                            "k9y4K1": {
                               "content": "you@example.com"
                             }
                           }
@@ -79418,8 +79305,9 @@
                             {
                               "id": "mJ10z",
                               "type": "ref",
-                              "ref": "xAZP1",
+                              "ref": "ZmMoc",
                               "name": "Inline button",
+                              "width": "fit_content",
                               "height": 24,
                               "padding": [
                                 0,
@@ -79427,7 +79315,7 @@
                               ],
                               "cornerRadius": 10,
                               "descendants": {
-                                "lCY2F": {
+                                "dzlXv": {
                                   "content": "Search",
                                   "fontSize": 12
                                 }
@@ -79436,35 +79324,13 @@
                           ]
                         },
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "nZcbV",
-                          "name": "UI / Textarea",
-                          "reusable": true,
+                          "ref": "cpx18",
+                          "name": "Textarea",
                           "width": 320,
-                          "height": 88,
-                          "cornerRadius": "$radius-md",
                           "stroke": "$border",
-                          "strokeWidth": 1,
-                          "layout": "vertical",
-                          "padding": [
-                            8,
-                            10
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "eUZYf",
-                              "name": "Value",
-                              "fill": "$text-secondary",
-                              "textGrowth": "fixed-width",
-                              "width": "fill_container",
-                              "content": "Describe what changed and why",
-                              "lineHeight": 1.5,
-                              "fontFamily": "$font-primary",
-                              "fontSize": 14,
-                              "fontWeight": "normal"
-                            }
-                          ]
+                          "strokeWidth": 1
                         }
                       ]
                     }
@@ -79578,54 +79444,20 @@
                           "gap": 12,
                           "children": [
                             {
-                              "type": "frame",
+                              "type": "ref",
                               "id": "TDWwo",
-                              "name": "UI / Select trigger",
-                              "reusable": true,
-                              "width": 200,
-                              "height": 32,
-                              "cornerRadius": "$radius-md",
-                              "stroke": "$border",
-                              "strokeWidth": 1,
-                              "gap": 6,
-                              "padding": [
-                                0,
-                                8,
-                                0,
-                                10
-                              ],
-                              "justifyContent": "space_between",
-                              "alignItems": "center",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "kDWm0",
-                                  "name": "Value",
-                                  "fill": "$text-secondary",
-                                  "content": "Select seniority",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 14,
-                                  "fontWeight": "normal"
-                                },
-                                {
-                                  "type": "icon",
-                                  "id": "eQDOx",
-                                  "name": "Chevron",
-                                  "width": 16,
-                                  "height": 16,
-                                  "icon": "chevron-down",
-                                  "library": "lucide",
-                                  "fill": "$text-secondary"
-                                }
-                              ]
+                              "ref": "Kj7bi",
+                              "name": "Select trigger",
+                              "width": 200
                             },
                             {
                               "id": "iAkg1",
                               "type": "ref",
-                              "ref": "TDWwo",
+                              "ref": "Kj7bi",
                               "name": "Selected",
+                              "width": 200,
                               "descendants": {
-                                "kDWm0": {
+                                "gnUIo": {
                                   "content": "Senior",
                                   "fill": "$text-primary"
                                 }
@@ -79634,12 +79466,13 @@
                             {
                               "id": "Y9M1z",
                               "type": "ref",
-                              "ref": "TDWwo",
+                              "ref": "Kj7bi",
                               "name": "Size sm",
+                              "width": 200,
                               "height": 28,
                               "cornerRadius": 10,
                               "descendants": {
-                                "kDWm0": {
+                                "gnUIo": {
                                   "content": "Small trigger",
                                   "fill": "$text-primary"
                                 }
@@ -79923,132 +79756,16 @@
                       "gap": 32,
                       "children": [
                         {
-                          "type": "frame",
+                          "type": "ref",
                           "id": "hVmVn",
-                          "name": "UI / Dialog",
-                          "reusable": true,
-                          "clip": true,
-                          "width": 384,
-                          "fill": "$bg-panel",
-                          "cornerRadius": 17,
-                          "stroke": "#173D371A",
-                          "strokeWidth": 1,
-                          "effect": {
-                            "type": "shadow",
-                            "shadowType": "outer",
-                            "color": "#173D3726",
-                            "offset": {
-                              "x": 0,
-                              "y": 12
-                            },
-                            "blur": 32
-                          },
-                          "layout": "vertical",
-                          "gap": 16,
-                          "padding": [
-                            16,
-                            16,
-                            0,
-                            16
-                          ],
-                          "children": [
-                            {
-                              "type": "frame",
-                              "id": "UnSLd",
-                              "name": "Header",
-                              "width": "fill_container",
-                              "layout": "vertical",
-                              "gap": 8,
-                              "padding": [
-                                0,
-                                32,
-                                0,
-                                0
-                              ],
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "P6w4b",
-                                  "name": "Title",
-                                  "fill": "$text-primary",
-                                  "content": "Discard unsaved changes?",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 16,
-                                  "fontWeight": "600"
-                                },
-                                {
-                                  "type": "text",
-                                  "id": "sbA0u",
-                                  "name": "Description",
-                                  "fill": "$text-secondary",
-                                  "textGrowth": "fixed-width",
-                                  "width": "fill_container",
-                                  "content": "Your edits to this section will be lost. This cannot be undone.",
-                                  "lineHeight": 1.45,
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 14,
-                                  "fontWeight": "normal"
-                                }
-                              ]
-                            },
-                            {
-                              "id": "z7onpH",
-                              "type": "ref",
-                              "ref": "k1HlvD",
-                              "name": "Close",
-                              "layoutPosition": "absolute",
-                              "x": 348,
-                              "y": 8,
-                              "width": 28,
-                              "height": 28,
-                              "fill": "#00000000",
-                              "stroke": "#00000000",
-                              "descendants": {
-                                "ExIK5": {
-                                  "icon": "x",
-                                  "fill": "$text-secondary"
-                                }
-                              }
-                            },
-                            {
-                              "type": "frame",
-                              "id": "yb4CA",
-                              "name": "Footer",
-                              "width": "fill_container",
-                              "fill": "$bg-control",
-                              "stroke": "$border",
-                              "strokeWidth": {
-                                "top": 1
-                              },
-                              "gap": 8,
-                              "padding": 16,
-                              "justifyContent": "end",
-                              "children": [
-                                {
-                                  "id": "UysZI",
-                                  "type": "ref",
-                                  "ref": "oEBiB",
-                                  "name": "Cancel",
-                                  "descendants": {
-                                    "RMkLL": {
-                                      "content": "Keep editing"
-                                    }
-                                  }
-                                },
-                                {
-                                  "id": "KABGT",
-                                  "type": "ref",
-                                  "ref": "HkYW3",
-                                  "name": "Confirm",
-                                  "descendants": {
-                                    "SYE0C": {
-                                      "content": "Discard"
-                                    }
-                                  }
-                                }
-                              ]
+                          "ref": "B7IZho",
+                          "name": "Dialog",
+                          "width": 676,
+                          "descendants": {
+                            "ESeGI": {
+                              "width": "fill_container"
                             }
-                          ]
+                          }
                         },
                         {
                           "type": "frame",
@@ -80941,12 +80658,13 @@
                                     {
                                       "id": "YMwju",
                                       "type": "ref",
-                                      "ref": "oEBiB",
+                                      "ref": "UIu4d",
                                       "name": "Action",
+                                      "width": "fit_content",
                                       "height": 28,
                                       "cornerRadius": 12,
                                       "descendants": {
-                                        "RMkLL": {
+                                        "A8Qe7": {
                                           "content": "Review fields",
                                           "fontSize": 13
                                         }
@@ -81033,12 +80751,13 @@
                                     {
                                       "id": "KqSKa",
                                       "type": "ref",
-                                      "ref": "oEBiB",
+                                      "ref": "UIu4d",
                                       "name": "Action",
+                                      "width": "fit_content",
                                       "height": 28,
                                       "cornerRadius": 12,
                                       "descendants": {
-                                        "RMkLL": {
+                                        "A8Qe7": {
                                           "content": "Review fields",
                                           "fontSize": 13
                                         }
@@ -81125,12 +80844,13 @@
                                     {
                                       "id": "rmjJ9",
                                       "type": "ref",
-                                      "ref": "oEBiB",
+                                      "ref": "UIu4d",
                                       "name": "Action",
+                                      "width": "fit_content",
                                       "height": 28,
                                       "cornerRadius": 12,
                                       "descendants": {
-                                        "RMkLL": {
+                                        "A8Qe7": {
                                           "content": "Review fields",
                                           "fontSize": 13
                                         }
@@ -81217,12 +80937,13 @@
                                     {
                                       "id": "hDxKA",
                                       "type": "ref",
-                                      "ref": "oEBiB",
+                                      "ref": "UIu4d",
                                       "name": "Action",
+                                      "width": "fit_content",
                                       "height": 28,
                                       "cornerRadius": 12,
                                       "descendants": {
-                                        "RMkLL": {
+                                        "A8Qe7": {
                                           "content": "Review fields",
                                           "fontSize": 13
                                         }
@@ -81638,13 +81359,11 @@
                       "alignItems": "center",
                       "children": [
                         {
-                          "type": "rectangle",
+                          "type": "ref",
                           "id": "LSotC",
-                          "name": "UI / Separator",
-                          "reusable": true,
-                          "fill": "$border",
-                          "width": 240,
-                          "height": 1
+                          "ref": "NgSTd",
+                          "name": "Separator",
+                          "width": 240
                         },
                         {
                           "type": "frame",
@@ -81667,7 +81386,7 @@
                             {
                               "id": "H22Ql",
                               "type": "ref",
-                              "ref": "LSotC",
+                              "ref": "NgSTd",
                               "name": "Vertical",
                               "width": 1,
                               "height": "fill_container"
@@ -81685,7 +81404,7 @@
                             {
                               "id": "I3YN3D",
                               "type": "ref",
-                              "ref": "LSotC",
+                              "ref": "NgSTd",
                               "name": "Vertical",
                               "width": 1,
                               "height": "fill_container"

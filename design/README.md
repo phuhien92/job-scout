@@ -10,11 +10,15 @@ The remaining frames are design guidance, not shipped behavior. They do not impl
 
 ## Component naming and instances
 
-The `Job Scout components · code-aligned` frame (`l7Piy5`) is the reusable Pen component set for the approved journey. Primitive names come from the generated [code catalog](../.claude/skills/job-scout-ui/references/components.md). Variant-bearing definitions use `Export / prop=value`, for example `Button / variant=default / size=default` and `SelectTrigger / size=default`; export, prop, and value spelling must match the catalog exactly.
+The `Job Scout components · code-aligned` frame (`l7Piy5`) is the reusable Pen component set for the approved journey. Primitive names come from the generated [code catalog](../.claude/skills/job-scout-ui/references/components.md). Variant-bearing definitions use `Export / prop=value`, for example `Button / variant=default / size=default` and `SelectTrigger / size=default`; export, prop, and value spelling must match the catalog exactly. The visible dialog surface is `DialogContent`, because the catalog's `Dialog` is the non-visual root.
+
+The `Primitives • UI components` board (`rgFOJ`) is a specimen sheet. Its Button, Input, Textarea, SelectTrigger, DialogContent, and Separator specimens are instances of the code-aligned definitions, not separate components. Its remaining `UI /` definitions cover primitives the approved journey does not use yet.
 
 Product patterns keep stable PascalCase names: `EvidenceBadge`, `ReviewStatus`, `FieldAnswerRow`, `UnresolvedQuestion`, and `ConnectionState`. `AppNavigationItem`, `ExtensionHeader`, `ExtensionToolbar`, `JobCard`, and `CompactFieldStateRow` are proposed patterns because the current catalog has no equivalent. Do not assign a catalog primitive name to an unmatched design element.
 
-Every occurrence of a reusable control or pattern in the approved frames is a Pen `ref` instance. Change shared appearance in its reusable definition, and use instance overrides only for copy, state, locale, and container sizing. Do not detach an instance or redraw a parallel control. Review exports for issue #38 are in [`review/issue-38`](review/issue-38/).
+Every occurrence of a reusable control or pattern in the approved frames is a Pen `ref` instance. Change shared appearance in its reusable definition, and use instance overrides only for copy, state, locale, and container sizing. Do not detach an instance or redraw a parallel control.
+
+The issue #38 conversion covers the 24 approved frames listed below. The extension canvas frames outside that list (`Extension closed • Launcher` and its hover state, `Extension • Job detected`, `Extension • Autofill information`, `Extension • Settings`, the scanning and filling states, and `Section 3 • Profile and resumes`) use `ExtensionToolbar`, `JobCard`, `CompactFieldStateRow`, and `Button` instances, but their other form controls are still hand-drawn. Those frames fall outside this conversion; replace their controls with instances before treating them as approved. Review exports for issue #38 are in [`review/issue-38`](review/issue-38/).
 
 ## Approved architecture defaults
 

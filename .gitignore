@@ -16,7 +16,7 @@
 /test-results/
 
 # next.js
-# local runtime data (working-memory JSON store is gitignored)
+# local runtime data (SQLite, resume files and legacy JSON backups)
 .data/
 /.next/
 /out/

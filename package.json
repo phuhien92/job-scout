@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "db:backup": "node scripts/backup-profile.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,6 +16,7 @@
   "dependencies": {
     "@ai-sdk/react": "4.0.101",
     "@base-ui/react": "^1.8.0",
+    "@libsql/client": "^0.18.0",
     "@mastra/ai-sdk": "1.10.2",
     "@mastra/core": "1.66.0",
     "@robr0/design-system": "^0.17.0",

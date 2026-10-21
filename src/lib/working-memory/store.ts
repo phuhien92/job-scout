@@ -1,5 +1,5 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
+import { accessDatabase } from "./database";
+import { applicationProfileSchema, migrateLegacyProfile, refreshLegacyFacts } from "./application-profile";
 
 import {
   EMPTY_WORKING_MEMORY,
@@ -8,20 +8,7 @@ import {
   type WorkingMemory,
 } from "@/lib/working-memory/types";
 
-const STORE_FILE = path.join(
-  process.env.JOB_SCOUT_DATA_DIR || path.join(process.cwd(), ".data"),
-  "working-memory.json",
-);
-
-/**
- * Working-memory store for the whole product (Scout and Optimize share one
- * resource-scoped profile, `resume` source text, and extracted facts).
- *
- * This is the single swap point for the persistence layer. Today it is a
- * small server-side JSON file; swapping to Mastra memory or LibSQL means
- * reimplementing only `readWorkingMemory`/`writeWorkingMemory` behind the
- * same `WorkingMemory` shape.
- */
+/** Shared Scout/Optimize boundary; SQLite storage and migration live in database.ts. */
 
 function normList(value: unknown, max = 60): string[] {
   if (!Array.isArray(value)) {
@@ -98,7 +85,21 @@ function normalizeOptimizedResume(value: unknown): OptimizedResume | null {
 }
 
 function normalizeWorkingMemory(value: unknown): WorkingMemory {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error("Invalid working-memory store");
+  }
+  const version = (value as { storeVersion?: unknown }).storeVersion;
+  if (version !== undefined && version !== 1) {
+    throw new Error("Unsupported working-memory store version");
+  }
   const raw = (value ?? {}) as Partial<WorkingMemory>;
+  if (raw.profile !== undefined && (!raw.profile || typeof raw.profile !== "object" || Array.isArray(raw.profile))) {
+    throw new Error("Invalid stored profile");
+  }
+  if (version === 1 && raw.applicationProfile === undefined) {
+    throw new Error("Missing application profile in versioned store");
+  }
+  const profile = normalizeProfile(raw.profile);
   const resume = raw.resume;
   const resumeRecord =
     resume && typeof resume === "object" && typeof resume.fileName === "string"
@@ -118,22 +119,22 @@ function normalizeWorkingMemory(value: unknown): WorkingMemory {
         }
       : null;
   return {
+    storeVersion: 1,
+    applicationProfile: raw.applicationProfile === undefined
+      ? migrateLegacyProfile(profile)
+      : applicationProfileSchema.parse(raw.applicationProfile),
     resume: resumeRecord,
-    profile: normalizeProfile(raw.profile),
+    profile,
     optimizedResume: normalizeOptimizedResume(raw.optimizedResume),
   };
 }
 
 export async function readWorkingMemory(): Promise<WorkingMemory> {
-  try {
-    const raw = await fs.readFile(STORE_FILE, "utf8");
-    return normalizeWorkingMemory(JSON.parse(raw) as unknown);
-  } catch {
-    return EMPTY_WORKING_MEMORY;
-  }
+  return accessDatabase(normalizeWorkingMemory);
 }
 
 export async function writeWorkingMemory(memory: WorkingMemory): Promise<void> {
-  await fs.mkdir(path.dirname(STORE_FILE), { recursive: true });
-  await fs.writeFile(STORE_FILE, `${JSON.stringify(memory, null, 2)}\n`, "utf8");
+  const normalized = normalizeWorkingMemory(memory);
+  normalized.applicationProfile = refreshLegacyFacts(normalized.applicationProfile, normalized.profile);
+  await accessDatabase(normalizeWorkingMemory, normalized);
 }

@@ -26,7 +26,8 @@ or the server's model invocation. Production builds are outside this baseline.
 
 Every run creates a unique temporary `JOB_SCOUT_DATA_DIR` and removes it on
 completion. Tests run with one worker because the current product has one shared
-local profile; each test resets only the temporary working-memory file. The app's
+local profile; each test resets only the temporary SQLite database, sidecar files
+and legacy JSON backup. Connections close after each request. The app's
 normal `.data` directory is untouched. Do not run `npx playwright test` directly:
 use the runner so it owns storage setup, server lifetime, and cleanup.
 

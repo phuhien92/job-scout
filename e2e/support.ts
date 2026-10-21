@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { rm } from "node:fs/promises";
 import path from "node:path";
 import { test as base, expect, type Page } from "@playwright/test";
 import type { UIMessageChunk } from "ai";
@@ -9,7 +9,11 @@ export const test = base.extend<{ isolation: void }>({
       const dataDir = process.env.JOB_SCOUT_DATA_DIR;
       if (!process.env.JOB_SCOUT_E2E || !dataDir)
         throw new Error("Missing isolated E2E storage");
-      await writeFile(path.join(dataDir, "working-memory.json"), "{}");
+      // Storage connections close after each request; tests run serially.
+      for (const name of ["job-scout.db", "job-scout.db-journal", "job-scout.db-wal",
+        "job-scout.db-shm", "working-memory.json"]) {
+        await rm(path.join(dataDir, name), { force: true });
+      }
       const errors: string[] = [];
       page.on("pageerror", (error) => errors.push(error.message));
       // No browser request may reach a real listings/model service. Local Next

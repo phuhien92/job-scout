@@ -41,3 +41,5 @@ See the [browser baseline guide](docs/testing/browser-baseline.md) for browser i
 ## Shared application contract
 
 The [application-plan v1 contract](docs/application-plan.md) defines validated review data shared by the planned extension and local/hosted backends. It includes a synthetic Rippling fixture and deterministic tests; it does not yet scan or fill live forms.
+
+Local profile storage uses SQLite at `JOB_SCOUT_DATA_DIR/job-scout.db` (default `.data/`). Existing JSON migrates automatically and stays as a backup. See [profile storage and portable backups](docs/application-profile.md).

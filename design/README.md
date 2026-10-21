@@ -14,7 +14,8 @@ The `Job Scout components · code-aligned` frame (`l7Piy5`) is the reusable Pen 
 
 The approved journey's controls are 44px or taller touch targets, larger than the code's `Button`, `Input`, `Textarea`, and `SelectTrigger` defaults, so they are product patterns:
 
-- `ActionButton / variant=default|secondary|outline|destructive / surface=standard` is the 44px, radius-12 action used across the website, companion, and extension frames.
+- `ActionButton / variant=default|secondary|outline|destructive / surface=standard` is the 44px, radius-12 action used across the approved website, companion, popup, and side-panel frames.
+- `ActionButton / variant=default|secondary / surface=extension` is the radius-10, hug-height action in the extension canvas frames outside the approved list.
 - `ActionButton / variant=default|secondary / surface=workspace` is the radius-10 inline action used in frames 02–04, with matching `AppNavigationItem / state=default|active / surface=workspace` items there. Other frames use `AppNavigationItem / state=default|active / surface=standard`.
 - `FormInput / state=focus`, `FormTextarea / state=focus`, and `FormSelectTrigger` are the 48px approved form controls.
 

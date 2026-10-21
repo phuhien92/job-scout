@@ -11940,6 +11940,106 @@
                   "height": 44
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "g9Pq7",
+              "name": "ActionButton / variant=default / surface=extension showcase",
+              "width": 348,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PgAsM",
+                  "name": "ActionButton / variant=default / surface=extension caption",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ActionButton / variant=default / surface=extension",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "vByd1",
+                  "name": "ActionButton / variant=default / surface=extension",
+                  "reusable": true,
+                  "width": 348,
+                  "fill": "$accent",
+                  "cornerRadius": 10,
+                  "gap": 8,
+                  "padding": [
+                    13,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tCj0l",
+                      "name": "Label",
+                      "fill": "$accent-text",
+                      "content": "Preview autofill",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "k5Aj5",
+              "name": "ActionButton / variant=secondary / surface=extension showcase",
+              "width": 348,
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YRQc1",
+                  "name": "ActionButton / variant=secondary / surface=extension caption",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ActionButton / variant=secondary / surface=extension",
+                  "fontFamily": "$font-primary",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "gvOyw",
+                  "name": "ActionButton / variant=secondary / surface=extension",
+                  "reusable": true,
+                  "width": 348,
+                  "fill": "$bg-raised",
+                  "cornerRadius": 10,
+                  "gap": 8,
+                  "padding": [
+                    13,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "c4WIn",
+                      "name": "Label",
+                      "fill": "$text-primary",
+                      "content": "Review every field",
+                      "fontFamily": "$font-primary",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -16862,11 +16962,11 @@
             {
               "id": "oAE9I",
               "type": "ref",
-              "ref": "dPqNg",
+              "ref": "vByd1",
               "name": "Scan and preview",
               "width": "fill_container",
               "descendants": {
-                "lBog5": {
+                "tCj0l": {
                   "content": "Scan and preview autofill"
                 }
               }
@@ -21450,11 +21550,11 @@
                 {
                   "id": "ySE9F",
                   "type": "ref",
-                  "ref": "dPqNg",
+                  "ref": "vByd1",
                   "name": "Scan and preview",
                   "width": "fill_container",
                   "descendants": {
-                    "lBog5": {
+                    "tCj0l": {
                       "content": "Scan and preview autofill"
                     }
                   }
@@ -28155,11 +28255,11 @@
             {
               "id": "rfu8T",
               "type": "ref",
-              "ref": "dPqNg",
+              "ref": "vByd1",
               "name": "Save settings",
               "width": "fill_container",
               "descendants": {
-                "lBog5": {
+                "tCj0l": {
                   "content": "Save settings"
                 }
               }
@@ -39523,12 +39623,12 @@
             {
               "id": "EV3PZ",
               "type": "ref",
-              "ref": "dPqNg",
+              "ref": "vByd1",
               "name": "Review on page (disabled)",
               "width": "fill_container",
               "opacity": 0.45,
               "descendants": {
-                "lBog5": {
+                "tCj0l": {
                   "content": "Review on employer page"
                 }
               }
@@ -46478,11 +46578,11 @@
             {
               "id": "CeoAx",
               "type": "ref",
-              "ref": "dPqNg",
+              "ref": "vByd1",
               "name": "Review on page",
               "width": "fill_container",
               "descendants": {
-                "lBog5": {
+                "tCj0l": {
                   "content": "Review on employer page"
                 }
               }
@@ -46490,11 +46590,11 @@
             {
               "id": "aN1DL",
               "type": "ref",
-              "ref": "Nraf8",
+              "ref": "gvOyw",
               "name": "Save attempt",
               "width": "fill_container",
               "descendants": {
-                "T7xcj": {
+                "c4WIn": {
                   "content": "Save this application attempt"
                 }
               }

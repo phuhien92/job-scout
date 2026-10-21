@@ -38,6 +38,41 @@ test("shared navigation renders all four routes without overflow", async ({
   ).toBeVisible();
 });
 
+test("renders only approved light tokens before and after hydration", async ({
+  page,
+}) => {
+  await page.emulateMedia({ colorScheme: "dark" });
+  await page.addInitScript(() => localStorage.setItem("theme", "dark"));
+
+  const response = await page.goto("/scout");
+  expect(await response!.text()).toContain('data-theme="light"');
+  await expect(page.locator('meta[name="color-scheme"]')).toHaveAttribute(
+    "content",
+    "only light",
+  );
+  expect(
+    await page.evaluate(() => ({
+      attribute: document.documentElement.dataset.theme,
+      background: getComputedStyle(document.body).backgroundColor,
+      colorScheme: getComputedStyle(document.documentElement).colorScheme,
+      stored: localStorage.getItem("theme"),
+      token: getComputedStyle(document.documentElement)
+        .getPropertyValue("--js-bg-page")
+        .trim(),
+    })),
+  ).toEqual({
+    attribute: "light",
+    background: "rgb(245, 251, 247)",
+    colorScheme: "light only",
+    stored: "dark",
+    token: "#F5FBF7",
+  });
+  await expect(page.getByRole("switch", { name: /theme/i })).toHaveCount(0);
+
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+});
+
 test("Scout consumes a mocked chat stream and renders a source job card", async ({
   page,
 }) => {

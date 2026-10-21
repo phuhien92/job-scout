@@ -7,6 +7,7 @@ describe("countChanges", () => {
     const numstat = [
       "120\t30\tsrc/components/JobCard.tsx",
       "255\t0\t.claude/skills/job-scout-ui/references/components.md",
+      "54\t0\tsrc/styles/tokens.css",
       "900\t400\tpnpm-lock.yaml",
       "5000\t10\tdesign/job-scout.pen",
       "-\t-\tdesign/profile-overview.png",
@@ -18,6 +19,7 @@ describe("countChanges", () => {
     ]);
     expect(excluded).toEqual([
       ".claude/skills/job-scout-ui/references/components.md",
+      "src/styles/tokens.css",
       "pnpm-lock.yaml",
       "design/job-scout.pen",
     ]);

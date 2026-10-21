@@ -67,9 +67,9 @@ next-intl without i18n routing — URLs stay locale-free. English is the default
 
 The existing website has local Base UI-backed primitives in `src/components/ui`, product components in `src/components`, and a legacy `@robr0/design-system` dependency. No new UI should depend on the legacy package. Before writing UI, load the `job-scout-ui` skill: its component catalog is generated from `src/components/ui` (`pnpm ui:catalog`; `pnpm ui:catalog --check` fails when stale), and ESLint blocks legacy imports and raw form controls in product code. The migration plan and source-backed component boundaries are in `docs/research/component-architecture.md`; issue #17 tracks implementation and final dependency removal.
 
-The shared shell lives in `src/components/AppShell.tsx` and wraps the Scout, Optimize, Jobs, and Profile routes through `src/app/layout.tsx`. Preserve desktop and narrow navigation, keyboard operation, focus behavior, theme switching, and EN/VI controls while replacing legacy components. Verify at 375px and 1440px.
+The shared shell lives in `src/components/AppShell.tsx` and wraps the Scout, Optimize, Jobs, and Profile routes through `src/app/layout.tsx`. Preserve desktop and narrow navigation, keyboard operation, focus behavior, fixed light theming, and EN/VI controls while replacing legacy components. Verify at 375px and 1440px.
 
-Theme switching currently uses `data-theme` on `<html>` and `src/lib/theme.tsx`. New tokens must be owned by Job Scout; do not add styles that depend on `@robr0` token CSS. Copy uses sentence-case labels, no emoji, and no em dashes in product UI.
+The website currently fixes `data-theme="light"` on `<html>` with no visible theme switch; dark Pen values remain dormant. New tokens must be owned by Job Scout; do not add styles that depend on `@robr0` token CSS. Copy uses sentence-case labels, no emoji, and no em dashes in product UI.
 
 Use Framer Motion for new product animations when needed. Respect `prefers-reduced-motion`, preserve keyboard/focus behavior, and keep application review controls usable throughout transitions. Add the dependency when implementing an animation; the browser baseline itself needs no new animation.
 

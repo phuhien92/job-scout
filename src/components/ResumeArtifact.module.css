@@ -1,6 +1,6 @@
 .card {
-  border: var(--border-xs) solid var(--color-bg-container-border);
-  background: var(--color-bg-container-primary);
+  border: var(--border-xs) solid var(--js-border);
+  background: var(--js-bg-panel);
   min-width: 0;
   width: 100%;
   max-width: 36rem;
@@ -11,20 +11,20 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-md);
+  gap: var(--js-space-md);
   min-width: 0;
 }
 
 .meta {
   display: flex;
   align-items: center;
-  gap: var(--gap-sm);
+  gap: var(--js-space-sm);
   min-width: 0;
   flex: 1 1 12rem;
 }
 
 .icon {
-  color: var(--color-text-secondary);
+  color: var(--js-text-secondary);
   font-size: 1.5rem;
   flex-shrink: 0;
 }
@@ -38,7 +38,7 @@
 
 .title {
   margin: 0;
-  color: var(--color-text-primary);
+  color: var(--js-text-primary);
   font-weight: var(--font-weight-semibold, 600);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,7 +47,7 @@
 
 .subtitle {
   margin: 0;
-  color: var(--color-text-secondary);
+  color: var(--js-text-secondary);
   font-size: var(--font-size-caption, 0.8125rem);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -57,6 +57,6 @@
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gap-sm);
+  gap: var(--js-space-sm);
   flex-shrink: 0;
 }

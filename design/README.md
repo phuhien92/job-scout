@@ -1,25 +1,109 @@
 # Job Scout experience flow
 
-Open [job-scout.pen](job-scout.pen) in pen.dev. Start with the canvas frame **00 · End-to-end user workflow**, then follow the numbered screens:
+Open [job-scout.pen](job-scout.pen) in pen.dev and start with **00 · End-to-end user workflow**. The editable canvas is the canonical design source. The PNG files in this directory are scale-1 review exports from that source.
 
-The approved [rabbit logo](brand/scout-rabbit-bubble.png) appears in the website navigation, extension headers, and profile screens. It is placed as a replaceable image fill in the `.pen` design, with its source PNG stored alongside it.
+The approved [rabbit logo](brand/scout-rabbit-bubble.png) remains a replaceable image fill throughout the website, popup, and side panel. The approved light direction uses a cream canvas, white panels, forest text, green actions, and mint status surfaces. The dark palette shown in [dark-field-review.png](dark-field-review.png) remains dormant design data and is not emitted into the current product stylesheet.
 
-The design now uses a light cream canvas (`#F5FBF7`), white cards, forest-teal text (`#173D37`), green primary actions (`#087F65`), and mint status surfaces. The palette follows the approved logo across the website and extension. Preview the [resume intake](resume-intake.png), [extension pairing](extension-pairing.png), [fill preview](extension-fill-preview.png), and [workflow map](workflow-overview.png).
+The approved light values in the top-level Pen variables are the implementation token source. Run `npm run tokens:generate` after changing them; CI runs `npm run tokens:check` against the generated `src/styles/tokens.css`. Do not edit that stylesheet by hand.
 
-| Step | Surface | User decision |
+The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, application history, or a reusable-component migration.
+
+## Approved architecture defaults
+
+- The extension **popup owns status and launch**. The **side panel owns field review, decisions, confirmation, apply results, and recovery**.
+- A local pairing request is approved in the companion website. The companion generates, expires, and revokes the secret; only the companion and extension worker hold it. The employer webpage, content script, popup DOM, side-panel text, and application-plan payload never receive it.
+- Provider selection, credentials, consent, testing, and recovery stay in the companion. The extension receives non-secret readiness only.
+- Work authorization, sponsorship, EEO answers, other personal declarations, and files remain manual-only under application-plan contract v1.
+- Application-history saving is later work. No current screen offers a save-attempt action.
+- Hosted sign-in is a disabled future placeholder and makes no current product claim.
+
+## Screen and export map
+
+### Journey and website
+
+| Pen frame | Export | Review purpose |
 | --- | --- | --- |
-| 01 · Resume intake | Website | Upload a source resume and correct extracted facts. |
-| 02 · AI suggestions | Website | Accept, edit, or skip each evidence-backed change. |
-| 03 · Targeted draft | Website | Inspect, save, or export the role-specific version. |
-| 04 · Job match | Website | Review fit and open the employer application. |
-| 05 · Companion pairing | Extension | Connect local mode; hosted access is a future option. |
-| 06 · Fill preview | Extension | Review proposed values, evidence, and unanswered fields before filling. |
-| 07 · Final review | Extension and employer page | Check all answers and submit manually on the employer page. |
+| `jyRfS` · 00 · End-to-end user workflow | [workflow-overview.png](workflow-overview.png) | Surface ownership, safety boundaries, and the complete handoff. |
+| `oi58r` · 01 · Resume upload | [resume-intake.png](resume-intake.png) | Initial upload only; no extracted facts appear yet. |
+| `cFSuP` · 01A · Resume extraction states | [resume-extraction-states.png](resume-extraction-states.png) | Uploaded, reading, and failed extraction states. |
+| `o2RCC9` · 01B · Extracted fact review and correction | [resume-fact-review.png](resume-fact-review.png) | Source excerpt, confidence, correction, provenance, and blocked readiness. |
+| `YcfRS` · 02 · Evidence-backed resume review | [resume-suggestions.png](resume-suggestions.png) | Inspect, accept, edit, or skip evidence-backed suggestions. |
+| `KQx9o` · 03 · Targeted resume ready | [targeted-resume.png](targeted-resume.png) | Targeted draft remains separate from the source resume. |
+| `JISdW` · 04 · Job match and apply handoff | [job-match-handoff.png](job-match-handoff.png) | Explainable fit and employer-page handoff. |
+| `aSZlw` · 08 · Profile hub | [profile-overview.png](profile-overview.png) | Verified facts in the Scout, Optimize, Jobs, and Profile shell. |
+| `tqNtH` · Action · Edit verified profile fact | [profile-edit.png](profile-edit.png) | Source-preserving correction dialog and focus return. |
 
-The canvas also includes a narrow version of step 02 and recovery branches for a disconnected companion, unavailable AI provider, and unsupported form. All names, employers, and contact values are fictional examples. The earlier extension concepts have been removed from this workflow file.
+### Extension and companion
 
-## Profile reference
+| Pen frame | Export | Review purpose |
+| --- | --- | --- |
+| `PEMn0` · Extension popup · Status and launch | [extension-popup-status.png](extension-popup-status.png) | Connection, provider readiness, page support, and side-panel launch. |
+| `GEPQq` · 05 · Extension pairing pending | [extension-pairing.png](extension-pairing.png) | Pending request, expiry, hosted placeholder, and secret boundary. |
+| `H1pu7d` · Pairing state map | [pairing-state-map.png](pairing-state-map.png) | Pending, approved, rejected/expired, connected, disconnected, and revoked states. |
+| `xR59j` · Companion · Pairing approval and revocation | [companion-pairing-approval.png](companion-pairing-approval.png) | Companion approval, rejection, revocation, and direct secret delivery. |
+| `cnncD` · Companion · Provider setup and readiness | [companion-provider-setup.png](companion-provider-setup.png) | Credential ownership, cost consent, test status, non-secret readiness, and recovery. |
+| `fpORB` · 06 · Complete application-plan review | [extension-fill-preview.png](extension-fill-preview.png) | Every scanned field, required/optional state, and exact unanswered reason. |
+| `ujUUx` · 06A · Candidate evidence and decision | [extension-field-review.png](extension-field-review.png) | Proposed value, evidence, confidence, edit, reject, blank, and approve controls. |
+| `afU7b` · 06B · Explicit write confirmation | [extension-fill-confirmation.png](extension-fill-confirmation.png) | User-approved values separated from validated proposals before writing. |
+| `ChUic` · 07 · Exact apply result and manual review | [extension-final-review.png](extension-final-review.png) | Adapter-confirmed applied and untouched fields, then manual submission. |
+| `HJ0NY` · 07A · Partial write result | [extension-partial-result.png](extension-partial-result.png) | Per-field applied, failed, not-attempted, and untouched outcomes. |
+| `w3qsbf` · Branch · Recoverable application states | [application-recovery-states.png](application-recovery-states.png) | Stale plan, navigation/permission loss, disconnect, provider recovery, and unsupported controls. |
 
-The canvas adds **08 · Profile hub** and **Action · Edit personal details**, based on the layout and interaction pattern of [Jobright's profile page](https://jobright.ai/jobs/profile). The [profile overview](profile-overview.png) shows its slim navigation, section tabs, personal details, education, work experience, skills, optional equal-employment information, and readiness rail. The [edit state](profile-edit.png) shows how a user corrects verified details before using them for application autofill. Job Scout branding, local-mode privacy copy, and all example data are original to this proposal.
+### Responsive, theme, locale, and accessibility
 
-This design is the first proposal for [issue #18](https://github.com/phuhien92/job-scout/issues/18), not implementation or approval to submit an application.
+| Pen frame | Export | Review purpose |
+| --- | --- | --- |
+| `Dv5Bh` · Variant · 375px fact review | [narrow-fact-review.png](narrow-fact-review.png) | Single-column correction at the required narrow breakpoint. |
+| `EwlJt` · Handoff · Accessibility responsive theme locale | [accessibility-handoff.png](accessibility-handoff.png) | 375px/1440px behavior, focus, announcements, errors, reduced motion, and locale rules. |
+| `zvS02` · Variant · Dark candidate review | [dark-field-review.png](dark-field-review.png) | Representative dark side-panel review. |
+| `RoHG7` · Variant · Vietnamese complete field review | [vi-field-review.png](vi-field-review.png) | Real Vietnamese copy and extension-panel text expansion. |
+
+## Application-plan review model
+
+The side-panel flow follows [`docs/application-plan.md`](../docs/application-plan.md):
+
+1. The complete-list screen shows all seven fields from the representative v1 fixture exactly once.
+2. The three candidates are **validated proposals**, not permission to write. Each candidate is reachable for evidence inspection and an edit, reject, leave-blank, or approve decision.
+3. Required and optional states remain visible. Unanswered fields use the contract reasons `personal-declaration`, `manual-upload`, `missing-evidence`, and `unsupported`.
+4. A separate confirmation screen lists only user-approved values and repeats what will remain untouched.
+5. The adapter rescans before writing and checks identity before each write. A stale scan discards the old plan and requires review again.
+6. Final and interrupted states report exact per-field outcomes. There is no silent retry and no success count beyond adapter-confirmed writes.
+7. The extension has no submit action. The user reviews and submits on the employer page.
+
+## Pairing and provider state model
+
+The pairing sequence is request → pending companion approval → approved secret delivery → authenticated connection. Rejection or expiry issues no secret. Disconnect offers reconnect; companion revocation invalidates the stored secret and requires a new approved request.
+
+The generated secret travels directly between the loopback companion and extension worker storage. It is transport authentication, not application-plan data. The popup and side panel may render connection state but never the secret.
+
+Provider setup remains in the companion. Before a bounded test can incur cost, the companion shows the selected access path and requests consent. The extension sees only readiness and a recovery link back to companion setup.
+
+## Resume fact and readiness model
+
+Resume states are separate: initial upload, extraction in progress, extraction failure, extracted-fact review, correction, and verified completion. Resume-derived values show a source anchor and confidence. A correction is stored as explicit user-entered provenance while the original excerpt stays available.
+
+A profile is ready only when required contact facts and every resume-derived fact selected for reuse are verified. Manual-only declarations do not count toward contract-v1 readiness. Original binary retention remains planned work in issue #43, and a targeted draft never replaces the source resume.
+
+## Accessibility and responsive handoff
+
+- Use at least 12px high-contrast text for evidence, privacy, reasons, and safety messages. The revised light tertiary text is `#526C64`, which is 5.69:1 on white and 5.43:1 on the cream page. White on `#087F65` is 4.96:1.
+- Interactive targets are at least 44px. Provide visible focus, accessible names, logical keyboard order, dialog focus trap and return, and persistent critical status text.
+- Announce extraction, scan, provider, approval, stale-plan, and apply-result changes. Busy controls expose loading and disabled semantics; errors receive focus and one clear recovery action.
+- At 375px, website content becomes one column and dialogs become full-screen sheets. At 1440px, the shared 218px sidebar and multi-zone content remain visible. The 400px extension side panel stays one column.
+- Reduced motion removes translation and spring behavior. Keep instant swaps or a short fade, and never animate review controls away during a decision.
+- Allow at least 35% Vietnamese expansion. Wrap labels and never truncate unanswered reasons or safety copy.
+
+## Source and export verification
+
+The design was edited through the Pen CLI developer workflow after reading `pen-schema.md`, `execute.md`, `whiteboard.md`, and `guide/web-app.md`. All 24 top-level frames export at scale 1. The final Pen layout audit reports zero clipped nodes, no text below 12px, and all image fills resolve to `brand/scout-rabbit-bubble.png`.
+
+To reproduce the structural check in `pen interactive`:
+
+```text
+get_app_state()
+execute({ input: 'problems=0; Get((n,c)=>{ if(c.problems){ problems++; Print(n.id,n.name,c.problems) } }); Print("TOTAL_PROBLEMS",problems)' })
+execute({ input: 'Get((n,c)=>{ if(c.depth===0) Print(n.id,n.name,c.bounds.width,c.bounds.height) })' })
+execute({ input: 'ids=[]; Get((n,c)=>{ if(c.depth===0) ids.push(n.id) }); Export(ids,"png","/absolute/output/path",{scale:1})' })
+```
+
+The PNG filenames above are committed review artifacts. Re-export the mapped frame IDs and compare bytes before updating them.

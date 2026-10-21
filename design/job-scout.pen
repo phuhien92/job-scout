@@ -76935,126 +76935,126 @@
                       "gap": 32,
                       "children": [
                         {
+                          "type": "frame",
                           "id": "hVmVn",
-                          "type": "ref",
-                          "ref": "B7IZho",
-                          "name": "DialogContent",
-                          "width": 676,
-                          "descendants": {
-                            "ESeGI": {
-                              "width": "fill_container"
+                          "name": "Dialog specimen",
+                          "clip": true,
+                          "width": 384,
+                          "fill": "$bg-panel",
+                          "cornerRadius": 17,
+                          "stroke": "#173D371A",
+                          "strokeWidth": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#173D3726",
+                            "offset": {
+                              "x": 0,
+                              "y": 12
                             },
-                            "V7pdL": {
-                              "height": 44,
-                              "fill": "$bg-raised",
-                              "cornerRadius": "$radius-md",
-                              "stroke": "$border",
-                              "strokeWidth": 1,
+                            "blur": 32
+                          },
+                          "layout": "vertical",
+                          "gap": 16,
+                          "padding": [
+                            16,
+                            16,
+                            0,
+                            16
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "UnSLd",
+                              "name": "Header",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 8,
                               "padding": [
-                                12,
-                                16
+                                0,
+                                32,
+                                0,
+                                0
                               ],
-                              "justifyContent": "center",
-                              "alignItems": "center",
-                              "descendants": {
-                                "A8Qe7": {
-                                  "name": "Close edit dialog label",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P6w4b",
+                                  "name": "Title",
                                   "fill": "$text-primary",
-                                  "content": "Close",
+                                  "content": "Discard unsaved changes?",
+                                  "fontFamily": "$font-primary",
+                                  "fontSize": 16,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "sbA0u",
+                                  "name": "Description",
+                                  "fill": "$text-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Your edits to this section will be lost. This cannot be undone.",
+                                  "lineHeight": 1.45,
                                   "fontFamily": "$font-primary",
                                   "fontSize": 14,
-                                  "fontWeight": "700"
+                                  "fontWeight": "normal"
                                 }
-                              }
+                              ]
                             },
-                            "qIQ0A": {
-                              "height": 28,
-                              "fill": "$warning-bg",
-                              "cornerRadius": "$radius-pill",
-                              "padding": [
-                                6,
-                                10
-                              ],
-                              "alignItems": "center",
+                            {
+                              "id": "z7onpH",
+                              "type": "ref",
+                              "ref": "Ly5AR",
+                              "name": "Close",
+                              "layoutPosition": "absolute",
+                              "x": 348,
+                              "y": 8,
                               "descendants": {
-                                "bEUby": {
-                                  "name": "Edit confidence text",
-                                  "fill": "$warning-text",
-                                  "content": "64% · REVIEW",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 12,
-                                  "fontWeight": "700"
+                                "azPTs": {
+                                  "fill": "$text-secondary"
                                 }
                               }
                             },
-                            "nYZfE": {
-                              "height": 48,
+                            {
+                              "type": "frame",
+                              "id": "yb4CA",
+                              "name": "Footer",
+                              "width": "fill_container",
                               "fill": "$bg-control",
-                              "cornerRadius": 10,
-                              "stroke": "$accent",
-                              "strokeWidth": 2,
-                              "padding": [
-                                13,
-                                14
-                              ],
-                              "alignItems": "center",
-                              "descendants": {
-                                "k9y4K1": {
-                                  "name": "Edit location value",
-                                  "fill": "$text-primary",
-                                  "content": "Portland, OR",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 15,
-                                  "fontWeight": "700"
-                                }
-                              }
-                            },
-                            "xH9C2": {
-                              "height": 44,
-                              "fill": "$bg-raised",
-                              "cornerRadius": "$radius-md",
                               "stroke": "$border",
-                              "strokeWidth": 1,
-                              "padding": [
-                                12,
-                                16
-                              ],
-                              "justifyContent": "center",
-                              "alignItems": "center",
-                              "descendants": {
-                                "A8Qe7": {
-                                  "name": "Cancel correction label",
-                                  "fill": "$text-primary",
-                                  "content": "Cancel",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 14,
-                                  "fontWeight": "700"
+                              "strokeWidth": {
+                                "top": 1
+                              },
+                              "gap": 8,
+                              "padding": 16,
+                              "justifyContent": "end",
+                              "children": [
+                                {
+                                  "id": "UysZI",
+                                  "type": "ref",
+                                  "ref": "oEBiB",
+                                  "name": "Cancel",
+                                  "descendants": {
+                                    "RMkLL": {
+                                      "content": "Keep editing"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "KABGT",
+                                  "type": "ref",
+                                  "ref": "HkYW3",
+                                  "name": "Confirm",
+                                  "descendants": {
+                                    "SYE0C": {
+                                      "content": "Discard"
+                                    }
+                                  }
                                 }
-                              }
-                            },
-                            "kiASZ": {
-                              "height": 44,
-                              "fill": "$accent",
-                              "cornerRadius": "$radius-md",
-                              "stroke": "$border",
-                              "padding": [
-                                12,
-                                16
-                              ],
-                              "justifyContent": "center",
-                              "alignItems": "center",
-                              "descendants": {
-                                "lBog5": {
-                                  "name": "Save verified correction label",
-                                  "fill": "$accent-text",
-                                  "content": "Save and verify",
-                                  "fontFamily": "$font-primary",
-                                  "fontSize": 14,
-                                  "fontWeight": "700"
-                                }
-                              }
+                              ]
                             }
-                          }
+                          ]
                         },
                         {
                           "type": "frame",
@@ -78971,6 +78971,48 @@
                   "width": 16,
                   "height": 16,
                   "icon": "ellipsis",
+                  "library": "lucide",
+                  "fill": "$text-primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "X7Z2I",
+          "name": "Button / variant=ghost / size=icon-sm showcase",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "gNpuj",
+              "name": "Button / variant=ghost / size=icon-sm caption",
+              "fill": "$text-secondary",
+              "content": "Button / variant=ghost / size=icon-sm",
+              "fontFamily": "$font-primary",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "Ly5AR",
+              "name": "Button / variant=ghost / size=icon-sm",
+              "reusable": true,
+              "width": 28,
+              "height": 28,
+              "cornerRadius": 12,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "azPTs",
+                  "name": "Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "x",
                   "library": "lucide",
                   "fill": "$text-primary"
                 }

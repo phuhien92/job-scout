@@ -85,7 +85,7 @@ Keep the core closed to ad-hoc modification through stable interfaces:
 
 - `src/app/api/profile/upload/route.ts` already accepts PDF, DOCX, and TXT and extracts resume text. Preserve the original file for later attachments.
 - `src/lib/working-memory/types.ts` currently stores a small profile and one resume. Introduce a structured application profile with provenance and verification status.
-- `src/lib/working-memory/store.ts` is a single local JSON file. Replace it behind the existing read/write boundary with durable local storage before supporting multiple resumes or applications.
+- `src/lib/working-memory/store.ts` preserves the shared read/write boundary; `database.ts` stores local profile/resume evidence in SQLite and imports legacy JSON transactionally. See `docs/application-profile.md` for portable backup and migration. Original resume files remain #43.
 - `src/lib/resume/fact-gate.ts` checks numeric claims only. Expand evidence checks for employers, dates, tools, and qualifications without treating the gate as proof of truth.
 - `src/mastra/agents/job-scout.ts` currently configures one model from an environment variable. Move provider selection behind the AI-provider interface.
 

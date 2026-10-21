@@ -80,6 +80,10 @@ Use Node 24 and `npm ci`. `npm test` covers unit/component tests; `npm run typec
 
 ## Shared application contract
 
+Local profile persistence uses `@libsql/client` at `JOB_SCOUT_DATA_DIR/job-scout.db`.
+Keep callers behind the working-memory store boundary. Migration and portable
+backup behavior are documented in `docs/application-profile.md`.
+
 `src/lib/application-plan/contract.ts` defines the versioned extension/backend boundary. Read `docs/application-plan.md` before changing scanners, planners, or fill adapters. Keep it independent of React, Next.js, Chrome APIs, and provider code; validate wire payloads and recheck the active scan before user-approved writes.
 
 ## Agent rules

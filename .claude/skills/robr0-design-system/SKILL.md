@@ -1,6 +1,6 @@
 ---
 name: robr0-design-system
-description: Build React UI with @robr0/design-system. Use when installing the package, composing its components, theming with its design tokens, or reading a component's exact prop contract.
+description: LEGACY, migration only. Read this only to understand an existing @robr0/design-system import while replacing it under issue #17. Never use it to build new UI; use the job-scout-ui skill instead.
 ---
 
 # Using @robr0/design-system

@@ -2,9 +2,11 @@
 
 Open [job-scout.pen](job-scout.pen) in pen.dev and start with **00 · End-to-end user workflow**. The editable canvas is the canonical design source. The PNG files in this directory are scale-1 review exports from that source.
 
-The approved [rabbit logo](brand/scout-rabbit-bubble.png) remains a replaceable image fill throughout the website, popup, and side panel. The light direction uses a cream canvas, white panels, forest text, green actions, and mint status surfaces. A complete dark palette is defined in the Pen variables and shown in [dark-field-review.png](dark-field-review.png).
+The approved [rabbit logo](brand/scout-rabbit-bubble.png) remains a replaceable image fill throughout the website, popup, and side panel. The approved light direction uses a cream canvas, white panels, forest text, green actions, and mint status surfaces. The dark palette shown in [dark-field-review.png](dark-field-review.png) remains dormant design data and is not emitted into the current product stylesheet.
 
-This is design guidance, not shipped behavior. It does not implement the extension, provider integrations, hosted access, application history, design-token generation, or a reusable-component migration.
+The approved light values in the top-level Pen variables are the implementation token source. Run `npm run tokens:generate` after changing them; CI runs `npm run tokens:check` against the generated `src/styles/tokens.css`. Do not edit that stylesheet by hand.
+
+The remaining frames are design guidance, not shipped behavior. They do not implement the extension, provider integrations, hosted access, application history, or a reusable-component migration.
 
 ## Approved architecture defaults
 
